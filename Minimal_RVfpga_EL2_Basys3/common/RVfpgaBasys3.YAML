@@ -1,0 +1,41 @@
+name: RVfpgaBasys3
+bootAddr: 0x0
+compileFlags: -mabi=ilp32 -march=rv32imc
+cpu: swerv
+arch: RV32
+endianness: little
+hasMMU: False
+
+memories:
+
+   ICCM:
+       type: itcm
+       base: 0xee000000
+       size: 0x80000  # 512KB
+       writable: True
+       executable: True
+      
+   DCCM:
+       type: dtcm
+       base: 0xf0040000
+       size: 0x40000  # 256KB
+       writable: True
+       executable: False
+
+   DDR:
+       type: ram
+       base: 0x0
+       size: 0x10000
+       writable: True
+       executable: True
+
+defaultLayout:
+    code: DDR
+    initdata: DDR
+    uninitdata: DDR
+    rodata: DDR
+    stack: DDR
+
+
+
+

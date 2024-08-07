@@ -1,0 +1,28 @@
+To run a program using a simulator you should:
+
+TRACE:
+
+    -Generate simulator binary (Vrvfpgasim):
+
+cd Simulators/verilatorSIM_Trace/
+make clean
+make
+
+
+    -Go to the program's folder, inside the Tests/ folder
+
+cd commandLine
+make clean
+make Test.vh
+make Test.dis
+
+
+    -Generate trace.vcd file (wait 5 seconds, and hit Crtl+C)
+
+../../../Simulators/verilatorSIM_Trace/Vrvfpgasim +ram_init_file=Test1.vh +vcd=1
+
+    -Run simulator
+
+gtkwave trace.vcd
+
+VidBo:
