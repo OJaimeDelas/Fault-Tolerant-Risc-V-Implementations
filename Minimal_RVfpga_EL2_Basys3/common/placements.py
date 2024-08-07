@@ -10,20 +10,26 @@ ddr = link.core.mems["DDR"]
 #Create an offset for the boot
 offset = 0x0800
 
-# Create regions
-# Regions are created from a base_addr offset (not a specific address) and a size
-# Global symbols can not be referenced relative to the PC farther than +-2GB in
-# RV64. This memory range keeps symbols within such limits.
+# # Create regions
+# iccm += Range(0x0 + offset , iccm.size - offset) # (the offset is for the boot)
 
-ddr += Range(0x0 + offset , ddr.size - offset) # (the offset is for the boot)
+# # Set the boot address to the start of ICCM
+# link.core.boot_addr = iccm.base_addr
 
-# Set the boot address to the start of ICCM
+# # Directly assign entire memory blocks without defining specific regions
+# # ICCM (Instruction TCM) for code and read-only data
+# link.layout.code = iccm[1]
+# link.layout.rodata = iccm[1]
+
+# Create a new DDR region
+ddr += Range(ddr.base_addr + offset, ddr.size - offset)
+
+# Move the boot address to the beginning of DDR
 link.core.boot_addr = ddr.base_addr
 
-# Directly assign entire memory blocks without defining specific regions
-# ICCM (Instruction TCM) for code and read-only data
-link.layout.code = iccm
-link.layout.rodata = iccm
+# Move code, data and stack to the new region
+link.layout.code = ddr[1]
+link.layout.initdata = ddr[1]
 
 
 # DCCM (Data TCM) for initialized data, uninitialized data, and stack

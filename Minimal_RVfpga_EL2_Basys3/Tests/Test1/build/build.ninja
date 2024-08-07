@@ -39,7 +39,7 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = /home/jaime/Desktop/Tese/Minimal_RVfpga_EL2_Basys3/Tests/Test1/build/
+cmake_ninja_workdir = /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/Tests/Test1/build/
 # =============================================================================
 # Object build statements for EXECUTABLE target Test1.elf
 
@@ -49,11 +49,11 @@ cmake_ninja_workdir = /home/jaime/Desktop/Tese/Minimal_RVfpga_EL2_Basys3/Tests/T
 
 build cmake_object_order_depends_target_Test1.elf: phony || CMakeFiles/Test1.elf.dir
 
-build CMakeFiles/Test1.elf.dir/src/Test1.S.obj: ASM_COMPILER__Test1.2eelf_unscanned_Debug /home/jaime/Desktop/Tese/Minimal_RVfpga_EL2_Basys3/Tests/Test1/src/Test1.S || cmake_object_order_depends_target_Test1.elf
+build CMakeFiles/Test1.elf.dir/src/Test1.S.obj: ASM_COMPILER__Test1.2eelf_unscanned_Debug /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/Tests/Test1/src/Test1.S || cmake_object_order_depends_target_Test1.elf
   DEFINES = -DCPU_FREQ=13000000 -DCUSTOM_UART -DHAS_PRINTF=0 -DNO_SEMIHOSTING=1 -DPERIPH_H=\"RVfpgaBasys3_periph.h\" -DPLATFORM_H=\"swerv_csr.h\" -DUART
   DEP_FILE = CMakeFiles/Test1.elf.dir/src/Test1.S.obj.d
   FLAGS = -g -O0 -g -march=rv32im_zicsr_zifencei -mabi=ilp32
-  INCLUDES = -I/home/jaime/Desktop/Tese/Minimal_RVfpga_EL2_Basys3/common -I/home/jaime/Desktop/Tese/Minimal_RVfpga_EL2_Basys3/common/ee_printf -I/home/jaime/Desktop/Tese/Minimal_RVfpga_EL2_Basys3/common/drivers/uart/RVfpga -I/opt/imgtec/catapult-sdk_1.10.0/build/platform/RVfpga -I/home/jaime/Desktop/Tese/Minimal_RVfpga_EL2_Basys3/common/drivers/uart -I/home/jaime/Desktop/Tese/Minimal_RVfpga_EL2_Basys3/common/drivers/psp/api_inc -I/home/jaime/Desktop/Tese/Minimal_RVfpga_EL2_Basys3/common/drivers/bsp
+  INCLUDES = -I/home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/common -I/home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/common/ee_printf -I/home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/common/drivers/uart/RVfpga -I/opt/imgtec/catapult-sdk_1.10.0/build/platform/RVfpga -I/home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/common/drivers/uart -I/home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/common/drivers/psp/api_inc -I/home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/common/drivers/bsp
   OBJECT_DIR = CMakeFiles/Test1.elf.dir
   OBJECT_FILE_DIR = CMakeFiles/Test1.elf.dir/src
 
@@ -70,7 +70,7 @@ build Test1.elf: ASM_EXECUTABLE_LINKER__Test1.2eelf_Debug CMakeFiles/Test1.elf.d
   LINK_FLAGS = -march=rv32im_zicsr_zifencei -mabi=ilp32 --cpu=swerv -TTest1.elf.ld
   OBJECT_DIR = CMakeFiles/Test1.elf.dir
   POST_BUILD = :
-  PRE_LINK = cd /home/jaime/Desktop/Tese/Minimal_RVfpga_EL2_Basys3/Tests/Test1/build && ldgen.sh -c /home/jaime/Desktop/Tese/Minimal_RVfpga_EL2_Basys3/common/RVfpgaBasys3.YAML -l /home/jaime/Desktop/Tese/Minimal_RVfpga_EL2_Basys3/common/placements.py -o Test1.elf.ld /home/jaime/Desktop/Tese/Minimal_RVfpga_EL2_Basys3/Tests/Test1/build/CMakeFiles/Test1.elf.dir/./src/Test1.S.obj && cd /home/jaime/Desktop/Tese/Minimal_RVfpga_EL2_Basys3/Tests/Test1/build
+  PRE_LINK = cd /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/Tests/Test1/build && ldgen.sh -c /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/common/RVfpgaBasys3.YAML -l /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/common/placements.py -o Test1.elf.ld /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/Tests/Test1/build/CMakeFiles/Test1.elf.dir/./src/Test1.S.obj && cd /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/Tests/Test1/build
   TARGET_FILE = Test1.elf
   TARGET_PDB = Test1.elf.dbg
 
@@ -79,7 +79,7 @@ build Test1.elf: ASM_EXECUTABLE_LINKER__Test1.2eelf_Debug CMakeFiles/Test1.elf.d
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/jaime/Desktop/Tese/Minimal_RVfpga_EL2_Basys3/Tests/Test1/build && /opt/imgtec/catapult-sdk_1.10.0/build/bin/ccmake -S/home/jaime/Desktop/Tese/Minimal_RVfpga_EL2_Basys3/Tests/Test1 -B/home/jaime/Desktop/Tese/Minimal_RVfpga_EL2_Basys3/Tests/Test1/build
+  COMMAND = cd /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/Tests/Test1/build && /opt/imgtec/catapult-sdk_1.10.0/build/bin/ccmake -S/home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/Tests/Test1 -B/home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/Tests/Test1/build
   DESC = Running CMake cache editor...
   pool = console
   restat = 1
@@ -91,7 +91,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/jaime/Desktop/Tese/Minimal_RVfpga_EL2_Basys3/Tests/Test1/build && /opt/imgtec/catapult-sdk_1.10.0/build/bin/cmake --regenerate-during-build -S/home/jaime/Desktop/Tese/Minimal_RVfpga_EL2_Basys3/Tests/Test1 -B/home/jaime/Desktop/Tese/Minimal_RVfpga_EL2_Basys3/Tests/Test1/build
+  COMMAND = cd /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/Tests/Test1/build && /opt/imgtec/catapult-sdk_1.10.0/build/bin/cmake --regenerate-during-build -S/home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/Tests/Test1 -B/home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/Tests/Test1/build
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -107,7 +107,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 
 #############################################
-# Folder: /home/jaime/Desktop/Tese/Minimal_RVfpga_EL2_Basys3/Tests/Test1/build
+# Folder: /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/Tests/Test1/build
 
 build all: phony Test1.elf
 
@@ -118,14 +118,14 @@ build all: phony Test1.elf
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | /home/jaime/Desktop/Tese/Minimal_RVfpga_EL2_Basys3/Tests/Test1/CMakeLists.txt /home/jaime/Desktop/Tese/Minimal_RVfpga_EL2_Basys3/common/Common.cmake /opt/imgtec/catapult-sdk_1.10.0/build/riscv-toolchain-gcc-elf.cmake /opt/imgtec/catapult-sdk_1.10.0/build/share/cmake-3.27/Modules/CMakeASMInformation.cmake /opt/imgtec/catapult-sdk_1.10.0/build/share/cmake-3.27/Modules/CMakeGenericSystem.cmake /opt/imgtec/catapult-sdk_1.10.0/build/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake /opt/imgtec/catapult-sdk_1.10.0/build/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake /opt/imgtec/catapult-sdk_1.10.0/build/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake /opt/imgtec/catapult-sdk_1.10.0/build/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake /opt/imgtec/catapult-sdk_1.10.0/build/share/cmake-3.27/Modules/Compiler/GNU-ASM.cmake /opt/imgtec/catapult-sdk_1.10.0/build/share/cmake-3.27/Modules/Compiler/GNU.cmake /opt/imgtec/catapult-sdk_1.10.0/build/share/cmake-3.27/Modules/Platform/Generic.cmake CMakeCache.txt CMakeFiles/3.27.6/CMakeASMCompiler.cmake CMakeFiles/3.27.6/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/Tests/Test1/CMakeLists.txt /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/common/Common.cmake /opt/imgtec/catapult-sdk_1.10.0/build/riscv-toolchain-gcc-elf.cmake /opt/imgtec/catapult-sdk_1.10.0/build/share/cmake-3.27/Modules/CMakeASMInformation.cmake /opt/imgtec/catapult-sdk_1.10.0/build/share/cmake-3.27/Modules/CMakeGenericSystem.cmake /opt/imgtec/catapult-sdk_1.10.0/build/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake /opt/imgtec/catapult-sdk_1.10.0/build/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake /opt/imgtec/catapult-sdk_1.10.0/build/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake /opt/imgtec/catapult-sdk_1.10.0/build/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake /opt/imgtec/catapult-sdk_1.10.0/build/share/cmake-3.27/Modules/Compiler/GNU-ASM.cmake /opt/imgtec/catapult-sdk_1.10.0/build/share/cmake-3.27/Modules/Compiler/GNU.cmake /opt/imgtec/catapult-sdk_1.10.0/build/share/cmake-3.27/Modules/Platform/Generic.cmake CMakeCache.txt CMakeFiles/3.27.6/CMakeASMCompiler.cmake CMakeFiles/3.27.6/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /home/jaime/Desktop/Tese/Minimal_RVfpga_EL2_Basys3/Tests/Test1/CMakeLists.txt /home/jaime/Desktop/Tese/Minimal_RVfpga_EL2_Basys3/common/Common.cmake /opt/imgtec/catapult-sdk_1.10.0/build/riscv-toolchain-gcc-elf.cmake /opt/imgtec/catapult-sdk_1.10.0/build/share/cmake-3.27/Modules/CMakeASMInformation.cmake /opt/imgtec/catapult-sdk_1.10.0/build/share/cmake-3.27/Modules/CMakeGenericSystem.cmake /opt/imgtec/catapult-sdk_1.10.0/build/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake /opt/imgtec/catapult-sdk_1.10.0/build/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake /opt/imgtec/catapult-sdk_1.10.0/build/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake /opt/imgtec/catapult-sdk_1.10.0/build/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake /opt/imgtec/catapult-sdk_1.10.0/build/share/cmake-3.27/Modules/Compiler/GNU-ASM.cmake /opt/imgtec/catapult-sdk_1.10.0/build/share/cmake-3.27/Modules/Compiler/GNU.cmake /opt/imgtec/catapult-sdk_1.10.0/build/share/cmake-3.27/Modules/Platform/Generic.cmake CMakeCache.txt CMakeFiles/3.27.6/CMakeASMCompiler.cmake CMakeFiles/3.27.6/CMakeSystem.cmake: phony
+build /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/Tests/Test1/CMakeLists.txt /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/common/Common.cmake /opt/imgtec/catapult-sdk_1.10.0/build/riscv-toolchain-gcc-elf.cmake /opt/imgtec/catapult-sdk_1.10.0/build/share/cmake-3.27/Modules/CMakeASMInformation.cmake /opt/imgtec/catapult-sdk_1.10.0/build/share/cmake-3.27/Modules/CMakeGenericSystem.cmake /opt/imgtec/catapult-sdk_1.10.0/build/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake /opt/imgtec/catapult-sdk_1.10.0/build/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake /opt/imgtec/catapult-sdk_1.10.0/build/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake /opt/imgtec/catapult-sdk_1.10.0/build/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake /opt/imgtec/catapult-sdk_1.10.0/build/share/cmake-3.27/Modules/Compiler/GNU-ASM.cmake /opt/imgtec/catapult-sdk_1.10.0/build/share/cmake-3.27/Modules/Compiler/GNU.cmake /opt/imgtec/catapult-sdk_1.10.0/build/share/cmake-3.27/Modules/Platform/Generic.cmake CMakeCache.txt CMakeFiles/3.27.6/CMakeASMCompiler.cmake CMakeFiles/3.27.6/CMakeSystem.cmake: phony
 
 
 #############################################

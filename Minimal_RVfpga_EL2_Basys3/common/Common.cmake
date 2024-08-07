@@ -99,10 +99,10 @@ elseif(PLATFORM MATCHES "RVFPGABASYS3")
     set(CLANG_CPU swerv)
     set(PLATFORM_ARG -DRVFPGABASYS3)
     
-    set(DEFAULT_YAML_FILE "/home/jaime/Desktop/Tese/Minimal_RVfpga_EL2_Basys3/common/RVfpgaBasys3.YAML")
-    #set(PLACEMENTS_FILE "/home/jaime/Desktop/Tese/Minimal_RVfpga_EL2_Basys3/common/placements_regions.py")
-    #set(PLACEMENTS_FILE "/home/jaime/Desktop/Tese/Minimal_RVfpga_EL2_Basys3/common/placements.py")
-    set(PLACEMENTS_FILE "/opt/imgtec/catapult-sdk_1.10.0/examples/apps/hello/placements_rvfpga.py")
+    set(DEFAULT_YAML_FILE "/home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/common/RVfpgaBasys3.YAML")
+    #set(PLACEMENTS_FILE "/home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/common/placements_regions.py")
+    set(PLACEMENTS_FILE "/home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/common/placements.py")
+    #set(PLACEMENTS_FILE "/opt/imgtec/catapult-sdk_1.10.0/examples/apps/hello/placements_rvfpga.py")
     
 
     

@@ -70,3 +70,9 @@
 0	137	1722639017	build.ninja	83e3fe94a868d897
 0	260	1722639017	CMakeFiles/Test1.elf.dir/src/Test1.S.obj	d80fd078b1641236
 260	2022	1722639019	Test1.elf	72229bc0cb259b7e
+0	32	1723037821	build.ninja	abe3834dacd3c2da
+0	242	1723037821	CMakeFiles/Test1.elf.dir/src/Test1.S.obj	49fb469018599cec
+242	1299	1723037822	Test1.elf	3c5e84ed1cee231e
+0	27	1723064168	build.ninja	abe3834dacd3c2da
+0	18	1723064168	CMakeFiles/Test1.elf.dir/src/Test1.S.obj	49fb469018599cec
+18	711	1723064169	Test1.elf	3c5e84ed1cee231e

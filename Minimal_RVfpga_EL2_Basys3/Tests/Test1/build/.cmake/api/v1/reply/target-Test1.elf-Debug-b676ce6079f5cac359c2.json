@@ -22,7 +22,7 @@
 		"files" : 
 		[
 			"CMakeLists.txt",
-			"/home/jaime/Desktop/Tese/Minimal_RVfpga_EL2_Basys3/common/Common.cmake"
+			"/home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/common/Common.cmake"
 		],
 		"nodes" : 
 		[
@@ -239,15 +239,15 @@
 			[
 				{
 					"backtrace" : 17,
-					"path" : "/home/jaime/Desktop/Tese/Minimal_RVfpga_EL2_Basys3/common"
+					"path" : "/home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/common"
 				},
 				{
 					"backtrace" : 18,
-					"path" : "/home/jaime/Desktop/Tese/Minimal_RVfpga_EL2_Basys3/common/ee_printf"
+					"path" : "/home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/common/ee_printf"
 				},
 				{
 					"backtrace" : 19,
-					"path" : "/home/jaime/Desktop/Tese/Minimal_RVfpga_EL2_Basys3/common/drivers/uart/RVfpga"
+					"path" : "/home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/common/drivers/uart/RVfpga"
 				},
 				{
 					"backtrace" : 19,
@@ -255,15 +255,15 @@
 				},
 				{
 					"backtrace" : 20,
-					"path" : "/home/jaime/Desktop/Tese/Minimal_RVfpga_EL2_Basys3/common/drivers/uart"
+					"path" : "/home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/common/drivers/uart"
 				},
 				{
 					"backtrace" : 21,
-					"path" : "/home/jaime/Desktop/Tese/Minimal_RVfpga_EL2_Basys3/common/drivers/psp/api_inc"
+					"path" : "/home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/common/drivers/psp/api_inc"
 				},
 				{
 					"backtrace" : 22,
-					"path" : "/home/jaime/Desktop/Tese/Minimal_RVfpga_EL2_Basys3/common/drivers/bsp"
+					"path" : "/home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/common/drivers/bsp"
 				}
 			],
 			"language" : "ASM",
@@ -345,17 +345,17 @@
 		},
 		{
 			"backtrace" : 23,
-			"path" : "/home/jaime/Desktop/Tese/Minimal_RVfpga_EL2_Basys3/common/ee_printf/ee_printf.c",
+			"path" : "/home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/common/ee_printf/ee_printf.c",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 24,
-			"path" : "/home/jaime/Desktop/Tese/Minimal_RVfpga_EL2_Basys3/common/drivers/uart/RVfpga/config_uart.c",
+			"path" : "/home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/common/drivers/uart/RVfpga/config_uart.c",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 25,
-			"path" : "/home/jaime/Desktop/Tese/Minimal_RVfpga_EL2_Basys3/common/drivers/uart/uart_send_char.c",
+			"path" : "/home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/common/drivers/uart/uart_send_char.c",
 			"sourceGroupIndex" : 1
 		}
 	],

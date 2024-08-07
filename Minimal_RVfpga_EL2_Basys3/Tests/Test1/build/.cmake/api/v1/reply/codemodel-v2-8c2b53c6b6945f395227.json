@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "Test1.elf::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Test1.elf-Debug-73173fc16db77a952572.json",
+					"jsonFile" : "target-Test1.elf-Debug-b676ce6079f5cac359c2.json",
 					"name" : "Test1.elf",
 					"projectIndex" : 0
 				}
@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/home/jaime/Desktop/Tese/Minimal_RVfpga_EL2_Basys3/Tests/Test1/build",
-		"source" : "/home/jaime/Desktop/Tese/Minimal_RVfpga_EL2_Basys3/Tests/Test1"
+		"build" : "/home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/Tests/Test1/build",
+		"source" : "/home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/Tests/Test1"
 	},
 	"version" : 
 	{

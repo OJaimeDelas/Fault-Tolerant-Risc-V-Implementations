@@ -41,9 +41,9 @@ MEMORY
 PHDRS
 {
 	ddr_0_text     PT_LOAD;
-	iccm_0_text    PT_LOAD;
+	ddr_1_text     PT_LOAD;
 	dccm_0_init    PT_LOAD;
-	iccm_0_init    PT_LOAD;
+	ddr_0_init     PT_LOAD;
 	dccm_0_data    PT_LOAD;
 	
 	tls PT_TLS;
@@ -79,7 +79,7 @@ SECTIONS
 		*(.gnu.linkonce.t.*)
 		KEEP (*(.fini))
 		__text_end = .;
-	} > ICCM_0 :iccm_0_text
+	} > DDR_1 :ddr_1_text
 
 	PROVIDE (__etext = __text_end);
 	PROVIDE (_etext = __text_end);
@@ -172,7 +172,7 @@ SECTIONS
 		*(.srodata .srodata.*)
 		*(.data.rel.ro .data.rel.ro.*)
 		*(.got .got.*)
-	} > ICCM_0 :iccm_0_init
+	} > DDR_0 :ddr_0_init
 
 	/*
 	 * Data values which are preserved across reset
@@ -182,7 +182,7 @@ SECTIONS
 		KEEP(*(SORT_BY_NAME(.preserve.*)))
 		KEEP(*(.preserve))
 		PROVIDE(__preserve_end__ = .);
-	} > ICCM_0 :iccm_0_init
+	} > DDR_0 :ddr_0_init
 
         
 
