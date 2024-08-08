@@ -29,7 +29,7 @@ link.core.boot_addr = ddr.base_addr
 
 # Move code, data and stack to the new region
 link.layout.code = ddr[1]
-link.layout.initdata = ddr[1]
+link.layout.rodata = ddr[1]
 
 
 # DCCM (Data TCM) for initialized data, uninitialized data, and stack
