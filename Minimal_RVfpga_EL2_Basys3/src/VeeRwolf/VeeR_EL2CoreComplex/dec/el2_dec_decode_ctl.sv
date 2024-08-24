@@ -21,27 +21,6 @@ import el2_pkg::*;
  )
   (
 
-`ifdef Pipeline
-   output logic [31:0]        i0_inst_d,
-   output logic [31:0]        i0_inst_x,
-   output logic [31:0]        i0_inst_r,
-   output logic [31:0]        i0_inst_wb_in,
-   output logic [31:0]        i0_inst_wb,
-`endif
-
-`ifdef Pipeline
-   output logic alu_instd,
-   output logic lsu_instd,
-   output logic mul_instd,
-   output logic i0_x_data_en,
-   output logic alu_instx,
-   output logic mul_instx,
-`endif
-
-`ifdef Pipeline
-   output logic [2:0] instr_control,
-`endif
-
    input logic dec_tlu_trace_disable,
    input logic dec_debug_valid_d,
 
@@ -166,10 +145,6 @@ import el2_pkg::*;
    output el2_lsu_pkt_t    lsu_p,                    // load/store packet
    output logic             dec_qual_lsu_d,           // LSU instruction at D.  Use to quiet LSU operands
 
-   output el2_div_pkt_t    div_p,                    // divide packet
-   output logic [4:0]       div_waddr_wb,             // DIV write address to GPR
-   output logic             dec_div_cancel,           // cancel the divide operation
-
    output logic        dec_lsu_valid_raw_d,
    output logic [11:0] dec_lsu_offset_d,
 
@@ -210,8 +185,6 @@ import el2_pkg::*;
    output logic [4:0] dec_nonblock_load_waddr,        // logical write addr for nonblock load
    output logic       dec_pause_state,                // core in pause state
    output logic       dec_pause_state_cg,             // pause state for clock-gating
-
-   output logic       dec_div_active,                 // non-block divide is active
 
    input  logic       scan_mode
    );
@@ -254,9 +227,6 @@ import el2_pkg::*;
 
    logic [31:0]        csr_rddata_x;
 
-   logic               mul_decode_d;
-   logic               div_decode_d;
-   logic               div_e1_to_r;
    logic               div_flush;
    logic               div_active_in;
    logic               div_active;
@@ -561,21 +531,6 @@ end // else: !if(pt.BTB_ENABLE==1)
       end
    end
 
-`ifdef Pipeline
-   assign alu_instd = i0_d_c.alu;
-   assign lsu_instd = i0_dp.lsu;
-   assign mul_instd = i0_d_c.mul;
-   assign alu_instx = i0_x_c.alu;
-   assign mul_instx = i0_x_c.mul;
-`endif
-
-
-`ifdef Pipeline
-   assign instr_control[0] = d_d.i0valid;
-   assign instr_control[1] = x_d.i0valid;
-   assign instr_control[2] = r_d.i0valid;
-`endif
-
    assign i0[31:0] = dec_i0_instr_d[31:0];
 
    assign dec_i0_select_pc_d = i0_dp.pc;
@@ -782,7 +737,6 @@ end : cam_array
       i0_itype = NULL;
 
       if (i0_legal_decode_d) begin
-         if (i0_dp.mul)                  i0_itype = MUL;
          if (i0_dp.load)                 i0_itype = LOAD;
          if (i0_dp.store)                i0_itype = STORE;
          if (i0_dp.pm_alu)               i0_itype = ALU;
@@ -862,13 +816,6 @@ end : cam_array
    // load/store mutually exclusive
    assign dec_lsu_offset_d[11:0] = ({12{ ~dec_extint_stall & i0_dp.lsu & i0_dp.load}} &               i0[31:20]) |
                                    ({12{ ~dec_extint_stall & i0_dp.lsu & i0_dp.store}} &             {i0[31:25],i0[11:7]});
-
-
-
-   assign div_p.valid    =  div_decode_d;
-
-   assign div_p.unsign   =  i0_dp.unsign;
-   assign div_p.rem      =  i0_dp.rem;
 
 
    always_comb  begin
@@ -1055,9 +1002,9 @@ end : cam_array
 
    assign presync_stall      = (i0_presync & prior_inflight_eff);
 
-   assign prior_inflight_eff = (i0_dp.div)  ?  prior_inflight_x  :  prior_inflight;
+   assign prior_inflight_eff = prior_inflight;
 
-   assign i0_div_prior_div_stall = i0_dp.div & div_active;
+   assign i0_div_prior_div_stall = '0;
 
    // Raw block has everything excepts the stalls coming from the lsu
    assign i0_block_raw_d = (i0_dp.csr_read & prior_csr_write) |
@@ -1197,7 +1144,6 @@ end : cam_array
    assign dec_i0_branch_d     = i0_dp.condbr | i0_dp.jal | i0_br_error_all;
 
    assign lsu_decode_d = i0_legal_decode_d    & i0_dp.lsu;
-   assign mul_decode_d = i0_exulegal_decode_d & i0_dp.mul;
    assign div_decode_d = i0_exulegal_decode_d & i0_dp.div;
 
    assign dec_qual_lsu_d = i0_dp.lsu;
@@ -1305,8 +1251,6 @@ end : cam_array
 
 // end tlu stuff
 
-
-   assign i0_d_c.mul                =  i0_dp.mul  & i0_legal_decode_d;
    assign i0_d_c.load               =  i0_dp.load & i0_legal_decode_d;
    assign i0_d_c.alu                =  i0_dp.alu  & i0_legal_decode_d;
 
@@ -1382,19 +1326,12 @@ end : cam_array
    assign dec_i0_wdata_r[31:0]      =  i0_result_corr_r[31:0];
 
 
-   // divide stuff
-   assign div_e1_to_r         = (x_d.i0div & x_d.i0valid) |
-                                (r_d.i0div & r_d.i0valid);
 
    assign div_active_in = i0_div_decode_d | (div_active & ~nonblock_div_cancel);
 
-
-   assign dec_div_active = div_active;
-
    // nonblocking div scheme
 
-   assign i0_nonblock_div_stall  = (dec_i0_rs1_en_d & div_active & (div_waddr_wb[4:0] == i0r.rs1[4:0])) |
-                                   (dec_i0_rs2_en_d & div_active & (div_waddr_wb[4:0] == i0r.rs2[4:0]));
+   assign i0_nonblock_div_stall  = '0;
 
 
    assign div_flush              = (x_d.i0div & x_d.i0valid & (x_d.i0rd[4:0]==5'b0)                           ) |
@@ -1403,11 +1340,7 @@ end : cam_array
 
 
    // cancel if any younger inst committing this cycle to same dest as nonblock divide
-   assign nonblock_div_cancel    = (div_active &  div_flush) |
-                                   (div_active & ~div_e1_to_r & (r_d.i0rd[4:0] == div_waddr_wb[4:0]) & i0_wen_r);
-
-   assign dec_div_cancel         =  nonblock_div_cancel;
-
+   assign nonblock_div_cancel    = '0;
 
 
    assign i0_div_decode_d            =  i0_legal_decode_d & i0_dp.div;
@@ -1442,9 +1375,6 @@ end : cam_array
 
    assign trace_enable = ~dec_tlu_trace_disable;
 
-
-   rvdffe #(.WIDTH(5),.OVERRIDE(1))  i0rdff  (.*, .en(i0_div_decode_d),        .din(i0r.rd[4:0]),             .dout(div_waddr_wb[4:0]));
-
    rvdffe #(32) i0xinstff            (.*, .en(i0_x_data_en & trace_enable),    .din(i0_inst_d[31:0]),         .dout(i0_inst_x[31:0]));
    rvdffe #(32) i0cinstff            (.*, .en(i0_r_data_en & trace_enable),    .din(i0_inst_x[31:0]),         .dout(i0_inst_r[31:0]));
 
@@ -1478,13 +1408,13 @@ end : cam_array
 
    // bit 2 is priority match, bit 0 lowest priority, i0_x, i0_r
 
-   assign i0_rs1bypass[2]                =  i0_rs1_depth_d[0] & (i0_rs1_class_d.alu | i0_rs1_class_d.mul                      );
+   assign i0_rs1bypass[2]                =  i0_rs1_depth_d[0] & (i0_rs1_class_d.alu                    );
    assign i0_rs1bypass[1]                =  i0_rs1_depth_d[0] & (                                          i0_rs1_class_d.load);
-   assign i0_rs1bypass[0]                =  i0_rs1_depth_d[1] & (i0_rs1_class_d.alu | i0_rs1_class_d.mul | i0_rs1_class_d.load);
+   assign i0_rs1bypass[0]                =  i0_rs1_depth_d[1] & (i0_rs1_class_d.alu | i0_rs1_class_d.load);
 
-   assign i0_rs2bypass[2]                =  i0_rs2_depth_d[0] & (i0_rs2_class_d.alu | i0_rs2_class_d.mul                      );
+   assign i0_rs2bypass[2]                =  i0_rs2_depth_d[0] & (i0_rs2_class_d.alu                     );
    assign i0_rs2bypass[1]                =  i0_rs2_depth_d[0] & (                                          i0_rs2_class_d.load);
-   assign i0_rs2bypass[0]                =  i0_rs2_depth_d[1] & (i0_rs2_class_d.alu | i0_rs2_class_d.mul | i0_rs2_class_d.load);
+   assign i0_rs2bypass[0]                =  i0_rs2_depth_d[1] & (i0_rs2_class_d.alu | i0_rs2_class_d.load);
 
 
    assign dec_i0_rs1_bypass_en_d[3]      =  i0_rs1_nonblock_load_bypass_en_d & ~i0_rs1bypass[0] & ~i0_rs1bypass[1] & ~i0_rs1bypass[2];
@@ -1718,12 +1648,6 @@ assign out.bdecompress = (i[30]&i[27]&i[13]&!i[12]&!i[6]&i[5]&i[4]&!i[2]);
 assign out.zbe = (i[30]&i[27]&i[14]&i[13]&!i[12]&!i[6]&i[5]&!i[2]) | (!i[30]&i[27]
     &!i[25]&i[13]&i[12]&!i[6]&i[5]&!i[2]) | (!i[30]&!i[29]&i[27]&!i[25]
     &!i[12]&!i[6]&i[5]&i[4]&!i[2]);
-
-assign out.clmul = (i[27]&i[25]&!i[14]&!i[13]&!i[6]&i[5]&i[4]&!i[2]);
-
-assign out.clmulh = (i[27]&!i[14]&i[13]&i[12]&!i[6]&i[5]&!i[2]);
-
-assign out.clmulr = (i[27]&i[25]&!i[14]&!i[12]&!i[6]&i[5]&i[4]&!i[2]);
 
 assign out.zbc = (i[27]&i[25]&!i[14]&!i[6]&i[5]&i[4]&!i[2]);
 

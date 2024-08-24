@@ -6651,31 +6651,6 @@ void Vrvfpgasim_veerwolf_core__B0_Cbebc20::_settle__TOP__rvfpgasim__veerwolf__2(
                                                           & (vlSymsp->TOP__rvfpgasim__veerwolf.rvtop__DOT__veer__DOT__ifu__DOT__mem_ctl__DOT____Vcellout__ifu_fetch_addr_f_ff__dout 
                                                              >> 1U)))) 
                                               & __Vtemp42[2U]));
-    vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__dec_trigger__DOT__genblk1__BRA__0__KET____DOT__trigger_i0_match__DOT__masken_or_fullmask 
-        = (1U & ((vlSymsp->TOP__rvfpgasim__veerwolf.rvtop__DOT__veer__DOT__dec__DOT____Vcellout__tlu__trigger_pkt_any[1U] 
-                  >> 4U) & (~ (IData)((0xffffffffU 
-                                       == vlSymsp->TOP__rvfpgasim__veerwolf.rvtop__DOT__veer__DOT__dec__DOT____Vcellout__tlu__trigger_pkt_any[0U])))));
-    vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__dec_trigger__DOT__genblk1__BRA__1__KET____DOT__trigger_i0_match__DOT__masken_or_fullmask 
-        = (1U & ((vlSymsp->TOP__rvfpgasim__veerwolf.rvtop__DOT__veer__DOT__dec__DOT____Vcellout__tlu__trigger_pkt_any[2U] 
-                  >> 0xaU) & (~ (IData)((0xffffffffU 
-                                         == ((vlSymsp->TOP__rvfpgasim__veerwolf.rvtop__DOT__veer__DOT__dec__DOT____Vcellout__tlu__trigger_pkt_any[2U] 
-                                              << 0x1aU) 
-                                             | (vlSymsp->TOP__rvfpgasim__veerwolf.rvtop__DOT__veer__DOT__dec__DOT____Vcellout__tlu__trigger_pkt_any[1U] 
-                                                >> 6U)))))));
-    vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__dec_trigger__DOT__genblk1__BRA__2__KET____DOT__trigger_i0_match__DOT__masken_or_fullmask 
-        = (1U & ((vlSymsp->TOP__rvfpgasim__veerwolf.rvtop__DOT__veer__DOT__dec__DOT____Vcellout__tlu__trigger_pkt_any[3U] 
-                  >> 0x10U) & (~ (IData)((0xffffffffU 
-                                          == ((vlSymsp->TOP__rvfpgasim__veerwolf.rvtop__DOT__veer__DOT__dec__DOT____Vcellout__tlu__trigger_pkt_any[3U] 
-                                               << 0x14U) 
-                                              | (vlSymsp->TOP__rvfpgasim__veerwolf.rvtop__DOT__veer__DOT__dec__DOT____Vcellout__tlu__trigger_pkt_any[2U] 
-                                                 >> 0xcU)))))));
-    vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__dec_trigger__DOT__genblk1__BRA__3__KET____DOT__trigger_i0_match__DOT__masken_or_fullmask 
-        = (1U & ((vlSymsp->TOP__rvfpgasim__veerwolf.rvtop__DOT__veer__DOT__dec__DOT____Vcellout__tlu__trigger_pkt_any[4U] 
-                  >> 0x16U) & (~ (IData)((0xffffffffU 
-                                          == ((vlSymsp->TOP__rvfpgasim__veerwolf.rvtop__DOT__veer__DOT__dec__DOT____Vcellout__tlu__trigger_pkt_any[4U] 
-                                               << 0xeU) 
-                                              | (vlSymsp->TOP__rvfpgasim__veerwolf.rvtop__DOT__veer__DOT__dec__DOT____Vcellout__tlu__trigger_pkt_any[3U] 
-                                                 >> 0x12U)))))));
     vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__lsu__DOT__trigger__DOT__genblk1__BRA__0__KET____DOT__trigger_match__DOT__masken_or_fullmask 
         = (1U & ((vlSymsp->TOP__rvfpgasim__veerwolf.rvtop__DOT__veer__DOT__dec__DOT____Vcellout__tlu__trigger_pkt_any[1U] 
                   >> 4U) & (~ (IData)((0xffffffffU 
@@ -6695,6 +6670,31 @@ void Vrvfpgasim_veerwolf_core__B0_Cbebc20::_settle__TOP__rvfpgasim__veerwolf__2(
                                               | (vlSymsp->TOP__rvfpgasim__veerwolf.rvtop__DOT__veer__DOT__dec__DOT____Vcellout__tlu__trigger_pkt_any[2U] 
                                                  >> 0xcU)))))));
     vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__lsu__DOT__trigger__DOT__genblk1__BRA__3__KET____DOT__trigger_match__DOT__masken_or_fullmask 
+        = (1U & ((vlSymsp->TOP__rvfpgasim__veerwolf.rvtop__DOT__veer__DOT__dec__DOT____Vcellout__tlu__trigger_pkt_any[4U] 
+                  >> 0x16U) & (~ (IData)((0xffffffffU 
+                                          == ((vlSymsp->TOP__rvfpgasim__veerwolf.rvtop__DOT__veer__DOT__dec__DOT____Vcellout__tlu__trigger_pkt_any[4U] 
+                                               << 0xeU) 
+                                              | (vlSymsp->TOP__rvfpgasim__veerwolf.rvtop__DOT__veer__DOT__dec__DOT____Vcellout__tlu__trigger_pkt_any[3U] 
+                                                 >> 0x12U)))))));
+    vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__dec_trigger__DOT__genblk1__BRA__0__KET____DOT__trigger_i0_match__DOT__masken_or_fullmask 
+        = (1U & ((vlSymsp->TOP__rvfpgasim__veerwolf.rvtop__DOT__veer__DOT__dec__DOT____Vcellout__tlu__trigger_pkt_any[1U] 
+                  >> 4U) & (~ (IData)((0xffffffffU 
+                                       == vlSymsp->TOP__rvfpgasim__veerwolf.rvtop__DOT__veer__DOT__dec__DOT____Vcellout__tlu__trigger_pkt_any[0U])))));
+    vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__dec_trigger__DOT__genblk1__BRA__1__KET____DOT__trigger_i0_match__DOT__masken_or_fullmask 
+        = (1U & ((vlSymsp->TOP__rvfpgasim__veerwolf.rvtop__DOT__veer__DOT__dec__DOT____Vcellout__tlu__trigger_pkt_any[2U] 
+                  >> 0xaU) & (~ (IData)((0xffffffffU 
+                                         == ((vlSymsp->TOP__rvfpgasim__veerwolf.rvtop__DOT__veer__DOT__dec__DOT____Vcellout__tlu__trigger_pkt_any[2U] 
+                                              << 0x1aU) 
+                                             | (vlSymsp->TOP__rvfpgasim__veerwolf.rvtop__DOT__veer__DOT__dec__DOT____Vcellout__tlu__trigger_pkt_any[1U] 
+                                                >> 6U)))))));
+    vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__dec_trigger__DOT__genblk1__BRA__2__KET____DOT__trigger_i0_match__DOT__masken_or_fullmask 
+        = (1U & ((vlSymsp->TOP__rvfpgasim__veerwolf.rvtop__DOT__veer__DOT__dec__DOT____Vcellout__tlu__trigger_pkt_any[3U] 
+                  >> 0x10U) & (~ (IData)((0xffffffffU 
+                                          == ((vlSymsp->TOP__rvfpgasim__veerwolf.rvtop__DOT__veer__DOT__dec__DOT____Vcellout__tlu__trigger_pkt_any[3U] 
+                                               << 0x14U) 
+                                              | (vlSymsp->TOP__rvfpgasim__veerwolf.rvtop__DOT__veer__DOT__dec__DOT____Vcellout__tlu__trigger_pkt_any[2U] 
+                                                 >> 0xcU)))))));
+    vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__dec_trigger__DOT__genblk1__BRA__3__KET____DOT__trigger_i0_match__DOT__masken_or_fullmask 
         = (1U & ((vlSymsp->TOP__rvfpgasim__veerwolf.rvtop__DOT__veer__DOT__dec__DOT____Vcellout__tlu__trigger_pkt_any[4U] 
                   >> 0x16U) & (~ (IData)((0xffffffffU 
                                           == ((vlSymsp->TOP__rvfpgasim__veerwolf.rvtop__DOT__veer__DOT__dec__DOT____Vcellout__tlu__trigger_pkt_any[4U] 

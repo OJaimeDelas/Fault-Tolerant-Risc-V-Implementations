@@ -437,13 +437,6 @@ import el2_pkg::*;
    logic [31:0]               dec_tlu_mtval_wb1;
    logic                      dec_tlu_i0_exc_valid_wb1;
 
-`ifndef Pipeline
-   logic [4:0]                div_waddr_wb;
-`endif
-
-
-   logic                      dec_div_active;
-
    logic                      dec_debug_valid_d;
 
 
