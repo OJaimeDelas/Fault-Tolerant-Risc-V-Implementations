@@ -12,6 +12,18 @@
 #
 # The first loop starts with Value = 1.
 # Then: 1 - 22 - 14 - 14
+#
+#        -------- Verilator Simulation --------
+#
+# In the Verilator simulation, with the default memory placement,
+# the program start at 27160ps marker, at pc=0x800
+# - Check Test1.dis (built with "make Test1.dis") to vizualize addresses and opcodes
+# 
+# The values of "Value" can be checked in the AND t2, t2, x14 operation
+# The address of this operation is 0x85c, opcode is 00e3f3b3
+#
+# The AND result can be seen in "result[31:0]" signal, already configured
+# in the .tcl file. The first result can be seen at 28600ps marker.
 
 
 
@@ -60,7 +72,7 @@ REPEAT_x12:
    and t2,t2,t3   # t2 = t2 and t3 (t2 = 0000 0111 & 0000 0010 = 0000 0010 = 2) 
 
 
-   addi x13,x0, 0x2 #Number of shift loop iterations
+   addi x13,x0, 0x1 #Number of shift loop iterations
 
    SHIFT_x13:
 

@@ -723,8 +723,6 @@ import el2_pkg::*;
 
    logic        ifu_i0_pc4;
 
-   el2_mul_pkt_t  mul_p;
-
    el2_div_pkt_t  div_p;
    logic           dec_div_cancel;
 

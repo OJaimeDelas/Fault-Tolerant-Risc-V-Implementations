@@ -13,8 +13,8 @@ make
 
 cd commandLine
 make clean
-make TestX.vh
-make TestX.dis
+make Test.vh
+make Test.dis
 
 
     -Generate trace.vcd file (wait 5 seconds, and hit Crtl+C)

@@ -3,7 +3,7 @@
 #
 
 # Get references to the memories
-iccm = link.core.mems["ICCM"]
+#iccm = link.core.mems["ICCM"]
 dccm = link.core.mems["DCCM"]
 ddr = link.core.mems["DDR"]
 
@@ -27,19 +27,20 @@ ddr += Range(ddr.base_addr + offset, ddr.size - offset)
 # Move the boot address to the beginning of DDR
 link.core.boot_addr = ddr.base_addr
 
-# Move code, data and stack to the new region
+# ICCM (Instruction TCM) for read-only data code
 link.layout.code = ddr[1]
 link.layout.rodata = ddr[1]
 
 
 # DCCM (Data TCM) for initialized data, uninitialized data, and stack
-link.layout.initdata = dccm
-link.layout.uninitdata = dccm
-link.layout.stack = dccm
+link.layout.initdata = ddr[1]
+link.layout.uninitdata = ddr[1]
+link.layout.stack = ddr[1]
 
 
 # Print layout details for verification
-print(f"ICCM base address: {iccm.base_addr:#x}, size: {iccm.size:#x}")
-print(f"DCCM base address: {dccm.base_addr:#x}, size: {dccm.size:#x}")
+print(f"Custom Placements Python File")
+#print(f"ICCM base address: {iccm.base_addr:#x}, size: {iccm.size:#x}")
+#print(f"DCCM base address: {dccm.base_addr:#x}, size: {dccm.size:#x}")
 
 

@@ -140,8 +140,6 @@ read_verilog -library xil_defaultlib -sv {
   /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/src/VeeRwolf/VeeR_EL2CoreComplex/el2_dma_ctrl.sv
   /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/src/VeeRwolf/VeeR_EL2CoreComplex/exu/el2_exu.sv
   /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/src/VeeRwolf/VeeR_EL2CoreComplex/exu/el2_exu_alu_ctl.sv
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/src/VeeRwolf/VeeR_EL2CoreComplex/exu/el2_exu_div_ctl.sv
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/src/VeeRwolf/VeeR_EL2CoreComplex/exu/el2_exu_mul_ctl.sv
   /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/src/VeeRwolf/VeeR_EL2CoreComplex/ifu/el2_ifu.sv
   /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/src/VeeRwolf/VeeR_EL2CoreComplex/ifu/el2_ifu_aln_ctl.sv
   /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/src/VeeRwolf/VeeR_EL2CoreComplex/ifu/el2_ifu_bp_ctl.sv
@@ -214,6 +212,8 @@ read_xdc /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementatio
 set_property used_in_implementation false [get_files /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/src/rvfpgabasys3.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
+
+read_checkpoint -auto_incremental -incremental /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/Minimal_RVFPGA/Minimal_RVFPGA.srcs/utils_1/imports/synth_1/rvfpgabasys3.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

@@ -11,7 +11,7 @@ memories:
    ICCM:
        type: itcm
        base: 0xee000000
-       size: 0x80000  # 512KB
+       size: 0x40000  # 256KB
        writable: True
        executable: True
       
@@ -25,7 +25,7 @@ memories:
    DDR:
        type: ram
        base: 0x0
-       size: 0x10000
+       size: 0x40000
        writable: True
        executable: True
 

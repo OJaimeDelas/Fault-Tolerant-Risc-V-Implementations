@@ -1,7 +1,11 @@
 gtkwave::addSignalsFromList rvfpgasim.clk
 
+gtkwave::addSignalsFromList rvfpgasim.veerwolf.rvtop.ifu_axi_rdata
+gtkwave::addSignalsFromList rvfpgasim.veerwolf.rvtop.iccm_rd_data
+
 gtkwave::addSignalsFromList rvfpgasim.veerwolf.rvtop.veer.dec.dec_i0_pc_d_ext
 
+gtkwave::addSignalsFromList rvfpgasim.veerwolf.rvtop.veer.ifu.ifu_fetch_pc_ext
 gtkwave::addSignalsFromList rvfpgasim.veerwolf.rvtop.veer.ifu.ifu_fetch_data_f
 gtkwave::addSignalsFromList rvfpgasim.veerwolf.rvtop.veer.dec.decode.dec_i0_instr_d
 gtkwave::addSignalsFromList rvfpgasim.veerwolf.rvtop.veer.dec.decode.i0_inst_x

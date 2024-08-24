@@ -299,33 +299,6 @@ typedef struct packed {
                        logic legal;
                        } el2_dec_pkt_t;
 
-
-typedef struct packed {
-                       logic valid;
-                       logic rs1_sign;
-                       logic rs2_sign;
-                       logic low;
-                       logic bcompress;
-                       logic bdecompress;
-                       logic clmul;
-                       logic clmulh;
-                       logic clmulr;
-                       logic grev;
-                       logic gorc;
-                       logic shfl;
-                       logic unshfl;
-                       logic crc32_b;
-                       logic crc32_h;
-                       logic crc32_w;
-                       logic crc32c_b;
-                       logic crc32c_h;
-                       logic crc32c_w;
-                       logic bfp;
-                       logic xperm_n;
-                       logic xperm_b;
-                       logic xperm_h;
-                       } el2_mul_pkt_t;
-
 typedef struct packed {
                        logic valid;
                        logic unsign;

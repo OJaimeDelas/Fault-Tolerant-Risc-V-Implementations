@@ -53,8 +53,6 @@
 ../../src/VeeRwolf/VeeR_EL2CoreComplex/dec/el2_dec_trigger.sv
 ../../src/VeeRwolf/VeeR_EL2CoreComplex/dec/el2_dec.sv
 ../../src/VeeRwolf/VeeR_EL2CoreComplex/exu/el2_exu_alu_ctl.sv
-../../src/VeeRwolf/VeeR_EL2CoreComplex/exu/el2_exu_mul_ctl.sv
-../../src/VeeRwolf/VeeR_EL2CoreComplex/exu/el2_exu_div_ctl.sv
 ../../src/VeeRwolf/VeeR_EL2CoreComplex/exu/el2_exu.sv
 ../../src/VeeRwolf/VeeR_EL2CoreComplex/lsu/el2_lsu.sv
 ../../src/VeeRwolf/VeeR_EL2CoreComplex/lsu/el2_lsu_bus_buffer.sv

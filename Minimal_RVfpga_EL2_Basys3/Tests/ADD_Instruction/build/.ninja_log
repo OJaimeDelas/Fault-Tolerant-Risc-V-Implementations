@@ -1,0 +1,17 @@
+# ninja log v5
+0	183	1713618371	CMakeFiles/Test.elf.dir/src/Test.S.obj	c87d062efb2027cf
+183	1085	1713618372	Test.elf	73c007cf9f608553
+0	18	1713618806	CMakeFiles/Test.elf.dir/src/Test.S.obj	c87d062efb2027cf
+18	595	1713618806	Test.elf	73c007cf9f608553
+0	17	1713644205	CMakeFiles/Test.elf.dir/src/Test.S.obj	c87d062efb2027cf
+17	538	1713644206	Test.elf	73c007cf9f608553
+0	17	1713648433	CMakeFiles/Test.elf.dir/src/Test.S.obj	c87d062efb2027cf
+17	516	1713648434	Test.elf	73c007cf9f608553
+0	20	1713648900	CMakeFiles/Test.elf.dir/src/Test.S.obj	c87d062efb2027cf
+20	591	1713648901	Test.elf	73c007cf9f608553
+1	17	1713649248	CMakeFiles/Test.elf.dir/src/Test.S.obj	c87d062efb2027cf
+17	612	1713649248	Test.elf	73c007cf9f608553
+0	189	1713785823	CMakeFiles/Test.elf.dir/src/Test.S.obj	c87d062efb2027cf
+189	1109	1713785823	Test.elf	73c007cf9f608553
+0	183	1723483144	CMakeFiles/Test.elf.dir/src/Test.S.obj	e5af3b5a2d7e52d5
+183	1078	1723483145	Test.elf	7b108be25ab2888d

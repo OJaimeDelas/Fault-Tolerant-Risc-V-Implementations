@@ -168,8 +168,6 @@ import el2_pkg::*;
    output el2_lsu_pkt_t    lsu_p,                    // load/store packet
    output logic             dec_qual_lsu_d,           // LSU instruction at D.  Use to quiet LSU operands
 
-   output el2_mul_pkt_t    mul_p,                    // multiply packet
-
    output el2_div_pkt_t    div_p,                    // divide packet
    output logic [4:0]       div_waddr_wb,             // DIV write address to GPR
    output logic             dec_div_cancel,           // cancel the divide operation
@@ -873,32 +871,6 @@ end : cam_array
 
    assign div_p.unsign   =  i0_dp.unsign;
    assign div_p.rem      =  i0_dp.rem;
-
-
-   assign mul_p.valid    =  mul_decode_d;
-
-   assign mul_p.rs1_sign     =  i0_dp.rs1_sign;
-   assign mul_p.rs2_sign     =  i0_dp.rs2_sign;
-   assign mul_p.low          =  i0_dp.low;
-   assign mul_p.bcompress    =  i0_dp.bcompress;
-   assign mul_p.bdecompress  =  i0_dp.bdecompress;
-   assign mul_p.clmul        =  i0_dp.clmul;
-   assign mul_p.clmulh       =  i0_dp.clmulh;
-   assign mul_p.clmulr       =  i0_dp.clmulr;
-   assign mul_p.grev         =  i0_dp.grev;
-   assign mul_p.gorc         =  i0_dp.gorc;
-   assign mul_p.shfl         =  i0_dp.shfl;
-   assign mul_p.unshfl       =  i0_dp.unshfl;
-   assign mul_p.xperm_n      =  i0_dp.xperm_n;
-   assign mul_p.xperm_b      =  i0_dp.xperm_b;
-   assign mul_p.xperm_h      =  i0_dp.xperm_h;
-   assign mul_p.crc32_b      =  i0_dp.crc32_b;
-   assign mul_p.crc32_h      =  i0_dp.crc32_h;
-   assign mul_p.crc32_w      =  i0_dp.crc32_w;
-   assign mul_p.crc32c_b     =  i0_dp.crc32c_b;
-   assign mul_p.crc32c_h     =  i0_dp.crc32c_h;
-   assign mul_p.crc32c_w     =  i0_dp.crc32c_w;
-   assign mul_p.bfp          =  i0_dp.bfp;
 
 
    always_comb  begin
@@ -1682,26 +1654,12 @@ assign out.ecall = (!i[21]&!i[20]&!i[13]&!i[12]&i[6]&i[4]);
 
 assign out.mret = (i[29]&!i[13]&!i[12]&i[6]&i[4]);
 
-assign out.mul = (i[29]&!i[27]&i[24]&!i[14]&!i[13]&i[12]&!i[5]&i[4]&!i[2]) | (i[30]
-    &i[27]&i[13]&!i[6]&i[5]&i[4]&!i[2]) | (i[29]&i[27]&!i[23]&!i[20]
-    &i[14]&!i[13]&i[12]&!i[5]&i[4]&!i[2]) | (i[29]&i[27]&!i[21]&i[20]
-    &i[14]&!i[13]&i[12]&!i[5]&i[4]&!i[2]) | (i[29]&i[27]&i[24]&i[21]
-    &i[14]&!i[13]&i[12]&!i[5]&i[4]&!i[2]) | (i[29]&i[27]&!i[24]&!i[22]
-    &i[14]&!i[13]&i[12]&!i[5]&i[4]&!i[2]) | (!i[30]&i[29]&i[23]&i[14]
-    &!i[13]&i[12]&!i[5]&i[4]&!i[2]) | (i[30]&i[29]&i[27]&i[22]&i[14]
-    &!i[13]&i[12]&!i[5]&i[4]&!i[2]) | (i[27]&!i[25]&i[13]&!i[12]&!i[6]
-    &i[5]&i[4]&!i[2]) | (!i[30]&!i[29]&i[27]&!i[25]&!i[13]&i[12]&!i[6]
-    &i[4]&!i[2]) | (i[25]&!i[14]&!i[6]&i[5]&i[4]&!i[2]) | (i[29]&i[27]
-    &i[14]&!i[6]&i[5]&!i[2]);
-
 assign out.rs1_sign = (!i[27]&i[25]&!i[14]&i[13]&!i[12]&!i[6]&i[5]&i[4]&!i[2]) | (
     !i[27]&i[25]&!i[14]&!i[13]&i[12]&!i[6]&i[4]&!i[2]);
 
 assign out.rs2_sign = (!i[27]&i[25]&!i[14]&!i[13]&i[12]&!i[6]&i[4]&!i[2]);
 
 assign out.low = (i[25]&!i[14]&!i[13]&!i[12]&i[5]&i[4]&!i[2]);
-
-assign out.div = (!i[27]&i[25]&i[14]&!i[6]&i[5]&!i[2]);
 
 assign out.rem = (!i[27]&i[25]&i[14]&i[13]&!i[6]&i[5]&!i[2]);
 

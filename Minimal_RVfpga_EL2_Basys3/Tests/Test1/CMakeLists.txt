@@ -8,10 +8,10 @@ set(SOURCE
 
 set(TARGET_NAME Test1.elf)
 
-option(CUSTOM_UART "Use a custom uart_send_char()" OFF)
+option(CUSTOM_UART "Use a custom uart_send_char()" ON)
 
 set(SEMIHOSTING OFF)
-set(UART OFF)
+set(UART ON)
 
 add_executable(${TARGET_NAME} ${SOURCE})
 

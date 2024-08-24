@@ -85,7 +85,6 @@ import el2_pkg::*;
    input logic  [31:0]  dec_csr_rddata_d,                              // CSR read data
 
    input logic          dec_qual_lsu_d,                                // LSU instruction at D.  Use to quiet LSU operands
-   input el2_mul_pkt_t mul_p,                                         // DEC {valid, operand signs, low, operand bypass}
    input el2_div_pkt_t div_p,                                         // DEC {valid, unsigned, rem}
    input logic          dec_div_cancel,                                // Cancel the divide operation
 
@@ -214,8 +213,8 @@ import el2_pkg::*;
    rvdffpcie #(31)                      i_flush_r_ff         (.*, .clk(clk),        .en ( r_data_en     ),  .din ( i0_flush_path_x[31:1]         ),  .dout( i0_flush_path_upper_r[31:1]) );
    rvdffpcie #(31)                      i_npc_r_ff           (.*, .clk(clk),        .en ( r_data_en     ),  .din ( pred_correct_npc_x[31:1]      ),  .dout( pred_correct_npc_r[31:1]   ) );
 
-   rvdffie #(pt.BHT_GHR_SIZE+2,1)       i_misc_ff            (.*, .clk(clk),                                .din ({ghr_d_ns[pt.BHT_GHR_SIZE-1:0], mul_p.valid, dec_i0_branch_d}),
-                                                                                                            .dout({ghr_d[pt.BHT_GHR_SIZE-1:0]   , mul_valid_x, i0_branch_x}) );
+   rvdffie #(pt.BHT_GHR_SIZE+2,1)       i_misc_ff            (.*, .clk(clk),                                .din ({ghr_d_ns[pt.BHT_GHR_SIZE-1:0], '0, dec_i0_branch_d}),
+                                                                                                            .dout({ghr_d[pt.BHT_GHR_SIZE-1:0]   , '0, i0_branch_x}) );
 
 
 
@@ -301,28 +300,29 @@ import el2_pkg::*;
 
 
 
-   el2_exu_mul_ctl #(.pt(pt)) i_mul   (.*,
-                          .mul_p             ( mul_p              & {$bits(el2_mul_pkt_t){mul_p.valid}} ),   // I
-                          .rs1_in            ( muldiv_rs1_d[31:0] & {32{mul_p.valid}}                    ),   // I
-                          .rs2_in            ( i0_rs2_d[31:0]     & {32{mul_p.valid}}                    ),   // I
-                          .result_x          ( mul_result_x[31:0]                                        ));  // O
+   // el2_exu_mul_ctl #(.pt(pt)) i_mul   (.*,
+   //                        .mul_p             ( mul_p              & {$bits(el2_mul_pkt_t){mul_p.valid}} ),   // I
+   //                        .rs1_in            ( muldiv_rs1_d[31:0] & {32{mul_p.valid}}                    ),   // I
+   //                        .rs2_in            ( i0_rs2_d[31:0]     & {32{mul_p.valid}}                    ),   // I
+   //                        .result_x          ( mul_result_x[31:0]                                        ));  // O
 
 
 
-   el2_exu_div_ctl #(.pt(pt)) i_div   (.*,
-                          .cancel            ( dec_div_cancel              ),   // I
-                          .dp                ( div_p                       ),   // I
-                          .dividend          ( muldiv_rs1_d[31:0]          ),   // I
-                          .divisor           ( i0_rs2_d[31:0]              ),   // I
-                          .finish_dly        ( exu_div_wren                ),   // O
-                          .out               ( exu_div_result[31:0]        ));  // O
+   // el2_exu_div_ctl #(.pt(pt)) i_div   (.*,
+   //                        .cancel            ( dec_div_cancel              ),   // I
+   //                        .dp                ( div_p                       ),   // I
+   //                        .dividend          ( muldiv_rs1_d[31:0]          ),   // I
+   //                        .divisor           ( i0_rs2_d[31:0]              ),   // I
+   //                        .finish_dly        ( exu_div_wren                ),   // O
+   //                        .out               ( exu_div_result[31:0]        ));  // O
+
+   assign exu_div_result = 31'b0;
+   assign mul_result_x = 31'b0;
+   assign exu_div_wren = '0;
 
 
 
-   assign exu_i0_result_x[31:0]    =  (mul_valid_x)  ?  mul_result_x[31:0]  :  alu_result_x[31:0];
-
-
-
+   assign exu_i0_result_x[31:0]    =  alu_result_x[31:0];
 
    always_comb begin
       i0_predict_newp_d            =  dec_i0_predict_p_d;

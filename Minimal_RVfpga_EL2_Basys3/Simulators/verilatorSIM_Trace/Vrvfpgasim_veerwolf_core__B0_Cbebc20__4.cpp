@@ -1183,7 +1183,7 @@ VL_INLINE_OPT void Vrvfpgasim_veerwolf_core__B0_Cbebc20::_multiclk__TOP__rvfpgas
     VL_DEBUG_IF(VL_DBG_MSGF("+        Vrvfpgasim_veerwolf_core__B0_Cbebc20::_multiclk__TOP__rvfpgasim__veerwolf__25\n"); );
     Vrvfpgasim* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Variables
-    WData/*95:0*/ __Vtemp681[3];
+    WData/*95:0*/ __Vtemp476[3];
     // Body
     vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dbg__DOT__data1_reg_wren1 
         = ((((8U == (IData)(vlSymsp->TOP__rvfpgasim__veerwolf.rvtop__DOT__veer__DOT__dbg__DOT____Vcellout__dbg_state_reg__dout)) 
@@ -1329,7 +1329,7 @@ VL_INLINE_OPT void Vrvfpgasim_veerwolf_core__B0_Cbebc20::_multiclk__TOP__rvfpgas
                                                                      | ((IData)(vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dbg__DOT__sb_axi_size) 
                                                                         << 0xaU))))) 
                                       >> 0x20U)) >> 3U)));
-    __Vtemp681[0U] = (1U | ((0xfffffe00U & ((IData)(
+    __Vtemp476[0U] = (1U | ((0xfffffe00U & ((IData)(
                                                     (((((- (QData)((IData)(
                                                                            (0U 
                                                                             == (IData)(vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dbg__DOT__sb_axi_size))))) 
@@ -1418,7 +1418,7 @@ VL_INLINE_OPT void Vrvfpgasim_veerwolf_core__B0_Cbebc20::_multiclk__TOP__rvfpgas
                                                        (3U 
                                                         == (IData)(vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dbg__DOT__sb_axi_size))))) 
                                          << 1U))));
-    __Vtemp681[1U] = ((0x1ffU & ((IData)((((((- (QData)((IData)(
+    __Vtemp476[1U] = ((0x1ffU & ((IData)((((((- (QData)((IData)(
                                                                 (0U 
                                                                  == (IData)(vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dbg__DOT__sb_axi_size))))) 
                                              & (((QData)((IData)(
@@ -1546,7 +1546,7 @@ VL_INLINE_OPT void Vrvfpgasim_veerwolf_core__B0_Cbebc20::_multiclk__TOP__rvfpgas
                                                                & vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dbg__DOT__sb_axi_wrdata)) 
                                                            >> 0x20U)) 
                                                   << 9U)));
-    __Vtemp681[2U] = (0x1ffU & ((IData)(((((((- (QData)((IData)(
+    __Vtemp476[2U] = (0x1ffU & ((IData)(((((((- (QData)((IData)(
                                                                 (0U 
                                                                  == (IData)(vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dbg__DOT__sb_axi_size))))) 
                                              & (((QData)((IData)(
@@ -1612,16 +1612,16 @@ VL_INLINE_OPT void Vrvfpgasim_veerwolf_core__B0_Cbebc20::_multiclk__TOP__rvfpgas
                                 >> 0x17U));
     vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__axi_intercon__DOT__masters_req[0xfU] 
         = ((0x1ffffffU & vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__axi_intercon__DOT__masters_req[0xfU]) 
-           | (0xfe000000U & (__Vtemp681[0U] << 0x19U)));
+           | (0xfe000000U & (__Vtemp476[0U] << 0x19U)));
     vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__axi_intercon__DOT__masters_req[0x10U] 
-        = ((0x1ffffffU & (__Vtemp681[0U] >> 7U)) | 
-           (0xfe000000U & (__Vtemp681[1U] << 0x19U)));
+        = ((0x1ffffffU & (__Vtemp476[0U] >> 7U)) | 
+           (0xfe000000U & (__Vtemp476[1U] << 0x19U)));
     vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__axi_intercon__DOT__masters_req[0x11U] 
-        = ((0x1ffffffU & (__Vtemp681[1U] >> 7U)) | 
-           (0xfe000000U & (__Vtemp681[2U] << 0x19U)));
+        = ((0x1ffffffU & (__Vtemp476[1U] >> 7U)) | 
+           (0xfe000000U & (__Vtemp476[2U] << 0x19U)));
     vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__axi_intercon__DOT__masters_req[0x12U] 
         = ((0xfffffffcU & vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__axi_intercon__DOT__masters_req[0x12U]) 
-           | (0x1ffffffU & (__Vtemp681[2U] >> 7U)));
+           | (0x1ffffffU & (__Vtemp476[2U] >> 7U)));
 }
 
 VL_INLINE_OPT void Vrvfpgasim_veerwolf_core__B0_Cbebc20::_multiclk__TOP__rvfpgasim__veerwolf__26(Vrvfpgasim__Syms* __restrict vlSymsp) {
@@ -2212,8 +2212,8 @@ VL_INLINE_OPT void Vrvfpgasim_veerwolf_core__B0_Cbebc20::_multiclk__TOP__rvfpgas
                                   | (0x1fU & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                               >> 7U))));
     vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__decode__DOT__i0_dp_raw[0U] 
-        = ((3U & vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__decode__DOT__i0_dp_raw[0U]) 
-           | (0xfffffffcU & ((IData)((((QData)((IData)(
+        = ((0x3ffU & vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__decode__DOT__i0_dp_raw[0U]) 
+           | (0xfffffc00U & ((IData)((((QData)((IData)(
                                                        ((0x80000000U 
                                                          & (((((((((((((0x80000000U 
                                                                         & (((((((((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
@@ -3447,249 +3447,238 @@ VL_INLINE_OPT void Vrvfpgasim_veerwolf_core__B0_Cbebc20::_multiclk__TOP__rvfpgas
                                                                                 >> 6U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 4U))))))))))))))))))))))))))))))))))))) 
-                                       << 0x10U) | (QData)((IData)(
-                                                                   ((0x8000U 
-                                                                     & (((((0xffff8000U 
-                                                                            & (((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                & ((~ 
+                                       << 8U) | (QData)((IData)(
+                                                                ((0x80U 
+                                                                  & (((((0xffff80U 
+                                                                         & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                               >> 8U) 
+                                                                              & ((~ 
                                                                                 (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 0xcU)) 
-                                                                                << 0xfU)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 9U)) 
-                                                                               & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 0xbU))) 
-                                                                           | (0x7fff8000U 
-                                                                              & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 1U) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xcU)) 
-                                                                                << 0xfU)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 9U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 0xbU)))) 
-                                                                          | (0x3fff8000U 
-                                                                             & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 2U) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xcU)) 
-                                                                                << 0xfU)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 9U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 0xbU)))) 
-                                                                         | (0x1fff8000U 
-                                                                            & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 3U) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xcU)) 
-                                                                                << 0xfU)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 9U)) 
-                                                                               & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 0xbU)))) 
-                                                                        | (0xfff8000U 
-                                                                           & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 4U) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xcU)) 
-                                                                                << 0xfU)) 
-                                                                               & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 9U)) 
-                                                                              & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 0xbU))))) 
-                                                                    | ((0x4000U 
-                                                                        & (((((~ 
-                                                                               (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xdU)) 
-                                                                              << 0xeU) 
+                                                                                << 7U)) 
                                                                              & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 2U)) 
+                                                                                << 1U)) 
                                                                             & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                               << 8U)) 
+                                                                               << 3U))) 
+                                                                        | (0x7fff80U 
+                                                                           & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 9U) 
+                                                                                & ((~ 
+                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 0xcU)) 
+                                                                                << 7U)) 
+                                                                               & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                << 1U)) 
+                                                                              & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                << 3U)))) 
+                                                                       | (0x3fff80U 
+                                                                          & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 0xaU) 
+                                                                               & ((~ 
+                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 0xcU)) 
+                                                                                << 7U)) 
+                                                                              & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                << 1U)) 
+                                                                             & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                << 3U)))) 
+                                                                      | (0x1fff80U 
+                                                                         & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                               >> 0xbU) 
+                                                                              & ((~ 
+                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 0xcU)) 
+                                                                                << 7U)) 
+                                                                             & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                << 1U)) 
+                                                                            & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                               << 3U)))) 
+                                                                     | (0xfff80U 
+                                                                        & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                              >> 0xcU) 
+                                                                             & ((~ 
+                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 0xcU)) 
+                                                                                << 7U)) 
+                                                                            & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                               << 1U)) 
                                                                            & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                              << 0xaU))) 
-                                                                       | ((0x2000U 
-                                                                           & ((((((0x7fffe000U 
+                                                                              << 3U))))) 
+                                                                 | ((0x40U 
+                                                                     & (((((~ 
+                                                                            (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                             >> 0xdU)) 
+                                                                           << 6U) 
+                                                                          & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                             >> 6U)) 
+                                                                         & vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0) 
+                                                                        & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                           << 2U))) 
+                                                                    | ((0x20U 
+                                                                        & ((((((0x7fffe0U 
                                                                                 & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 1U) 
+                                                                                >> 9U) 
                                                                                 & ((~ 
                                                                                 (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 0xdU)) 
-                                                                                << 0xdU)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 9U))) 
-                                                                                | (0x3fffe000U 
-                                                                                & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 2U) 
+                                                                                << 5U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 1U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 9U)))) 
-                                                                                | (0x1fffe000U 
+                                                                                << 1U))) 
+                                                                               | (0x3fffe0U 
                                                                                 & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 3U) 
+                                                                                >> 0xaU) 
+                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 9U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 1U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 9U)))) 
-                                                                                | (0xfffe000U 
+                                                                                << 1U)))) 
+                                                                              | (0x1fffe0U 
                                                                                 & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 4U) 
+                                                                                >> 0xbU) 
+                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 9U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 1U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 9U)))) 
-                                                                               | (0x7ffe000U 
+                                                                                << 1U)))) 
+                                                                             | (0xfffe0U 
                                                                                 & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 5U) 
+                                                                                >> 0xcU) 
+                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 9U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 1U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 7U)) 
+                                                                                << 1U)))) 
+                                                                            | (0x7ffe0U 
+                                                                               & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 0xdU) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 9U)))) 
-                                                                              | (0x3ffe000U 
-                                                                                & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 6U) 
+                                                                                >> 9U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 1U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 7U)) 
+                                                                                << 1U)))) 
+                                                                           | (0x3ffe0U 
+                                                                              & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 0xeU) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 9U))))) 
-                                                                          | ((0x1000U 
-                                                                              & (((((((((((0xfffff000U 
+                                                                                >> 9U)) 
+                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 1U)) 
+                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                << 1U))))) 
+                                                                       | ((0x10U 
+                                                                           & (((((((((((0xfffffff0U 
                                                                                 & (((~ 
                                                                                 (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 5U)) 
-                                                                                << 0xcU) 
+                                                                                << 4U) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 9U))) 
-                                                                                | (0xfffff000U 
+                                                                                << 1U))) 
+                                                                                | (0x1ffffff0U 
                                                                                 & (((((~ 
                                                                                 (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 0xdU)) 
-                                                                                << 0xcU) 
+                                                                                << 4U) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 5U)) 
+                                                                                >> 3U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 6U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 8U)))) 
-                                                                                | (0xfffff000U 
+                                                                                >> 2U)) 
+                                                                                & vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0))) 
+                                                                                | (0xffffff0U 
                                                                                 & (((((~ 
                                                                                 (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 0xdU)) 
-                                                                                << 0xcU) 
+                                                                                << 4U) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 4U)) 
+                                                                                >> 4U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 6U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 8U)))) 
-                                                                                | (0xfffff000U 
+                                                                                >> 2U)) 
+                                                                                & vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0))) 
+                                                                                | (0x7fffff0U 
                                                                                 & (((((~ 
                                                                                 (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 0xdU)) 
-                                                                                << 0xcU) 
+                                                                                << 4U) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 3U)) 
+                                                                                >> 5U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 6U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 8U)))) 
-                                                                                | (0xfffff000U 
+                                                                                >> 2U)) 
+                                                                                & vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0))) 
+                                                                                | (0x3fffff0U 
                                                                                 & (((((~ 
                                                                                 (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 0xdU)) 
-                                                                                << 0xcU) 
+                                                                                << 4U) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 2U)) 
+                                                                                >> 6U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 6U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 8U)))) 
-                                                                                | (0xfffff000U 
+                                                                                >> 2U)) 
+                                                                                & vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0))) 
+                                                                                | (0x1fffff0U 
                                                                                 & (((((~ 
                                                                                 (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 0xdU)) 
-                                                                                << 0xcU) 
+                                                                                << 4U) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 1U)) 
+                                                                                >> 7U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 6U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 8U)))) 
-                                                                                | (0x1ffff000U 
+                                                                                >> 2U)) 
+                                                                                & vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0))) 
+                                                                                | (0x1ffff0U 
                                                                                 & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 3U) 
+                                                                                >> 0xbU) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 1U)) 
+                                                                                >> 9U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 6U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 8U)))) 
-                                                                                | (0xffff000U 
+                                                                                >> 2U)) 
+                                                                                & vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0))) 
+                                                                                | (0xffff0U 
                                                                                 & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 4U) 
+                                                                                >> 0xcU) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 1U)) 
+                                                                                >> 9U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 6U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 8U)))) 
-                                                                                | (0x7fff000U 
+                                                                                >> 2U)) 
+                                                                                & vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0))) 
+                                                                                | (0x7fff0U 
                                                                                 & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 5U) 
+                                                                                >> 0xdU) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 1U)) 
+                                                                                >> 9U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 6U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 8U)))) 
-                                                                                | (0x3fff000U 
+                                                                                >> 2U)) 
+                                                                                & vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0))) 
+                                                                               | (0x3fff0U 
                                                                                 & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 6U) 
+                                                                                >> 0xeU) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 1U)) 
+                                                                                >> 9U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 6U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 8U)))) 
-                                                                                | (0x1fff000U 
+                                                                                >> 2U)) 
+                                                                                & vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0))) 
+                                                                              | (0x1fff0U 
                                                                                 & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 7U) 
+                                                                                >> 0xfU) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 1U)) 
+                                                                                >> 9U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 6U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 8U))))) 
-                                                                             | ((0x800U 
-                                                                                & ((((((((((((0x7ffff800U 
+                                                                                >> 2U)) 
+                                                                                & vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0)))) 
+                                                                          | ((8U 
+                                                                              & ((((((((((((0x7ffff8U 
                                                                                 & (((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 1U) 
+                                                                                >> 9U) 
                                                                                 & ((~ 
                                                                                 (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 5U)) 
-                                                                                << 0xbU)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 8U))) 
-                                                                                | (0xfffff800U 
+                                                                                << 3U)) 
+                                                                                & vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0)) 
+                                                                                | (0x1ffffff8U 
                                                                                 & ((((((~ 
                                                                                 (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 0x16U)) 
@@ -3699,130 +3688,131 @@ VL_INLINE_OPT void Vrvfpgasim_veerwolf_core__B0_Cbebc20::_multiclk__TOP__rvfpgas
                                                                                 & (~ 
                                                                                 (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 0xcU))) 
-                                                                                << 0xbU) 
+                                                                                << 3U) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 5U)) 
+                                                                                >> 3U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 7U)))) 
-                                                                                | (0xfffff800U 
+                                                                                >> 1U)))) 
+                                                                                | (0xffffff8U 
                                                                                 & (((((~ 
                                                                                 (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 0xdU)) 
-                                                                                << 0xbU) 
+                                                                                << 3U) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 4U)) 
+                                                                                >> 4U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 5U)) 
+                                                                                >> 3U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 7U)))) 
-                                                                                | (0xfffff800U 
+                                                                                >> 1U)))) 
+                                                                                | (0x7fffff8U 
                                                                                 & (((((~ 
                                                                                 (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 0xdU)) 
-                                                                                << 0xbU) 
+                                                                                << 3U) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 3U)) 
+                                                                                >> 5U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 5U)) 
+                                                                                >> 3U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 7U)))) 
-                                                                                | (0xfffff800U 
+                                                                                >> 1U)))) 
+                                                                                | (0x3fffff8U 
                                                                                 & (((((~ 
                                                                                 (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 0xdU)) 
-                                                                                << 0xbU) 
+                                                                                << 3U) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 2U)) 
+                                                                                >> 6U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 5U)) 
+                                                                                >> 3U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 7U)))) 
-                                                                                | (0xfffff800U 
+                                                                                >> 1U)))) 
+                                                                                | (0x1fffff8U 
                                                                                 & (((((~ 
                                                                                 (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 0xdU)) 
-                                                                                << 0xbU) 
+                                                                                << 3U) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 1U)) 
+                                                                                >> 7U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 5U)) 
+                                                                                >> 3U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 7U)))) 
-                                                                                | (0xfffff800U 
+                                                                                >> 1U)))) 
+                                                                                | (0xfffff8U 
                                                                                 & (((((~ 
                                                                                 (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 0xdU)) 
-                                                                                << 0xbU) 
-                                                                                & vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0) 
+                                                                                << 3U) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 5U)) 
+                                                                                >> 8U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 7U)))) 
-                                                                                | (0xffff800U 
+                                                                                >> 3U)) 
+                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 1U)))) 
+                                                                                | (0xffff8U 
                                                                                 & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 4U) 
+                                                                                >> 0xcU) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 2U)) 
+                                                                                >> 0xaU)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 5U)) 
+                                                                                >> 3U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 7U)))) 
-                                                                                | (0x7fff800U 
+                                                                                >> 1U)))) 
+                                                                                | (0x7fff8U 
                                                                                 & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 5U) 
+                                                                                >> 0xdU) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 2U)) 
+                                                                                >> 0xaU)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 5U)) 
+                                                                                >> 3U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 7U)))) 
-                                                                                | (0x3fff800U 
+                                                                                >> 1U)))) 
+                                                                                | (0x3fff8U 
                                                                                 & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 6U) 
+                                                                                >> 0xeU) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 2U)) 
+                                                                                >> 0xaU)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 5U)) 
+                                                                                >> 3U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 7U)))) 
-                                                                                | (0x1fff800U 
+                                                                                >> 1U)))) 
+                                                                                | (0x1fff8U 
                                                                                 & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 7U) 
+                                                                                >> 0xfU) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 2U)) 
+                                                                                >> 0xaU)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 5U)) 
+                                                                                >> 3U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 7U)))) 
-                                                                                | (0xfff800U 
+                                                                                >> 1U)))) 
+                                                                                | (0xfff8U 
                                                                                 & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 8U) 
+                                                                                >> 0x10U) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 2U)) 
+                                                                                >> 0xaU)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 5U)) 
+                                                                                >> 3U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 7U))))) 
-                                                                                | ((0x400U 
+                                                                                >> 1U))))) 
+                                                                             | ((4U 
                                                                                 & (((((((~ 
                                                                                 (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 0x16U)) 
-                                                                                << 0xaU) 
+                                                                                << 2U) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xaU)) 
+                                                                                >> 0x12U)) 
                                                                                 & ((~ 
                                                                                 (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 0xdU)) 
-                                                                                << 0xaU)) 
+                                                                                << 2U)) 
                                                                                 & ((~ 
                                                                                 (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 0xcU)) 
-                                                                                << 0xaU)) 
+                                                                                << 2U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 4U)) 
+                                                                                >> 4U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 6U))) 
-                                                                                | ((0x200U 
+                                                                                >> 2U))) 
+                                                                                | ((2U 
                                                                                 & (((((((~ 
                                                                                 (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 0x15U)) 
@@ -3835,520 +3825,135 @@ VL_INLINE_OPT void Vrvfpgasim_veerwolf_core__B0_Cbebc20::_multiclk__TOP__rvfpgas
                                                                                 & (~ 
                                                                                 (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 0xcU))) 
-                                                                                << 9U) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 3U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 5U))) 
-                                                                                | ((0x100U 
-                                                                                & (((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x15U) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xdU)) 
-                                                                                << 8U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xcU)) 
-                                                                                << 8U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 2U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 4U))) 
-                                                                                | ((0x80U 
-                                                                                & ((((((((((((0x380U 
-                                                                                & (((((((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x16U) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x1bU)) 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x11U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xeU)) 
-                                                                                << 7U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xdU)) 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 5U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 5U)) 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 3U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 2U)) 
-                                                                                << 7U))) 
-                                                                                | (0x180U 
-                                                                                & (((((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x17U) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x14U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 6U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 6U)) 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 2U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 3U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 2U)) 
-                                                                                << 7U)))) 
-                                                                                | (0x380U 
-                                                                                & ((((((((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x16U) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x14U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x17U)) 
-                                                                                << 7U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x14U)) 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 7U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xdU)) 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 5U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 5U)) 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 3U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 2U)) 
-                                                                                << 7U)))) 
-                                                                                | (0x380U 
-                                                                                & ((((((((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x16U) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x14U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x15U)) 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xdU)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 7U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xdU)) 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 5U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 5U)) 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 3U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 2U)) 
-                                                                                << 7U)))) 
-                                                                                | (0x380U 
-                                                                                & ((((((((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x16U) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x14U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x11U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xeU)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 7U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xdU)) 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 5U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 5U)) 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 3U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 2U)) 
-                                                                                << 7U)))) 
-                                                                                | (0x380U 
-                                                                                & ((((((((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x16U) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x14U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x18U)) 
-                                                                                << 7U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x16U)) 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 7U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xdU)) 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 5U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 5U)) 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 3U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 2U)) 
-                                                                                << 7U)))) 
-                                                                                | (0x380U 
-                                                                                & ((((((((((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x1eU)) 
-                                                                                << 7U) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x16U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x10U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 7U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xdU)) 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 5U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 5U)) 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 3U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 2U)) 
-                                                                                << 7U)))) 
-                                                                                | (0x180U 
-                                                                                & ((((((((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x17U) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x16U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x14U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xfU)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 7U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xdU)) 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 5U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 5U)) 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 3U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 2U)) 
-                                                                                << 7U)))) 
-                                                                                | (0xf80U 
-                                                                                & ((((((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x14U) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x19U)) 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 6U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xcU)) 
-                                                                                << 7U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 6U)) 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 2U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 3U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 2U)) 
-                                                                                << 7U)))) 
-                                                                                | (0xf80U 
-                                                                                & ((((((((((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x1eU)) 
-                                                                                & (~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x1dU))) 
-                                                                                << 7U) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x14U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x19U)) 
-                                                                                << 7U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xdU)) 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 5U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 6U)) 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 3U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 2U)) 
-                                                                                << 7U)))) 
-                                                                                | (0x3f80U 
-                                                                                & ((((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x12U) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xeU)) 
-                                                                                << 7U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 6U)) 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 2U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 3U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 2U)) 
-                                                                                << 7U)))) 
-                                                                                | (0x380U 
-                                                                                & ((((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x16U) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x14U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 7U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 6U)) 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 2U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 2U)) 
-                                                                                << 7U))))) 
-                                                                                | ((0x40U 
-                                                                                & (((((((((((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x1bU)) 
-                                                                                << 6U) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x13U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xeU)) 
-                                                                                << 6U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 7U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xcU)) 
-                                                                                << 6U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 6U)) 
-                                                                                << 6U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 1U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 2U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 2U)) 
-                                                                                << 6U)) 
-                                                                                | (((((((((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x1bU)) 
-                                                                                << 6U) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x13U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xeU)) 
-                                                                                << 6U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xdU)) 
-                                                                                << 6U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 6U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 6U)) 
-                                                                                << 6U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 2U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 2U)) 
-                                                                                << 6U)))) 
-                                                                                | ((0x20U 
-                                                                                & (((((((((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x1bU)) 
-                                                                                << 5U) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x14U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xeU)) 
-                                                                                << 5U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xdU)) 
-                                                                                << 5U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 7U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 6U)) 
-                                                                                << 5U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 1U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 2U)) 
-                                                                                << 5U))) 
-                                                                                | ((0x10U 
-                                                                                & (((((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x15U) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xeU)) 
-                                                                                << 4U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xdU)) 
-                                                                                << 4U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xcU)) 
-                                                                                << 4U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 1U)) 
-                                                                                & vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 2U)) 
-                                                                                << 4U))) 
-                                                                                | ((8U 
-                                                                                & (((((((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x1bU)) 
-                                                                                << 3U) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x16U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xbU)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 6U)) 
-                                                                                << 3U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 2U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 2U)) 
-                                                                                << 3U))) 
-                                                                                | ((4U 
-                                                                                & ((((((((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x1bU)) 
-                                                                                << 2U) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x17U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xcU)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xbU)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 6U)) 
-                                                                                << 2U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 3U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 2U)) 
-                                                                                << 2U))) 
-                                                                                | ((2U 
-                                                                                & (((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 5U)) 
                                                                                 << 1U) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 2U))) 
+                                                                                >> 5U)) 
+                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 3U))) 
                                                                                 | (1U 
-                                                                                & (((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xcU) 
+                                                                                & (((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 0x1dU) 
                                                                                 & (~ 
                                                                                 (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 5U))) 
+                                                                                >> 0xdU))) 
+                                                                                & (~ 
+                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 0xcU))) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 3U)))))))))))))))))))))) 
-                             << 2U)));
+                                                                                >> 6U)) 
+                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 4U)))))))))))))) 
+                             << 0xaU)));
     vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__decode__DOT__i0_dp_raw[1U] 
         = ((0xfffc0000U & vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__decode__DOT__i0_dp_raw[1U]) 
-           | ((3U & ((IData)((((QData)((IData)(((0x80000000U 
-                                                 & (((((((((((((0x80000000U 
-                                                                & (((((((((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                             << 1U) 
-                                                                            & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                               << 7U)) 
+           | ((0x3ffU & ((IData)((((QData)((IData)(
+                                                   ((0x80000000U 
+                                                     & (((((((((((((0x80000000U 
+                                                                    & (((((((((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                << 1U) 
+                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                << 7U)) 
+                                                                               & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                << 8U)) 
+                                                                              & ((~ 
+                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 0x16U)) 
+                                                                                << 0x1fU)) 
+                                                                             & ((~ 
+                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 0x15U)) 
+                                                                                << 0x1fU)) 
+                                                                            & ((~ 
+                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 0x14U)) 
+                                                                               << 0x1fU)) 
                                                                            & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                              << 8U)) 
+                                                                              << 0x11U)) 
                                                                           & ((~ 
                                                                               (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                               >> 0x16U)) 
+                                                                               >> 5U)) 
                                                                              << 0x1fU)) 
-                                                                         & ((~ 
+                                                                         & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                            << 0x1bU)) 
+                                                                        | ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                              << 1U) 
+                                                                             & ((~ 
+                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 0x1bU)) 
+                                                                                << 0x1fU)) 
+                                                                            & ((~ 
+                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 0x18U)) 
+                                                                               << 0x1fU)) 
+                                                                           & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                              << 0x1bU))) 
+                                                                       | (((((~ 
+                                                                              (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                               >> 0x1eU)) 
+                                                                             & (~ 
+                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 0x19U))) 
+                                                                            << 0x1fU) 
+                                                                           & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                              << 0x12U)) 
+                                                                          & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                             << 0x13U)))) 
+                                                                   | (0x80000000U 
+                                                                      & (((((~ 
                                                                              (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                              >> 0x15U)) 
-                                                                            << 0x1fU)) 
+                                                                              >> 0x1dU)) 
+                                                                            & (~ 
+                                                                               (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 0x1bU))) 
+                                                                           & (~ 
+                                                                              (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                               >> 5U))) 
+                                                                          << 0x1fU) 
+                                                                         & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                            << 0x1bU)))) 
+                                                                  | (0x80000000U 
+                                                                     & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                           << 4U) 
+                                                                          & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                             << 6U)) 
+                                                                         & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                            << 0x11U)) 
+                                                                        & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                           << 0x1bU)))) 
+                                                                 | (0x80000000U 
+                                                                    & ((((((~ 
+                                                                            (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                             >> 0x1dU)) 
+                                                                           & (~ 
+                                                                              (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                               >> 0x19U))) 
+                                                                          & (~ 
+                                                                             (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                              >> 0xdU))) 
+                                                                         & (~ 
+                                                                            (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                             >> 0xcU))) 
+                                                                        << 0x1fU) 
+                                                                       & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                          << 0x1bU)))) 
+                                                                | (0x80000000U 
+                                                                   & (((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                          << 2U) 
+                                                                         & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                            << 4U)) 
                                                                         & ((~ 
                                                                             (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                             >> 0x14U)) 
+                                                                             >> 0xeU)) 
                                                                            << 0x1fU)) 
+                                                                       & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                          << 0x13U)) 
+                                                                      & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                         << 0x1bU)))) 
+                                                               | (0x80000000U 
+                                                                  & (((((~ 
+                                                                         (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                          >> 0x1bU)) 
+                                                                        << 0x1fU) 
                                                                        & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                           << 0x11U)) 
                                                                       & ((~ 
@@ -4356,195 +3961,144 @@ VL_INLINE_OPT void Vrvfpgasim_veerwolf_core__B0_Cbebc20::_multiclk__TOP__rvfpgas
                                                                            >> 5U)) 
                                                                          << 0x1fU)) 
                                                                      & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                        << 0x1bU)) 
-                                                                    | ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                          << 1U) 
-                                                                         & ((~ 
-                                                                             (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                              >> 0x1bU)) 
-                                                                            << 0x1fU)) 
-                                                                        & ((~ 
-                                                                            (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                             >> 0x18U)) 
-                                                                           << 0x1fU)) 
-                                                                       & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                          << 0x1bU))) 
-                                                                   | (((((~ 
-                                                                          (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                           >> 0x1eU)) 
-                                                                         & (~ 
-                                                                            (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                             >> 0x19U))) 
-                                                                        << 0x1fU) 
-                                                                       & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                          << 0x12U)) 
-                                                                      & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                         << 0x13U)))) 
-                                                               | (0x80000000U 
-                                                                  & (((((~ 
-                                                                         (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                          >> 0x1dU)) 
-                                                                        & (~ 
-                                                                           (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                            >> 0x1bU))) 
-                                                                       & (~ 
-                                                                          (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                           >> 5U))) 
-                                                                      << 0x1fU) 
-                                                                     & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                         << 0x1bU)))) 
                                                               | (0x80000000U 
                                                                  & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                       << 4U) 
-                                                                      & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                         << 6U)) 
-                                                                     & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                        << 0x11U)) 
+                                                                       << 1U) 
+                                                                      & ((~ 
+                                                                          (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                           >> 0x1dU)) 
+                                                                         << 0x1fU)) 
+                                                                     & ((~ 
+                                                                         (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                          >> 0xdU)) 
+                                                                        << 0x1fU)) 
                                                                     & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                        << 0x1bU)))) 
                                                              | (0x80000000U 
-                                                                & ((((((~ 
-                                                                        (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                         >> 0x1dU)) 
-                                                                       & (~ 
-                                                                          (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                           >> 0x19U))) 
+                                                                & (((((~ 
+                                                                       (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                        >> 0x1bU)) 
                                                                       & (~ 
                                                                          (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                          >> 0xdU))) 
-                                                                     & (~ 
-                                                                        (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                         >> 0xcU))) 
-                                                                    << 0x1fU) 
+                                                                          >> 0x19U))) 
+                                                                     << 0x1fU) 
+                                                                    & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                       << 0x1aU)) 
                                                                    & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                       << 0x1bU)))) 
                                                             | (0x80000000U 
-                                                               & (((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                      << 2U) 
-                                                                     & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                        << 4U)) 
-                                                                    & ((~ 
-                                                                        (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                         >> 0xeU)) 
-                                                                       << 0x1fU)) 
-                                                                   & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                      << 0x13U)) 
+                                                               & (((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                    << 0x12U) 
+                                                                   & ((~ 
+                                                                       (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                        >> 5U)) 
+                                                                      << 0x1fU)) 
                                                                   & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                      << 0x1bU)))) 
                                                            | (0x80000000U 
-                                                              & (((((~ 
-                                                                     (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                      >> 0x1bU)) 
-                                                                    << 0x1fU) 
-                                                                   & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                      << 0x11U)) 
-                                                                  & ((~ 
-                                                                      (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                       >> 5U)) 
-                                                                     << 0x1fU)) 
-                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                    << 0x1bU)))) 
+                                                              & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                 << 0x1dU))) 
                                                           | (0x80000000U 
-                                                             & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                   << 1U) 
-                                                                  & ((~ 
-                                                                      (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                       >> 0x1dU)) 
-                                                                     << 0x1fU)) 
-                                                                 & ((~ 
-                                                                     (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                      >> 0xdU)) 
-                                                                    << 0x1fU)) 
-                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                   << 0x1bU)))) 
+                                                             & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                << 0x19U))) 
                                                          | (0x80000000U 
-                                                            & (((((~ 
-                                                                   (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                    >> 0x1bU)) 
-                                                                  & (~ 
-                                                                     (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                      >> 0x19U))) 
-                                                                 << 0x1fU) 
-                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                   << 0x1aU)) 
+                                                            & ((((((((((~ 
+                                                                        (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                         >> 0x1eU)) 
+                                                                       << 0x1fU) 
+                                                                      & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                         << 2U)) 
+                                                                     & ((~ 
+                                                                         (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                          >> 0x18U)) 
+                                                                        << 0x1fU)) 
+                                                                    & ((~ 
+                                                                        (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                         >> 0x17U)) 
+                                                                       << 0x1fU)) 
+                                                                   & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                      << 9U)) 
+                                                                  & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                     << 0xaU)) 
+                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                    << 0xbU)) 
+                                                                & ((~ 
+                                                                    (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                     >> 5U)) 
+                                                                   << 0x1fU)) 
                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                   << 0x1bU)))) 
                                                         | (0x80000000U 
-                                                           & (((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                << 0x12U) 
-                                                               & ((~ 
+                                                           & ((((~ 
+                                                                 (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                  >> 0xcU)) 
+                                                                & (~ 
                                                                    (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                    >> 5U)) 
-                                                                  << 0x1fU)) 
+                                                                    >> 5U))) 
+                                                               << 0x1fU) 
                                                               & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                 << 0x1bU)))) 
-                                                       | (0x80000000U 
-                                                          & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                             << 0x1dU))) 
-                                                      | (0x80000000U 
-                                                         & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                            << 0x19U))) 
-                                                     | (0x80000000U 
-                                                        & ((((((((((~ 
-                                                                    (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                     >> 0x1eU)) 
-                                                                   << 0x1fU) 
-                                                                  & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                     << 2U)) 
-                                                                 & ((~ 
-                                                                     (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                      >> 0x18U)) 
-                                                                    << 0x1fU)) 
-                                                                & ((~ 
-                                                                    (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                     >> 0x17U)) 
-                                                                   << 0x1fU)) 
-                                                               & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                  << 9U)) 
-                                                              & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                 << 0xaU)) 
-                                                             & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                << 0xbU)) 
-                                                            & ((~ 
-                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                 >> 5U)) 
-                                                               << 0x1fU)) 
-                                                           & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                              << 0x1bU)))) 
-                                                    | (0x80000000U 
-                                                       & ((((~ 
-                                                             (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                              >> 0xcU)) 
-                                                            & (~ 
-                                                               (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                >> 5U))) 
-                                                           << 0x1fU) 
-                                                          & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                             << 0x1bU))))) 
-                                                | ((0x40000000U 
-                                                    & ((((0xc0000000U 
-                                                          & (((((((((((((~ 
-                                                                         (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                          >> 0xdU)) 
-                                                                        << 0x1eU) 
-                                                                       & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                          << 0x13U)) 
-                                                                      & ((~ 
-                                                                          (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                           >> 2U)) 
-                                                                         << 0x1eU)) 
+                                                                 << 0x1bU))))) 
+                                                    | ((0x40000000U 
+                                                        & ((((0xc0000000U 
+                                                              & (((((((((((((~ 
+                                                                             (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                              >> 0xdU)) 
+                                                                            << 0x1eU) 
+                                                                           & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                              << 0x13U)) 
+                                                                          & ((~ 
+                                                                              (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                               >> 2U)) 
+                                                                             << 0x1eU)) 
+                                                                         | ((((~ 
+                                                                               (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 0xdU)) 
+                                                                              << 0x1eU) 
+                                                                             & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                << 0x14U)) 
+                                                                            & ((~ 
+                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 2U)) 
+                                                                               << 0x1eU))) 
+                                                                        | (((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                             << 0xbU) 
+                                                                            & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                               << 0x11U)) 
+                                                                           & ((~ 
+                                                                               (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 2U)) 
+                                                                              << 0x1eU))) 
+                                                                       | ((((~ 
+                                                                             (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                              >> 0xdU)) 
+                                                                            << 0x1eU) 
+                                                                           & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                              << 0x15U)) 
+                                                                          & ((~ 
+                                                                              (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                               >> 2U)) 
+                                                                             << 0x1eU))) 
+                                                                      | (((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                           << 0xcU) 
+                                                                          & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                             << 0x11U)) 
+                                                                         & ((~ 
+                                                                             (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                              >> 2U)) 
+                                                                            << 0x1eU))) 
                                                                      | ((((~ 
                                                                            (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                             >> 0xdU)) 
                                                                           << 0x1eU) 
                                                                          & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                            << 0x14U)) 
+                                                                            << 0x16U)) 
                                                                         & ((~ 
                                                                             (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                              >> 2U)) 
                                                                            << 0x1eU))) 
                                                                     | (((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                         << 0xbU) 
+                                                                         << 0xdU) 
                                                                         & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                            << 0x11U)) 
                                                                        & ((~ 
@@ -4556,284 +4110,248 @@ VL_INLINE_OPT void Vrvfpgasim_veerwolf_core__B0_Cbebc20::_multiclk__TOP__rvfpgas
                                                                           >> 0xdU)) 
                                                                         << 0x1eU) 
                                                                        & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                          << 0x15U)) 
+                                                                          << 0x17U)) 
                                                                       & ((~ 
                                                                           (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                            >> 2U)) 
                                                                          << 0x1eU))) 
                                                                   | (((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                       << 0xcU) 
+                                                                       << 0xeU) 
                                                                       & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                          << 0x11U)) 
                                                                      & ((~ 
                                                                          (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                           >> 2U)) 
                                                                         << 0x1eU))) 
-                                                                 | ((((~ 
-                                                                       (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                        >> 0xdU)) 
-                                                                      << 0x1eU) 
+                                                                 | (((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                      << 0xfU) 
                                                                      & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                        << 0x16U)) 
+                                                                        << 0x11U)) 
                                                                     & ((~ 
                                                                         (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                          >> 2U)) 
-                                                                       << 0x1eU))) 
-                                                                | (((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                     << 0xdU) 
-                                                                    & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                       << 0x11U)) 
-                                                                   & ((~ 
-                                                                       (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                        >> 2U)) 
-                                                                      << 0x1eU))) 
-                                                               | ((((~ 
-                                                                     (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                      >> 0xdU)) 
+                                                                       << 0x1eU)))) 
+                                                             | (((~ 
+                                                                  (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                   >> 4U)) 
+                                                                 & (~ 
+                                                                    (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                     >> 2U))) 
+                                                                << 0x1eU)) 
+                                                            | (0xc0000000U 
+                                                               & (((((~ 
+                                                                      (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                       >> 0xeU)) 
+                                                                     & (~ 
+                                                                        (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                         >> 0xdU))) 
                                                                     << 0x1eU) 
                                                                    & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                      << 0x17U)) 
+                                                                      << 0x18U)) 
                                                                   & ((~ 
                                                                       (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                       >> 2U)) 
-                                                                     << 0x1eU))) 
-                                                              | (((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                   << 0xeU) 
+                                                                       >> 3U)) 
+                                                                     << 0x1eU)))) 
+                                                           | (((~ 
+                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                 >> 6U)) 
+                                                               & (~ 
+                                                                  (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                   >> 2U))) 
+                                                              << 0x1eU))) 
+                                                       | ((0x20000000U 
+                                                           & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                 << 0x18U) 
+                                                                & ((~ 
+                                                                    (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                     >> 4U)) 
+                                                                   << 0x1dU)) 
+                                                               & ((~ 
+                                                                   (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                    >> 2U)) 
+                                                                  << 0x1dU)) 
+                                                              | ((((~ 
+                                                                    (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                     >> 6U)) 
+                                                                   << 0x1dU) 
                                                                   & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                     << 0x11U)) 
+                                                                     << 0x18U)) 
                                                                  & ((~ 
                                                                      (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                       >> 2U)) 
-                                                                    << 0x1eU))) 
-                                                             | (((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                  << 0xfU) 
-                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                    << 0x11U)) 
-                                                                & ((~ 
-                                                                    (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                     >> 2U)) 
-                                                                   << 0x1eU)))) 
-                                                         | (((~ 
-                                                              (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                               >> 4U)) 
-                                                             & (~ 
-                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                 >> 2U))) 
-                                                            << 0x1eU)) 
-                                                        | (0xc0000000U 
-                                                           & (((((~ 
-                                                                  (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                   >> 0xeU)) 
-                                                                 & (~ 
-                                                                    (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                     >> 0xdU))) 
-                                                                << 0x1eU) 
-                                                               & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                  << 0x18U)) 
-                                                              & ((~ 
-                                                                  (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                   >> 3U)) 
-                                                                 << 0x1eU)))) 
-                                                       | (((~ 
-                                                            (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                             >> 6U)) 
-                                                           & (~ 
-                                                              (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                               >> 2U))) 
-                                                          << 0x1eU))) 
-                                                   | ((0x20000000U 
-                                                       & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                             << 0x18U) 
-                                                            & ((~ 
-                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                 >> 4U)) 
-                                                               << 0x1dU)) 
-                                                           & ((~ 
-                                                               (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                >> 2U)) 
-                                                              << 0x1dU)) 
-                                                          | ((((~ 
-                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                 >> 6U)) 
-                                                               << 0x1dU) 
-                                                              & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                 << 0x18U)) 
-                                                             & ((~ 
-                                                                 (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                  >> 2U)) 
-                                                                << 0x1dU)))) 
-                                                      | ((0x10000000U 
-                                                          & ((((0xf0000000U 
-                                                                & ((((~ 
-                                                                      (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                       >> 4U)) 
-                                                                     & (~ 
-                                                                        (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                         >> 3U))) 
-                                                                    << 0x1cU) 
-                                                                   & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                      << 0x1aU))) 
-                                                               | (0xf0000000U 
-                                                                  & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                        << 0xfU) 
-                                                                       & ((~ 
-                                                                           (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                            >> 5U)) 
-                                                                          << 0x1cU)) 
-                                                                      & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                         << 0x18U)) 
-                                                                     & ((~ 
-                                                                         (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                          >> 2U)) 
-                                                                        << 0x1cU)))) 
-                                                              | (0xf0000000U 
-                                                                 & (((((~ 
-                                                                        (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                         >> 0xdU)) 
-                                                                       & (~ 
+                                                                    << 0x1dU)))) 
+                                                          | ((0x10000000U 
+                                                              & ((((0xf0000000U 
+                                                                    & ((((~ 
                                                                           (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                           >> 0xcU))) 
-                                                                      << 0x1cU) 
-                                                                     & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                        << 0x16U)) 
-                                                                    & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                       << 0x18U)))) 
-                                                             | (0xf0000000U 
-                                                                & (((((~ 
-                                                                       (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                        >> 0xcU)) 
-                                                                      & (~ 
-                                                                         (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                          >> 5U))) 
-                                                                     << 0x1cU) 
-                                                                    & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                       << 0x18U)) 
-                                                                   & ((~ 
-                                                                       (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                        >> 2U)) 
-                                                                      << 0x1cU))))) 
-                                                         | ((0x8000000U 
-                                                             & (((((~ 
-                                                                    (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                     >> 5U)) 
-                                                                   & (~ 
-                                                                      (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                       >> 2U))) 
-                                                                  << 0x1bU) 
-                                                                 | (0xf8000000U 
-                                                                    & ((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                        << 0x16U) 
-                                                                       & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                          << 0x19U)))) 
-                                                                | (0xf8000000U 
-                                                                   & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                      << 0x17U)))) 
-                                                            | ((0x4000000U 
-                                                                & (((0xfc000000U 
-                                                                     & (((((((~ 
-                                                                              (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                               >> 0x1dU)) 
-                                                                             & (~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xdU))) 
-                                                                            << 0x1aU) 
-                                                                           & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                              << 0xeU)) 
-                                                                          & ((~ 
-                                                                              (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                               >> 5U)) 
-                                                                             << 0x1aU)) 
-                                                                         & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                            << 0x16U)) 
-                                                                        & ((~ 
+                                                                           >> 4U)) 
+                                                                         & (~ 
                                                                             (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                             >> 2U)) 
-                                                                           << 0x1aU))) 
-                                                                    | (0x7c000000U 
-                                                                       & ((((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                               >> 1U) 
-                                                                              & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xdU)) 
-                                                                                << 0x1aU)) 
-                                                                             & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 0xeU)) 
-                                                                            & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 5U)) 
-                                                                               << 0x1aU)) 
-                                                                           & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                              << 0x16U)) 
-                                                                          & ((~ 
-                                                                              (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                               >> 2U)) 
-                                                                             << 0x1aU)))) 
-                                                                   | (0xfc000000U 
-                                                                      & ((((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                              << 0xcU) 
-                                                                             & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xdU)) 
-                                                                                << 0x1aU)) 
-                                                                            & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                               << 0xeU)) 
+                                                                             >> 3U))) 
+                                                                        << 0x1cU) 
+                                                                       & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                          << 0x1aU))) 
+                                                                   | (0xf0000000U 
+                                                                      & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                            << 0xfU) 
                                                                            & ((~ 
                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 5U)) 
-                                                                              << 0x1aU)) 
+                                                                              << 0x1cU)) 
                                                                           & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                             << 0x16U)) 
+                                                                             << 0x18U)) 
                                                                          & ((~ 
                                                                              (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                               >> 2U)) 
-                                                                            << 0x1aU))))) 
-                                                               | ((0x2000000U 
-                                                                   & (((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                        << 0x14U) 
-                                                                       & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                          << 0x16U)) 
-                                                                      | ((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                          << 0x15U) 
+                                                                            << 0x1cU)))) 
+                                                                  | (0xf0000000U 
+                                                                     & (((((~ 
+                                                                            (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                             >> 0xdU)) 
+                                                                           & (~ 
+                                                                              (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                               >> 0xcU))) 
+                                                                          << 0x1cU) 
                                                                          & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                            << 0x17U)))) 
-                                                                  | ((0x1000000U 
-                                                                      & (((((~ 
+                                                                            << 0x16U)) 
+                                                                        & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                           << 0x18U)))) 
+                                                                 | (0xf0000000U 
+                                                                    & (((((~ 
+                                                                           (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                            >> 0xcU)) 
+                                                                          & (~ 
                                                                              (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                              >> 5U)) 
-                                                                            & (~ 
-                                                                               (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 3U))) 
-                                                                           << 0x18U) 
-                                                                          & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                             << 0x16U)) 
-                                                                         | ((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                             << 0x13U) 
-                                                                            & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                               << 0x15U)))) 
-                                                                     | ((0x800000U 
-                                                                         & ((((~ 
-                                                                               (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                              >> 5U))) 
+                                                                         << 0x1cU) 
+                                                                        & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                           << 0x18U)) 
+                                                                       & ((~ 
+                                                                           (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                            >> 2U)) 
+                                                                          << 0x1cU))))) 
+                                                             | ((0x8000000U 
+                                                                 & (((((~ 
+                                                                        (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                         >> 5U)) 
+                                                                       & (~ 
+                                                                          (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                           >> 2U))) 
+                                                                      << 0x1bU) 
+                                                                     | (0xf8000000U 
+                                                                        & ((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                            << 0x16U) 
+                                                                           & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                              << 0x19U)))) 
+                                                                    | (0xf8000000U 
+                                                                       & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                          << 0x17U)))) 
+                                                                | ((0x4000000U 
+                                                                    & (((0xfc000000U 
+                                                                         & (((((((~ 
+                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 0x1dU)) 
+                                                                                & (~ 
+                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 0xdU))) 
+                                                                                << 0x1aU) 
+                                                                               & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                << 0xeU)) 
+                                                                              & ((~ 
+                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 5U)) 
-                                                                              & (~ 
+                                                                                << 0x1aU)) 
+                                                                             & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                << 0x16U)) 
+                                                                            & ((~ 
+                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 2U)) 
+                                                                               << 0x1aU))) 
+                                                                        | (0x7c000000U 
+                                                                           & ((((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 1U) 
+                                                                                & ((~ 
+                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 0xdU)) 
+                                                                                << 0x1aU)) 
+                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                << 0xeU)) 
+                                                                                & ((~ 
+                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 5U)) 
+                                                                                << 0x1aU)) 
+                                                                               & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                << 0x16U)) 
+                                                                              & ((~ 
+                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 2U)) 
+                                                                                << 0x1aU)))) 
+                                                                       | (0xfc000000U 
+                                                                          & ((((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                << 0xcU) 
+                                                                                & ((~ 
+                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 0xdU)) 
+                                                                                << 0x1aU)) 
+                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                << 0xeU)) 
+                                                                               & ((~ 
+                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 5U)) 
+                                                                                << 0x1aU)) 
+                                                                              & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                << 0x16U)) 
+                                                                             & ((~ 
+                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 2U)) 
+                                                                                << 0x1aU))))) 
+                                                                   | ((0x2000000U 
+                                                                       & (((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                            << 0x14U) 
+                                                                           & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                              << 0x16U)) 
+                                                                          | ((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                              << 0x15U) 
+                                                                             & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                << 0x17U)))) 
+                                                                      | ((0x1000000U 
+                                                                          & (((((~ 
+                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 5U)) 
+                                                                                & (~ 
+                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 3U))) 
+                                                                               << 0x18U) 
+                                                                              & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                << 0x16U)) 
+                                                                             | ((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                << 0x13U) 
+                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                << 0x15U)))) 
+                                                                         | ((0x800000U 
+                                                                             & ((((~ 
+                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 5U)) 
+                                                                                & (~ 
                                                                                 (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 4U))) 
-                                                                             & (~ 
+                                                                                & (~ 
                                                                                 (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 2U))) 
-                                                                            << 0x17U)) 
-                                                                        | ((0x400000U 
-                                                                            & ((((~ 
+                                                                                << 0x17U)) 
+                                                                            | ((0x400000U 
+                                                                                & ((((~ 
                                                                                 (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 6U)) 
                                                                                 << 0x16U) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 << 0x11U)) 
-                                                                               & ((~ 
+                                                                                & ((~ 
                                                                                 (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 4U)) 
                                                                                 << 0x16U))) 
-                                                                           | ((0x200000U 
-                                                                               & ((((~ 
+                                                                               | ((0x200000U 
+                                                                                & ((((~ 
                                                                                 (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 6U)) 
                                                                                 & (~ 
@@ -4843,7 +4361,7 @@ VL_INLINE_OPT void Vrvfpgasim_veerwolf_core__B0_Cbebc20::_multiclk__TOP__rvfpgas
                                                                                 (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 2U))) 
                                                                                 << 0x15U)) 
-                                                                              | ((0x100000U 
+                                                                                | ((0x100000U 
                                                                                 & ((((((((~ 
                                                                                 (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 0xeU)) 
@@ -5562,249 +5080,238 @@ VL_INLINE_OPT void Vrvfpgasim_veerwolf_core__B0_Cbebc20::_multiclk__TOP__rvfpgas
                                                                                 >> 6U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 4U))))))))))))))))))))))))))))))))))))) 
-                               << 0x10U) | (QData)((IData)(
-                                                           ((0x8000U 
-                                                             & (((((0xffff8000U 
-                                                                    & (((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                         & ((~ 
-                                                                             (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                              >> 0xcU)) 
-                                                                            << 0xfU)) 
-                                                                        & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                           << 9U)) 
-                                                                       & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                          << 0xbU))) 
-                                                                   | (0x7fff8000U 
-                                                                      & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                            >> 1U) 
-                                                                           & ((~ 
-                                                                               (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xcU)) 
-                                                                              << 0xfU)) 
-                                                                          & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                             << 9U)) 
-                                                                         & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                            << 0xbU)))) 
-                                                                  | (0x3fff8000U 
+                                   << 8U) | (QData)((IData)(
+                                                            ((0x80U 
+                                                              & (((((0xffff80U 
                                                                      & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                           >> 2U) 
+                                                                           >> 8U) 
                                                                           & ((~ 
                                                                               (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                >> 0xcU)) 
-                                                                             << 0xfU)) 
+                                                                             << 7U)) 
                                                                          & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                            << 9U)) 
+                                                                            << 1U)) 
                                                                         & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                           << 0xbU)))) 
-                                                                 | (0x1fff8000U 
+                                                                           << 3U))) 
+                                                                    | (0x7fff80U 
+                                                                       & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                             >> 9U) 
+                                                                            & ((~ 
+                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 0xcU)) 
+                                                                               << 7U)) 
+                                                                           & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                              << 1U)) 
+                                                                          & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                             << 3U)))) 
+                                                                   | (0x3fff80U 
+                                                                      & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                            >> 0xaU) 
+                                                                           & ((~ 
+                                                                               (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 0xcU)) 
+                                                                              << 7U)) 
+                                                                          & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                             << 1U)) 
+                                                                         & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                            << 3U)))) 
+                                                                  | (0x1fff80U 
+                                                                     & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                           >> 0xbU) 
+                                                                          & ((~ 
+                                                                              (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                               >> 0xcU)) 
+                                                                             << 7U)) 
+                                                                         & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                            << 1U)) 
+                                                                        & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                           << 3U)))) 
+                                                                 | (0xfff80U 
                                                                     & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                          >> 3U) 
+                                                                          >> 0xcU) 
                                                                          & ((~ 
                                                                              (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                               >> 0xcU)) 
-                                                                            << 0xfU)) 
+                                                                            << 7U)) 
                                                                         & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                           << 9U)) 
+                                                                           << 1U)) 
                                                                        & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                          << 0xbU)))) 
-                                                                | (0xfff8000U 
-                                                                   & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                         >> 4U) 
-                                                                        & ((~ 
-                                                                            (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                             >> 0xcU)) 
-                                                                           << 0xfU)) 
-                                                                       & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                          << 9U)) 
+                                                                          << 3U))))) 
+                                                             | ((0x40U 
+                                                                 & (((((~ 
+                                                                        (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                         >> 0xdU)) 
+                                                                       << 6U) 
                                                                       & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                         << 0xbU))))) 
-                                                            | ((0x4000U 
-                                                                & (((((~ 
-                                                                       (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                        >> 0xdU)) 
-                                                                      << 0xeU) 
-                                                                     & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                        << 2U)) 
+                                                                         >> 6U)) 
+                                                                     & vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0) 
                                                                     & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                       << 8U)) 
-                                                                   & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                      << 0xaU))) 
-                                                               | ((0x2000U 
-                                                                   & ((((((0x7fffe000U 
-                                                                           & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 1U) 
+                                                                       << 2U))) 
+                                                                | ((0x20U 
+                                                                    & ((((((0x7fffe0U 
+                                                                            & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 9U) 
                                                                                 & ((~ 
                                                                                 (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 0xdU)) 
-                                                                                << 0xdU)) 
+                                                                                << 5U)) 
+                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 1U)) 
                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 7U)) 
-                                                                              & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 9U))) 
-                                                                          | (0x3fffe000U 
+                                                                                << 1U))) 
+                                                                           | (0x3fffe0U 
+                                                                              & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 0xaU) 
+                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 9U)) 
+                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 1U)) 
+                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                << 1U)))) 
+                                                                          | (0x1fffe0U 
                                                                              & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 2U) 
+                                                                                >> 0xbU) 
+                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 9U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 1U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 9U)))) 
-                                                                         | (0x1fffe000U 
+                                                                                << 1U)))) 
+                                                                         | (0xfffe0U 
                                                                             & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 3U) 
+                                                                                >> 0xcU) 
+                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 9U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 1U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 7U)) 
                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 9U)))) 
-                                                                        | (0xfffe000U 
+                                                                                << 1U)))) 
+                                                                        | (0x7ffe0U 
                                                                            & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 4U) 
+                                                                                >> 0xdU) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 1U)) 
+                                                                                >> 9U)) 
                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 7U)) 
+                                                                                >> 1U)) 
                                                                               & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 9U)))) 
-                                                                       | (0x7ffe000U 
+                                                                                << 1U)))) 
+                                                                       | (0x3ffe0U 
                                                                           & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 5U) 
+                                                                                >> 0xeU) 
                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 1U)) 
-                                                                              & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 7U)) 
-                                                                             & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 9U)))) 
-                                                                      | (0x3ffe000U 
-                                                                         & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                               >> 6U) 
+                                                                                >> 9U)) 
                                                                               & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 1U)) 
                                                                              & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 7U)) 
-                                                                            & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                               << 9U))))) 
-                                                                  | ((0x1000U 
-                                                                      & (((((((((((0xfffff000U 
+                                                                                << 1U))))) 
+                                                                   | ((0x10U 
+                                                                       & (((((((((((0xfffffff0U 
                                                                                 & (((~ 
                                                                                 (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 5U)) 
-                                                                                << 0xcU) 
+                                                                                << 4U) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 9U))) 
-                                                                                | (0xfffff000U 
+                                                                                << 1U))) 
+                                                                                | (0x1ffffff0U 
                                                                                 & (((((~ 
                                                                                 (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 0xdU)) 
-                                                                                << 0xcU) 
+                                                                                << 4U) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 5U)) 
+                                                                                >> 3U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 6U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 8U)))) 
-                                                                                | (0xfffff000U 
+                                                                                >> 2U)) 
+                                                                                & vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0))) 
+                                                                                | (0xffffff0U 
                                                                                 & (((((~ 
                                                                                 (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 0xdU)) 
-                                                                                << 0xcU) 
+                                                                                << 4U) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 4U)) 
+                                                                                >> 4U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 6U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 8U)))) 
-                                                                                | (0xfffff000U 
+                                                                                >> 2U)) 
+                                                                                & vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0))) 
+                                                                                | (0x7fffff0U 
                                                                                 & (((((~ 
                                                                                 (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 0xdU)) 
-                                                                                << 0xcU) 
+                                                                                << 4U) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 3U)) 
+                                                                                >> 5U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 6U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 8U)))) 
-                                                                               | (0xfffff000U 
+                                                                                >> 2U)) 
+                                                                                & vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0))) 
+                                                                                | (0x3fffff0U 
                                                                                 & (((((~ 
                                                                                 (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 0xdU)) 
-                                                                                << 0xcU) 
+                                                                                << 4U) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 2U)) 
+                                                                                >> 6U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 6U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 8U)))) 
-                                                                              | (0xfffff000U 
+                                                                                >> 2U)) 
+                                                                                & vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0))) 
+                                                                               | (0x1fffff0U 
                                                                                 & (((((~ 
                                                                                 (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 0xdU)) 
-                                                                                << 0xcU) 
+                                                                                << 4U) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 1U)) 
+                                                                                >> 7U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 6U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 8U)))) 
-                                                                             | (0x1ffff000U 
+                                                                                >> 2U)) 
+                                                                                & vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0))) 
+                                                                              | (0x1ffff0U 
                                                                                 & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 3U) 
+                                                                                >> 0xbU) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 1U)) 
+                                                                                >> 9U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 6U)) 
+                                                                                >> 2U)) 
+                                                                                & vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0))) 
+                                                                             | (0xffff0U 
+                                                                                & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 0xcU) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 8U)))) 
-                                                                            | (0xffff000U 
+                                                                                >> 9U)) 
+                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 2U)) 
+                                                                                & vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0))) 
+                                                                            | (0x7fff0U 
                                                                                & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 4U) 
+                                                                                >> 0xdU) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 1U)) 
+                                                                                >> 9U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 6U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 8U)))) 
-                                                                           | (0x7fff000U 
+                                                                                >> 2U)) 
+                                                                                & vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0))) 
+                                                                           | (0x3fff0U 
                                                                               & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 5U) 
+                                                                                >> 0xeU) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 1U)) 
+                                                                                >> 9U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 6U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 8U)))) 
-                                                                          | (0x3fff000U 
+                                                                                >> 2U)) 
+                                                                                & vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0))) 
+                                                                          | (0x1fff0U 
                                                                              & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 6U) 
+                                                                                >> 0xfU) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 1U)) 
+                                                                                >> 9U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 6U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 8U)))) 
-                                                                         | (0x1fff000U 
-                                                                            & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 7U) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 1U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 6U)) 
-                                                                               & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 8U))))) 
-                                                                     | ((0x800U 
-                                                                         & ((((((((((((0x7ffff800U 
+                                                                                >> 2U)) 
+                                                                                & vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0)))) 
+                                                                      | ((8U 
+                                                                          & ((((((((((((0x7ffff8U 
                                                                                 & (((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 1U) 
+                                                                                >> 9U) 
                                                                                 & ((~ 
                                                                                 (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 5U)) 
-                                                                                << 0xbU)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 8U))) 
-                                                                                | (0xfffff800U 
+                                                                                << 3U)) 
+                                                                                & vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0)) 
+                                                                                | (0x1ffffff8U 
                                                                                 & ((((((~ 
                                                                                 (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 0x16U)) 
@@ -5814,131 +5321,132 @@ VL_INLINE_OPT void Vrvfpgasim_veerwolf_core__B0_Cbebc20::_multiclk__TOP__rvfpgas
                                                                                 & (~ 
                                                                                 (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 0xcU))) 
-                                                                                << 0xbU) 
+                                                                                << 3U) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 5U)) 
+                                                                                >> 3U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 7U)))) 
-                                                                                | (0xfffff800U 
+                                                                                >> 1U)))) 
+                                                                                | (0xffffff8U 
                                                                                 & (((((~ 
                                                                                 (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 0xdU)) 
-                                                                                << 0xbU) 
+                                                                                << 3U) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 4U)) 
+                                                                                >> 4U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 5U)) 
+                                                                                >> 3U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 7U)))) 
-                                                                                | (0xfffff800U 
+                                                                                >> 1U)))) 
+                                                                                | (0x7fffff8U 
                                                                                 & (((((~ 
                                                                                 (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 0xdU)) 
-                                                                                << 0xbU) 
+                                                                                << 3U) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 3U)) 
+                                                                                >> 5U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 5U)) 
+                                                                                >> 3U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 7U)))) 
-                                                                                | (0xfffff800U 
+                                                                                >> 1U)))) 
+                                                                                | (0x3fffff8U 
                                                                                 & (((((~ 
                                                                                 (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 0xdU)) 
-                                                                                << 0xbU) 
+                                                                                << 3U) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 2U)) 
+                                                                                >> 6U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 5U)) 
+                                                                                >> 3U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 7U)))) 
-                                                                                | (0xfffff800U 
+                                                                                >> 1U)))) 
+                                                                                | (0x1fffff8U 
                                                                                 & (((((~ 
                                                                                 (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 0xdU)) 
-                                                                                << 0xbU) 
+                                                                                << 3U) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 1U)) 
+                                                                                >> 7U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 5U)) 
+                                                                                >> 3U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 7U)))) 
-                                                                                | (0xfffff800U 
+                                                                                >> 1U)))) 
+                                                                                | (0xfffff8U 
                                                                                 & (((((~ 
                                                                                 (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 0xdU)) 
-                                                                                << 0xbU) 
-                                                                                & vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0) 
+                                                                                << 3U) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 5U)) 
+                                                                                >> 8U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 7U)))) 
-                                                                                | (0xffff800U 
+                                                                                >> 3U)) 
+                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 1U)))) 
+                                                                                | (0xffff8U 
                                                                                 & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 4U) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 2U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 5U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 7U)))) 
-                                                                               | (0x7fff800U 
-                                                                                & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 5U) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 2U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 5U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 7U)))) 
-                                                                              | (0x3fff800U 
-                                                                                & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 6U) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 2U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 5U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 7U)))) 
-                                                                             | (0x1fff800U 
-                                                                                & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 7U) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 2U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 5U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 7U)))) 
-                                                                            | (0xfff800U 
-                                                                               & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 8U) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 2U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 5U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 7U))))) 
-                                                                        | ((0x400U 
-                                                                            & (((((((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x16U)) 
-                                                                                << 0xaU) 
+                                                                                >> 0xcU) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 0xaU)) 
+                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 3U)) 
+                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 1U)))) 
+                                                                                | (0x7fff8U 
+                                                                                & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 0xdU) 
+                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 0xaU)) 
+                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 3U)) 
+                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 1U)))) 
+                                                                               | (0x3fff8U 
+                                                                                & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 0xeU) 
+                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 0xaU)) 
+                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 3U)) 
+                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 1U)))) 
+                                                                              | (0x1fff8U 
+                                                                                & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 0xfU) 
+                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 0xaU)) 
+                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 3U)) 
+                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 1U)))) 
+                                                                             | (0xfff8U 
+                                                                                & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 0x10U) 
+                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 0xaU)) 
+                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 3U)) 
+                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 1U))))) 
+                                                                         | ((4U 
+                                                                             & (((((((~ 
+                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 0x16U)) 
+                                                                                << 2U) 
+                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 0x12U)) 
                                                                                 & ((~ 
                                                                                 (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 0xdU)) 
-                                                                                << 0xaU)) 
+                                                                                << 2U)) 
                                                                                 & ((~ 
                                                                                 (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 0xcU)) 
-                                                                                << 0xaU)) 
+                                                                                << 2U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 4U)) 
-                                                                               & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 6U))) 
-                                                                           | ((0x200U 
-                                                                               & (((((((~ 
+                                                                                >> 4U)) 
+                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 2U))) 
+                                                                            | ((2U 
+                                                                                & (((((((~ 
                                                                                 (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 0x15U)) 
                                                                                 & (~ 
@@ -5950,501 +5458,29 @@ VL_INLINE_OPT void Vrvfpgasim_veerwolf_core__B0_Cbebc20::_multiclk__TOP__rvfpgas
                                                                                 & (~ 
                                                                                 (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 0xcU))) 
-                                                                                << 9U) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 3U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 5U))) 
-                                                                              | ((0x100U 
-                                                                                & (((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x15U) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xdU)) 
-                                                                                << 8U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xcU)) 
-                                                                                << 8U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 2U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 4U))) 
-                                                                                | ((0x80U 
-                                                                                & ((((((((((((0x380U 
-                                                                                & (((((((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x16U) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x1bU)) 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x11U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xeU)) 
-                                                                                << 7U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xdU)) 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 5U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 5U)) 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 3U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 2U)) 
-                                                                                << 7U))) 
-                                                                                | (0x180U 
-                                                                                & (((((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x17U) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x14U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 6U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 6U)) 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 2U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 3U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 2U)) 
-                                                                                << 7U)))) 
-                                                                                | (0x380U 
-                                                                                & ((((((((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x16U) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x14U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x17U)) 
-                                                                                << 7U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x14U)) 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 7U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xdU)) 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 5U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 5U)) 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 3U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 2U)) 
-                                                                                << 7U)))) 
-                                                                                | (0x380U 
-                                                                                & ((((((((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x16U) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x14U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x15U)) 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xdU)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 7U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xdU)) 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 5U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 5U)) 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 3U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 2U)) 
-                                                                                << 7U)))) 
-                                                                                | (0x380U 
-                                                                                & ((((((((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x16U) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x14U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x11U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xeU)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 7U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xdU)) 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 5U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 5U)) 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 3U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 2U)) 
-                                                                                << 7U)))) 
-                                                                                | (0x380U 
-                                                                                & ((((((((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x16U) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x14U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x18U)) 
-                                                                                << 7U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x16U)) 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 7U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xdU)) 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 5U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 5U)) 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 3U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 2U)) 
-                                                                                << 7U)))) 
-                                                                                | (0x380U 
-                                                                                & ((((((((((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x1eU)) 
-                                                                                << 7U) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x16U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x10U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 7U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xdU)) 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 5U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 5U)) 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 3U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 2U)) 
-                                                                                << 7U)))) 
-                                                                                | (0x180U 
-                                                                                & ((((((((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x17U) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x16U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x14U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xfU)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 7U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xdU)) 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 5U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 5U)) 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 3U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 2U)) 
-                                                                                << 7U)))) 
-                                                                                | (0xf80U 
-                                                                                & ((((((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x14U) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x19U)) 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 6U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xcU)) 
-                                                                                << 7U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 6U)) 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 2U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 3U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 2U)) 
-                                                                                << 7U)))) 
-                                                                                | (0xf80U 
-                                                                                & ((((((((((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x1eU)) 
-                                                                                & (~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x1dU))) 
-                                                                                << 7U) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x14U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x19U)) 
-                                                                                << 7U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xdU)) 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 5U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 6U)) 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 3U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 2U)) 
-                                                                                << 7U)))) 
-                                                                                | (0x3f80U 
-                                                                                & ((((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x12U) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xeU)) 
-                                                                                << 7U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 6U)) 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 2U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 3U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 2U)) 
-                                                                                << 7U)))) 
-                                                                                | (0x380U 
-                                                                                & ((((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x16U) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x14U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 7U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 6U)) 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 2U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 2U)) 
-                                                                                << 7U))))) 
-                                                                                | ((0x40U 
-                                                                                & (((((((((((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x1bU)) 
-                                                                                << 6U) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x13U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xeU)) 
-                                                                                << 6U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 7U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xcU)) 
-                                                                                << 6U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 6U)) 
-                                                                                << 6U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 1U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 2U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 2U)) 
-                                                                                << 6U)) 
-                                                                                | (((((((((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x1bU)) 
-                                                                                << 6U) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x13U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xeU)) 
-                                                                                << 6U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xdU)) 
-                                                                                << 6U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 6U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 6U)) 
-                                                                                << 6U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 2U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 2U)) 
-                                                                                << 6U)))) 
-                                                                                | ((0x20U 
-                                                                                & (((((((((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x1bU)) 
-                                                                                << 5U) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x14U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xeU)) 
-                                                                                << 5U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xdU)) 
-                                                                                << 5U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 7U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 6U)) 
-                                                                                << 5U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 1U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 2U)) 
-                                                                                << 5U))) 
-                                                                                | ((0x10U 
-                                                                                & (((((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x15U) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xeU)) 
-                                                                                << 4U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xdU)) 
-                                                                                << 4U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xcU)) 
-                                                                                << 4U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 1U)) 
-                                                                                & vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 2U)) 
-                                                                                << 4U))) 
-                                                                                | ((8U 
-                                                                                & (((((((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x1bU)) 
-                                                                                << 3U) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x16U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xbU)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 6U)) 
-                                                                                << 3U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 2U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 2U)) 
-                                                                                << 3U))) 
-                                                                                | ((4U 
-                                                                                & ((((((((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x1bU)) 
-                                                                                << 2U) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x17U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xcU)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xbU)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 6U)) 
-                                                                                << 2U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 3U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 2U)) 
-                                                                                << 2U))) 
-                                                                                | ((2U 
-                                                                                & (((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 5U)) 
                                                                                 << 1U) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 2U))) 
-                                                                                | (1U 
-                                                                                & (((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xcU) 
+                                                                                >> 5U)) 
+                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 3U))) 
+                                                                               | (1U 
+                                                                                & (((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 0x1dU) 
                                                                                 & (~ 
                                                                                 (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 5U))) 
+                                                                                >> 0xdU))) 
+                                                                                & (~ 
+                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 0xcU))) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 3U)))))))))))))))))))))) 
-                     >> 0x1eU)) | (0xfffffffcU & ((IData)(
-                                                          ((((QData)((IData)(
-                                                                             ((0x80000000U 
-                                                                               & (((((((((((((0x80000000U 
+                                                                                >> 6U)) 
+                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 4U)))))))))))))) 
+                         >> 0x16U)) | (0xfffffc00U 
+                                       & ((IData)((
+                                                   (((QData)((IData)(
+                                                                     ((0x80000000U 
+                                                                       & (((((((((((((0x80000000U 
                                                                                 & (((((((((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 << 1U) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
@@ -6571,7 +5607,7 @@ VL_INLINE_OPT void Vrvfpgasim_veerwolf_core__B0_Cbebc20::_multiclk__TOP__rvfpgas
                                                                                 << 0x1fU)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 << 0x1bU)))) 
-                                                                                | (0x80000000U 
+                                                                               | (0x80000000U 
                                                                                 & (((((~ 
                                                                                 (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 0x1bU)) 
@@ -6583,7 +5619,7 @@ VL_INLINE_OPT void Vrvfpgasim_veerwolf_core__B0_Cbebc20::_multiclk__TOP__rvfpgas
                                                                                 << 0x1aU)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 << 0x1bU)))) 
-                                                                                | (0x80000000U 
+                                                                              | (0x80000000U 
                                                                                 & (((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 << 0x12U) 
                                                                                 & ((~ 
@@ -6592,14 +5628,14 @@ VL_INLINE_OPT void Vrvfpgasim_veerwolf_core__B0_Cbebc20::_multiclk__TOP__rvfpgas
                                                                                 << 0x1fU)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 << 0x1bU)))) 
-                                                                                | (0x80000000U 
+                                                                             | (0x80000000U 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 << 0x1dU))) 
-                                                                                | (0x80000000U 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                            | (0x80000000U 
+                                                                               & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 << 0x19U))) 
-                                                                                | (0x80000000U 
-                                                                                & ((((((((((~ 
+                                                                           | (0x80000000U 
+                                                                              & ((((((((((~ 
                                                                                 (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 0x1eU)) 
                                                                                 << 0x1fU) 
@@ -6625,8 +5661,8 @@ VL_INLINE_OPT void Vrvfpgasim_veerwolf_core__B0_Cbebc20::_multiclk__TOP__rvfpgas
                                                                                 << 0x1fU)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 << 0x1bU)))) 
-                                                                                | (0x80000000U 
-                                                                                & ((((~ 
+                                                                          | (0x80000000U 
+                                                                             & ((((~ 
                                                                                 (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 0xcU)) 
                                                                                 & (~ 
@@ -6635,8 +5671,8 @@ VL_INLINE_OPT void Vrvfpgasim_veerwolf_core__B0_Cbebc20::_multiclk__TOP__rvfpgas
                                                                                 << 0x1fU) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 << 0x1bU))))) 
-                                                                              | ((0x40000000U 
-                                                                                & ((((0xc0000000U 
+                                                                      | ((0x40000000U 
+                                                                          & ((((0xc0000000U 
                                                                                 & (((((((((((((~ 
                                                                                 (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 0xdU)) 
@@ -6727,14 +5763,14 @@ VL_INLINE_OPT void Vrvfpgasim_veerwolf_core__B0_Cbebc20::_multiclk__TOP__rvfpgas
                                                                                 (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 2U)) 
                                                                                 << 0x1eU)))) 
-                                                                                | (((~ 
+                                                                               | (((~ 
                                                                                 (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 4U)) 
                                                                                 & (~ 
                                                                                 (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 2U))) 
                                                                                 << 0x1eU)) 
-                                                                                | (0xc0000000U 
+                                                                              | (0xc0000000U 
                                                                                 & (((((~ 
                                                                                 (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 0xeU)) 
@@ -6748,15 +5784,15 @@ VL_INLINE_OPT void Vrvfpgasim_veerwolf_core__B0_Cbebc20::_multiclk__TOP__rvfpgas
                                                                                 (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 3U)) 
                                                                                 << 0x1eU)))) 
-                                                                                | (((~ 
+                                                                             | (((~ 
                                                                                 (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 6U)) 
                                                                                 & (~ 
                                                                                 (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 2U))) 
                                                                                 << 0x1eU))) 
-                                                                                | ((0x20000000U 
-                                                                                & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                         | ((0x20000000U 
+                                                                             & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 << 0x18U) 
                                                                                 & ((~ 
                                                                                 (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
@@ -6776,7 +5812,7 @@ VL_INLINE_OPT void Vrvfpgasim_veerwolf_core__B0_Cbebc20::_multiclk__TOP__rvfpgas
                                                                                 (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 2U)) 
                                                                                 << 0x1dU)))) 
-                                                                                | ((0x10000000U 
+                                                                            | ((0x10000000U 
                                                                                 & ((((0xf0000000U 
                                                                                 & ((((~ 
                                                                                 (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
@@ -6826,7 +5862,7 @@ VL_INLINE_OPT void Vrvfpgasim_veerwolf_core__B0_Cbebc20::_multiclk__TOP__rvfpgas
                                                                                 (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 2U)) 
                                                                                 << 0x1cU))))) 
-                                                                                | ((0x8000000U 
+                                                                               | ((0x8000000U 
                                                                                 & (((((~ 
                                                                                 (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 5U)) 
@@ -7676,250 +6712,239 @@ VL_INLINE_OPT void Vrvfpgasim_veerwolf_core__B0_Cbebc20::_multiclk__TOP__rvfpgas
                                                                                 >> 6U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 4U))))))))))))))))))))))))))))))))))))) 
-                                                             << 0x10U) 
-                                                            | (QData)((IData)(
-                                                                              ((0x8000U 
-                                                                                & (((((0xffff8000U 
-                                                                                & (((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                     << 8U) 
+                                                    | (QData)((IData)(
+                                                                      ((0x80U 
+                                                                        & (((((0xffff80U 
+                                                                               & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 8U) 
                                                                                 & ((~ 
                                                                                 (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 0xcU)) 
-                                                                                << 0xfU)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 9U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 0xbU))) 
-                                                                                | (0x7fff8000U 
-                                                                                & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 1U) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xcU)) 
-                                                                                << 0xfU)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 9U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 0xbU)))) 
-                                                                                | (0x3fff8000U 
-                                                                                & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 2U) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xcU)) 
-                                                                                << 0xfU)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 9U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 0xbU)))) 
-                                                                                | (0x1fff8000U 
-                                                                                & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 3U) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xcU)) 
-                                                                                << 0xfU)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 9U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 0xbU)))) 
-                                                                                | (0xfff8000U 
-                                                                                & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 4U) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xcU)) 
-                                                                                << 0xfU)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 9U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 0xbU))))) 
-                                                                               | ((0x4000U 
-                                                                                & (((((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xdU)) 
-                                                                                << 0xeU) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 2U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 8U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 0xaU))) 
-                                                                                | ((0x2000U 
-                                                                                & ((((((0x7fffe000U 
-                                                                                & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 1U) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xdU)) 
-                                                                                << 0xdU)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 9U))) 
-                                                                                | (0x3fffe000U 
-                                                                                & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 2U) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 1U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 9U)))) 
-                                                                                | (0x1fffe000U 
-                                                                                & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 3U) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 1U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 9U)))) 
-                                                                                | (0xfffe000U 
-                                                                                & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 4U) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 1U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 9U)))) 
-                                                                                | (0x7ffe000U 
-                                                                                & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 5U) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 1U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 9U)))) 
-                                                                                | (0x3ffe000U 
-                                                                                & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 6U) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 1U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 9U))))) 
-                                                                                | ((0x1000U 
-                                                                                & (((((((((((0xfffff000U 
-                                                                                & (((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 5U)) 
-                                                                                << 0xcU) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 9U))) 
-                                                                                | (0xfffff000U 
-                                                                                & (((((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xdU)) 
-                                                                                << 0xcU) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 5U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 6U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 8U)))) 
-                                                                                | (0xfffff000U 
-                                                                                & (((((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xdU)) 
-                                                                                << 0xcU) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 4U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 6U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 8U)))) 
-                                                                                | (0xfffff000U 
-                                                                                & (((((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xdU)) 
-                                                                                << 0xcU) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 3U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 6U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 8U)))) 
-                                                                                | (0xfffff000U 
-                                                                                & (((((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xdU)) 
-                                                                                << 0xcU) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 2U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 6U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 8U)))) 
-                                                                                | (0xfffff000U 
-                                                                                & (((((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xdU)) 
-                                                                                << 0xcU) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 << 1U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 6U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 8U)))) 
-                                                                                | (0x1ffff000U 
+                                                                                << 3U))) 
+                                                                              | (0x7fff80U 
                                                                                 & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 3U) 
+                                                                                >> 9U) 
+                                                                                & ((~ 
+                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 0xcU)) 
+                                                                                << 7U)) 
+                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                << 1U)) 
+                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                << 3U)))) 
+                                                                             | (0x3fff80U 
+                                                                                & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 0xaU) 
+                                                                                & ((~ 
+                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 0xcU)) 
+                                                                                << 7U)) 
+                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                << 1U)) 
+                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                << 3U)))) 
+                                                                            | (0x1fff80U 
+                                                                               & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 0xbU) 
+                                                                                & ((~ 
+                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 0xcU)) 
+                                                                                << 7U)) 
+                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                << 1U)) 
+                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                << 3U)))) 
+                                                                           | (0xfff80U 
+                                                                              & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 0xcU) 
+                                                                                & ((~ 
+                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 0xcU)) 
+                                                                                << 7U)) 
+                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                << 1U)) 
+                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                << 3U))))) 
+                                                                       | ((0x40U 
+                                                                           & (((((~ 
+                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 0xdU)) 
+                                                                                << 6U) 
+                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 6U)) 
+                                                                               & vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0) 
+                                                                              & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                << 2U))) 
+                                                                          | ((0x20U 
+                                                                              & ((((((0x7fffe0U 
+                                                                                & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 9U) 
+                                                                                & ((~ 
+                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 0xdU)) 
+                                                                                << 5U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 1U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 6U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 8U)))) 
-                                                                                | (0xffff000U 
+                                                                                << 1U))) 
+                                                                                | (0x3fffe0U 
                                                                                 & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 4U) 
+                                                                                >> 0xaU) 
+                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 9U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 1U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 6U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 8U)))) 
-                                                                                | (0x7fff000U 
+                                                                                << 1U)))) 
+                                                                                | (0x1fffe0U 
                                                                                 & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 5U) 
+                                                                                >> 0xbU) 
+                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 9U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 1U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 6U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 8U)))) 
-                                                                                | (0x3fff000U 
+                                                                                << 1U)))) 
+                                                                                | (0xfffe0U 
                                                                                 & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 6U) 
+                                                                                >> 0xcU) 
+                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 9U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 1U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 6U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 8U)))) 
-                                                                                | (0x1fff000U 
+                                                                                << 1U)))) 
+                                                                                | (0x7ffe0U 
                                                                                 & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 7U) 
+                                                                                >> 0xdU) 
+                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 9U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 1U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 6U)) 
+                                                                                << 1U)))) 
+                                                                                | (0x3ffe0U 
+                                                                                & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 0xeU) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 8U))))) 
-                                                                                | ((0x800U 
-                                                                                & ((((((((((((0x7ffff800U 
+                                                                                >> 9U)) 
+                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 1U)) 
+                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                << 1U))))) 
+                                                                             | ((0x10U 
+                                                                                & (((((((((((0xfffffff0U 
+                                                                                & (((~ 
+                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 5U)) 
+                                                                                << 4U) 
+                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                << 1U))) 
+                                                                                | (0x1ffffff0U 
+                                                                                & (((((~ 
+                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 0xdU)) 
+                                                                                << 4U) 
+                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 3U)) 
+                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 2U)) 
+                                                                                & vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0))) 
+                                                                                | (0xffffff0U 
+                                                                                & (((((~ 
+                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 0xdU)) 
+                                                                                << 4U) 
+                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 4U)) 
+                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 2U)) 
+                                                                                & vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0))) 
+                                                                                | (0x7fffff0U 
+                                                                                & (((((~ 
+                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 0xdU)) 
+                                                                                << 4U) 
+                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 5U)) 
+                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 2U)) 
+                                                                                & vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0))) 
+                                                                                | (0x3fffff0U 
+                                                                                & (((((~ 
+                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 0xdU)) 
+                                                                                << 4U) 
+                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 6U)) 
+                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 2U)) 
+                                                                                & vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0))) 
+                                                                                | (0x1fffff0U 
+                                                                                & (((((~ 
+                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 0xdU)) 
+                                                                                << 4U) 
+                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 7U)) 
+                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 2U)) 
+                                                                                & vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0))) 
+                                                                                | (0x1ffff0U 
+                                                                                & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 0xbU) 
+                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 9U)) 
+                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 2U)) 
+                                                                                & vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0))) 
+                                                                                | (0xffff0U 
+                                                                                & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 0xcU) 
+                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 9U)) 
+                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 2U)) 
+                                                                                & vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0))) 
+                                                                                | (0x7fff0U 
+                                                                                & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 0xdU) 
+                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 9U)) 
+                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 2U)) 
+                                                                                & vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0))) 
+                                                                                | (0x3fff0U 
+                                                                                & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 0xeU) 
+                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 9U)) 
+                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 2U)) 
+                                                                                & vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0))) 
+                                                                                | (0x1fff0U 
+                                                                                & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 0xfU) 
+                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 9U)) 
+                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 2U)) 
+                                                                                & vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0)))) 
+                                                                                | ((8U 
+                                                                                & ((((((((((((0x7ffff8U 
                                                                                 & (((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 1U) 
+                                                                                >> 9U) 
                                                                                 & ((~ 
                                                                                 (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 5U)) 
-                                                                                << 0xbU)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 8U))) 
-                                                                                | (0xfffff800U 
+                                                                                << 3U)) 
+                                                                                & vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0)) 
+                                                                                | (0x1ffffff8U 
                                                                                 & ((((((~ 
                                                                                 (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 0x16U)) 
@@ -7929,130 +6954,131 @@ VL_INLINE_OPT void Vrvfpgasim_veerwolf_core__B0_Cbebc20::_multiclk__TOP__rvfpgas
                                                                                 & (~ 
                                                                                 (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 0xcU))) 
-                                                                                << 0xbU) 
+                                                                                << 3U) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 5U)) 
+                                                                                >> 3U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 7U)))) 
-                                                                                | (0xfffff800U 
+                                                                                >> 1U)))) 
+                                                                                | (0xffffff8U 
                                                                                 & (((((~ 
                                                                                 (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 0xdU)) 
-                                                                                << 0xbU) 
+                                                                                << 3U) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 4U)) 
+                                                                                >> 4U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 5U)) 
+                                                                                >> 3U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 7U)))) 
-                                                                                | (0xfffff800U 
+                                                                                >> 1U)))) 
+                                                                                | (0x7fffff8U 
                                                                                 & (((((~ 
                                                                                 (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 0xdU)) 
-                                                                                << 0xbU) 
+                                                                                << 3U) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 3U)) 
+                                                                                >> 5U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 5U)) 
+                                                                                >> 3U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 7U)))) 
-                                                                                | (0xfffff800U 
+                                                                                >> 1U)))) 
+                                                                                | (0x3fffff8U 
                                                                                 & (((((~ 
                                                                                 (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 0xdU)) 
-                                                                                << 0xbU) 
+                                                                                << 3U) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 2U)) 
+                                                                                >> 6U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 5U)) 
+                                                                                >> 3U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 7U)))) 
-                                                                                | (0xfffff800U 
+                                                                                >> 1U)))) 
+                                                                                | (0x1fffff8U 
                                                                                 & (((((~ 
                                                                                 (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 0xdU)) 
-                                                                                << 0xbU) 
+                                                                                << 3U) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 1U)) 
+                                                                                >> 7U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 5U)) 
+                                                                                >> 3U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 7U)))) 
-                                                                                | (0xfffff800U 
+                                                                                >> 1U)))) 
+                                                                                | (0xfffff8U 
                                                                                 & (((((~ 
                                                                                 (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 0xdU)) 
-                                                                                << 0xbU) 
-                                                                                & vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0) 
+                                                                                << 3U) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 5U)) 
+                                                                                >> 8U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 7U)))) 
-                                                                                | (0xffff800U 
+                                                                                >> 3U)) 
+                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 1U)))) 
+                                                                                | (0xffff8U 
                                                                                 & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 4U) 
+                                                                                >> 0xcU) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 2U)) 
+                                                                                >> 0xaU)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 5U)) 
+                                                                                >> 3U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 7U)))) 
-                                                                                | (0x7fff800U 
+                                                                                >> 1U)))) 
+                                                                                | (0x7fff8U 
                                                                                 & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 5U) 
+                                                                                >> 0xdU) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 2U)) 
+                                                                                >> 0xaU)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 5U)) 
+                                                                                >> 3U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 7U)))) 
-                                                                                | (0x3fff800U 
+                                                                                >> 1U)))) 
+                                                                                | (0x3fff8U 
                                                                                 & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 6U) 
+                                                                                >> 0xeU) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 2U)) 
+                                                                                >> 0xaU)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 5U)) 
+                                                                                >> 3U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 7U)))) 
-                                                                                | (0x1fff800U 
+                                                                                >> 1U)))) 
+                                                                                | (0x1fff8U 
                                                                                 & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 7U) 
+                                                                                >> 0xfU) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 2U)) 
+                                                                                >> 0xaU)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 5U)) 
+                                                                                >> 3U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 7U)))) 
-                                                                                | (0xfff800U 
+                                                                                >> 1U)))) 
+                                                                                | (0xfff8U 
                                                                                 & ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 8U) 
+                                                                                >> 0x10U) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 2U)) 
+                                                                                >> 0xaU)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 5U)) 
+                                                                                >> 3U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 7U))))) 
-                                                                                | ((0x400U 
+                                                                                >> 1U))))) 
+                                                                                | ((4U 
                                                                                 & (((((((~ 
                                                                                 (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 0x16U)) 
-                                                                                << 0xaU) 
+                                                                                << 2U) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xaU)) 
+                                                                                >> 0x12U)) 
                                                                                 & ((~ 
                                                                                 (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 0xdU)) 
-                                                                                << 0xaU)) 
+                                                                                << 2U)) 
                                                                                 & ((~ 
                                                                                 (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 0xcU)) 
-                                                                                << 0xaU)) 
+                                                                                << 2U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 4U)) 
+                                                                                >> 4U)) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 6U))) 
-                                                                                | ((0x200U 
+                                                                                >> 2U))) 
+                                                                                | ((2U 
                                                                                 & (((((((~ 
                                                                                 (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 0x15U)) 
@@ -8065,499 +7091,157 @@ VL_INLINE_OPT void Vrvfpgasim_veerwolf_core__B0_Cbebc20::_multiclk__TOP__rvfpgas
                                                                                 & (~ 
                                                                                 (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
                                                                                 >> 0xcU))) 
-                                                                                << 9U) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 3U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 5U))) 
-                                                                                | ((0x100U 
-                                                                                & (((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x15U) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xdU)) 
-                                                                                << 8U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xcU)) 
-                                                                                << 8U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 2U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 4U))) 
-                                                                                | ((0x80U 
-                                                                                & ((((((((((((0x380U 
-                                                                                & (((((((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x16U) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x1bU)) 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x11U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xeU)) 
-                                                                                << 7U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xdU)) 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 5U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 5U)) 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 3U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 2U)) 
-                                                                                << 7U))) 
-                                                                                | (0x180U 
-                                                                                & (((((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x17U) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x14U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 6U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 6U)) 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 2U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 3U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 2U)) 
-                                                                                << 7U)))) 
-                                                                                | (0x380U 
-                                                                                & ((((((((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x16U) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x14U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x17U)) 
-                                                                                << 7U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x14U)) 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 7U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xdU)) 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 5U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 5U)) 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 3U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 2U)) 
-                                                                                << 7U)))) 
-                                                                                | (0x380U 
-                                                                                & ((((((((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x16U) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x14U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x15U)) 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xdU)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 7U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xdU)) 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 5U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 5U)) 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 3U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 2U)) 
-                                                                                << 7U)))) 
-                                                                                | (0x380U 
-                                                                                & ((((((((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x16U) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x14U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x11U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xeU)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 7U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xdU)) 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 5U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 5U)) 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 3U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 2U)) 
-                                                                                << 7U)))) 
-                                                                                | (0x380U 
-                                                                                & ((((((((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x16U) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x14U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x18U)) 
-                                                                                << 7U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x16U)) 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 7U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xdU)) 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 5U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 5U)) 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 3U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 2U)) 
-                                                                                << 7U)))) 
-                                                                                | (0x380U 
-                                                                                & ((((((((((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x1eU)) 
-                                                                                << 7U) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x16U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x10U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 7U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xdU)) 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 5U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 5U)) 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 3U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 2U)) 
-                                                                                << 7U)))) 
-                                                                                | (0x180U 
-                                                                                & ((((((((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x17U) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x16U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x14U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xfU)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 7U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xdU)) 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 5U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 5U)) 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 3U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 2U)) 
-                                                                                << 7U)))) 
-                                                                                | (0xf80U 
-                                                                                & ((((((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x14U) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x19U)) 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 6U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xcU)) 
-                                                                                << 7U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 6U)) 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 2U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 3U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 2U)) 
-                                                                                << 7U)))) 
-                                                                                | (0xf80U 
-                                                                                & ((((((((((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x1eU)) 
-                                                                                & (~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x1dU))) 
-                                                                                << 7U) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x14U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x19U)) 
-                                                                                << 7U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xdU)) 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 5U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 6U)) 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 3U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 2U)) 
-                                                                                << 7U)))) 
-                                                                                | (0x3f80U 
-                                                                                & ((((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x12U) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xeU)) 
-                                                                                << 7U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 6U)) 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 2U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 3U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 2U)) 
-                                                                                << 7U)))) 
-                                                                                | (0x380U 
-                                                                                & ((((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x16U) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x14U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 7U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 6U)) 
-                                                                                << 7U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 2U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 2U)) 
-                                                                                << 7U))))) 
-                                                                                | ((0x40U 
-                                                                                & (((((((((((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x1bU)) 
-                                                                                << 6U) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x13U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xeU)) 
-                                                                                << 6U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 7U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xcU)) 
-                                                                                << 6U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 6U)) 
-                                                                                << 6U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 1U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 2U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 2U)) 
-                                                                                << 6U)) 
-                                                                                | (((((((((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x1bU)) 
-                                                                                << 6U) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x13U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xeU)) 
-                                                                                << 6U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xdU)) 
-                                                                                << 6U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 6U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 6U)) 
-                                                                                << 6U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 2U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 2U)) 
-                                                                                << 6U)))) 
-                                                                                | ((0x20U 
-                                                                                & (((((((((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x1bU)) 
-                                                                                << 5U) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x14U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xeU)) 
-                                                                                << 5U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xdU)) 
-                                                                                << 5U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 7U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 6U)) 
-                                                                                << 5U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                << 1U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 2U)) 
-                                                                                << 5U))) 
-                                                                                | ((0x10U 
-                                                                                & (((((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x15U) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xeU)) 
-                                                                                << 4U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xdU)) 
-                                                                                << 4U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xcU)) 
-                                                                                << 4U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 1U)) 
-                                                                                & vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 2U)) 
-                                                                                << 4U))) 
-                                                                                | ((8U 
-                                                                                & (((((((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x1bU)) 
-                                                                                << 3U) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x16U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xbU)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 6U)) 
-                                                                                << 3U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 2U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 2U)) 
-                                                                                << 3U))) 
-                                                                                | ((4U 
-                                                                                & ((((((((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x1bU)) 
-                                                                                << 2U) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0x17U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xcU)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xbU)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 6U)) 
-                                                                                << 2U)) 
-                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 3U)) 
-                                                                                & ((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 2U)) 
-                                                                                << 2U))) 
-                                                                                | ((2U 
-                                                                                & (((~ 
-                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 5U)) 
                                                                                 << 1U) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 2U))) 
+                                                                                >> 5U)) 
+                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 3U))) 
                                                                                 | (1U 
-                                                                                & (((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 0xcU) 
+                                                                                & (((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 0x1dU) 
                                                                                 & (~ 
                                                                                 (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 5U))) 
+                                                                                >> 0xdU))) 
+                                                                                & (~ 
+                                                                                (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 0xcU))) 
                                                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
-                                                                                >> 3U))))))))))))))))))))) 
-                                                           >> 0x20U)) 
-                                                  << 2U))));
+                                                                                >> 6U)) 
+                                                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                                                >> 4U))))))))))))) 
+                                                   >> 0x20U)) 
+                                          << 0xaU))));
+    vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__decode__DOT__i0_dp_raw[0U] 
+        = ((0xfffffe3fU & vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__decode__DOT__i0_dp_raw[0U]) 
+           | (0xffffffc0U & ((0x100U & ((0x7fc0U & 
+                                         ((((((((((~ 
+                                                   (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                    >> 0x1bU)) 
+                                                  << 8U) 
+                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                    >> 0x11U)) 
+                                                & ((~ 
+                                                    (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                     >> 0xeU)) 
+                                                   << 8U)) 
+                                               & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                  >> 5U)) 
+                                              & ((~ 
+                                                  (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                   >> 0xcU)) 
+                                                 << 8U)) 
+                                             & ((~ 
+                                                 (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                  >> 6U)) 
+                                                << 8U)) 
+                                            & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                               << 3U)) 
+                                           & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                              << 4U)) 
+                                          & ((~ (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                 >> 2U)) 
+                                             << 8U))) 
+                                        | (0x7fc0U 
+                                           & (((((((((~ 
+                                                      (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                       >> 0x1bU)) 
+                                                     << 8U) 
+                                                    & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                       >> 0x11U)) 
+                                                   & ((~ 
+                                                       (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                        >> 0xeU)) 
+                                                      << 8U)) 
+                                                  & ((~ 
+                                                      (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                       >> 0xdU)) 
+                                                     << 8U)) 
+                                                 & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                    >> 4U)) 
+                                                & ((~ 
+                                                    (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                     >> 6U)) 
+                                                   << 8U)) 
+                                               & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                  << 4U)) 
+                                              & ((~ 
+                                                  (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                   >> 2U)) 
+                                                 << 8U))))) 
+                             | ((0x80U & (((((((((~ 
+                                                  (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                   >> 0x1bU)) 
+                                                 << 7U) 
+                                                & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                   >> 0x12U)) 
+                                               & ((~ 
+                                                   (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                    >> 0xeU)) 
+                                                  << 7U)) 
+                                              & ((~ 
+                                                  (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                   >> 0xdU)) 
+                                                 << 7U)) 
+                                             & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                >> 5U)) 
+                                            & ((~ (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                   >> 6U)) 
+                                               << 7U)) 
+                                           & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                              << 3U)) 
+                                          & ((~ (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                 >> 2U)) 
+                                             << 7U))) 
+                                | (0x40U & (((((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                  >> 0x13U) 
+                                                 & ((~ 
+                                                     (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                      >> 0xeU)) 
+                                                    << 6U)) 
+                                                & ((~ 
+                                                    (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                     >> 0xdU)) 
+                                                   << 6U)) 
+                                               & ((~ 
+                                                   (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                    >> 0xcU)) 
+                                                  << 6U)) 
+                                              & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                 << 1U)) 
+                                             & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                << 2U)) 
+                                            & ((~ (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                   >> 2U)) 
+                                               << 6U)))))));
+    vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__decode__DOT__i0_dp_raw[0U] 
+        = ((0xffffffe3U & vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__decode__DOT__i0_dp_raw[0U]) 
+           | (0xfffffffcU & ((0x10U & ((((((((~ (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                 >> 0x1bU)) 
+                                             << 4U) 
+                                            & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                               >> 0x15U)) 
+                                           & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                              >> 0xaU)) 
+                                          & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                             >> 9U)) 
+                                         & ((~ (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                >> 6U)) 
+                                            << 4U)) 
+                                        & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                           >> 1U)) 
+                                       & ((~ (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                              >> 2U)) 
+                                          << 4U))) 
+                             | ((8U & (((~ (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                            >> 5U)) 
+                                        << 3U) & vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0)) 
+                                | (4U & (((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                           >> 0xaU) 
+                                          & ((~ (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                                 >> 5U)) 
+                                             << 2U)) 
+                                         & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__instbuff__DOT__ib0 
+                                            >> 1U)))))));
     vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__decode__DOT__i0_dp_raw[2U] 
         = ((0xfffffU & vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__decode__DOT__i0_dp_raw[2U]) 
            | (0xfff00000U & ((0x80000000U & (((((((
@@ -11837,16 +10521,6 @@ VL_INLINE_OPT void Vrvfpgasim_veerwolf_core__B0_Cbebc20::_multiclk__TOP__rvfpgas
     vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec_csr_ren_d 
         = ((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__decode__DOT__i0_dp[0U] 
             >> 0x13U) & (IData)(vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__dec_ib0_valid_d));
-    vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__mul_p 
-        = ((0x7ffff8U & vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__mul_p) 
-           | (7U & vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__decode__DOT__i0_dp[2U]));
-    vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__mul_p 
-        = ((0x7ffc07U & vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__mul_p) 
-           | ((0x3f0U & ((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__decode__DOT__i0_dp[2U] 
-                          << 0xbU) | (0x7f0U & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__decode__DOT__i0_dp[1U] 
-                                                >> 0x15U)))) 
-              | (8U & (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__decode__DOT__i0_dp[1U] 
-                       >> 0x14U))));
     vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__decode__DOT__bitmanip_legal 
         = (1U & (((((((((((~ ((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__decode__DOT__i0_dp[2U] 
                                >> 0x11U) & (~ (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__decode__DOT__i0_dp[1U] 
@@ -11997,6 +10671,11 @@ VL_INLINE_OPT void Vrvfpgasim_veerwolf_core__B0_Cbebc20::_multiclk__TOP__rvfpgas
     vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__decode__DOT__i0_pja 
         = ((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__decode__DOT__i0_dp[0U] 
             >> 0x17U) & (IData)(vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__decode__DOT__i0_pja_case));
+    vlSymsp->TOP__rvfpgasim__veerwolf.rvtop__DOT__veer__DOT__exu__DOT__i_misc_ff__DOT__genblock__DOT__dff__DOT____Vcellinp__genblock__DOT__dffs__din 
+        = ((0U != ((IData)(vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec_i0_branch_d) 
+                   ^ (IData)(vlSymsp->TOP__rvfpgasim__veerwolf.rvtop__DOT__veer__DOT__exu__DOT____Vcellout__i_misc_ff__dout)))
+            ? (IData)(vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec_i0_branch_d)
+            : (IData)(vlSymsp->TOP__rvfpgasim__veerwolf.rvtop__DOT__veer__DOT__exu__DOT____Vcellout__i_misc_ff__dout));
     vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__dec_csr_wen_unq_d 
         = ((((vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__decode__DOT__i0_dp[0U] 
               >> 0x12U) | (vlSymsp->TOP__rvfpgasim__veerwolf.__PVT__rvtop__DOT__veer__DOT__dec__DOT__decode__DOT__i0_dp[0U] 

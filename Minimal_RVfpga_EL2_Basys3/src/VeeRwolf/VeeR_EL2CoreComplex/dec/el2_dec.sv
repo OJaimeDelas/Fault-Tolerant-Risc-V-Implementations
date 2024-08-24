@@ -290,7 +290,6 @@ import el2_pkg::*;
 
    output el2_lsu_pkt_t    lsu_p,                  // lsu packet
    output logic             dec_qual_lsu_d,         // LSU instruction at D.  Use to quiet LSU operands
-   output el2_mul_pkt_t    mul_p,                  // mul packet
    output el2_div_pkt_t    div_p,                  // div packet
    output logic             dec_div_cancel,         // cancel divide operation
 
@@ -477,7 +476,6 @@ import el2_pkg::*;
 
                     .wen0(dec_i0_wen_r),          .waddr0(dec_i0_waddr_r[4:0]),          .wd0(dec_i0_wdata_r[31:0]),
                     .wen1(dec_nonblock_load_wen), .waddr1(dec_nonblock_load_waddr[4:0]), .wd1(lsu_nonblock_load_data[31:0]),
-                    .wen2(exu_div_wren),          .waddr2(div_waddr_wb),                 .wd2(exu_div_result[31:0]),
 
                     // outputs
                     .rd0(gpr_i0_rs1_d[31:0]), .rd1(gpr_i0_rs2_d[31:0])

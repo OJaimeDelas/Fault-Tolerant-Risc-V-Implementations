@@ -204,8 +204,6 @@ void Vrvfpgasim::_ctor_var_reset() {
     __Vchglast__TOP__rvfpgasim__veerwolf__rvtop__DOT__veer__DOT__ifu__DOT__ifc__DOT__fetch_addr_next_1 = VL_RAND_RESET_I(1);
     __Vchglast__TOP__rvfpgasim__veerwolf__rvtop__DOT__veer__DOT__dec__DOT__decode__DOT__d_d = VL_RAND_RESET_I(24);
     __Vchglast__TOP__rvfpgasim__veerwolf__rvtop__DOT__veer__DOT__dec__DOT__decode__DOT__cam = VL_RAND_RESET_Q(40);
-    __Vchglast__TOP__rvfpgasim__veerwolf__rvtop__DOT__veer__DOT__exu__DOT__i_mul__DOT__bfp_len = VL_RAND_RESET_I(5);
-    __Vchglast__TOP__rvfpgasim__veerwolf__rvtop__DOT__veer__DOT__exu__DOT__i_div__DOT__genblk5__DOT__i_new_4bit_div_fullshortq__DOT__b_ff = VL_RAND_RESET_Q(38);
     __Vchglast__TOP__rvfpgasim__veerwolf__rvtop__DOT__veer__DOT__lsu__DOT__end_addr_m = VL_RAND_RESET_I(32);
     __Vchglast__TOP__rvfpgasim__veerwolf__rvtop__DOT__veer__DOT__lsu__DOT__end_addr_r = VL_RAND_RESET_I(32);
     __Vchglast__TOP__rvfpgasim__veerwolf__rvtop__DOT__veer__DOT__lsu__DOT__ldst_dual_d = VL_RAND_RESET_I(1);

@@ -48,7 +48,6 @@ VM_CLASSES_SLOW += \
 	Vrvfpgasim_veerwolf_core__B0_Cbebc20__1__Slow \
 	Vrvfpgasim_veerwolf_core__B0_Cbebc20__2__Slow \
 	Vrvfpgasim_veerwolf_core__B0_Cbebc20__3__Slow \
-	Vrvfpgasim_veerwolf_core__B0_Cbebc20__4__Slow \
 	Vrvfpgasim_wb_mem_wrapper__M1000_I0__Slow \
 	Vrvfpgasim_dpram64__S1000_MB0__Slow \
 	Vrvfpgasim_axi_demux__pi3__Slow \

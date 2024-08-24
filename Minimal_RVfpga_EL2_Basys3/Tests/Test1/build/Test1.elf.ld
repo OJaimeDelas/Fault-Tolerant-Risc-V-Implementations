@@ -32,19 +32,18 @@ MEMORY
 	 * r - read only section
 	 * i - initialized section
 	 */
-	ICCM_0    (w!rx)   : ORIGIN = 0xEE000000, LENGTH = 512K 
+	ICCM_0    (w!rx)   : ORIGIN = 0xEE000000, LENGTH = 256K 
 	DCCM_0    (w!r)    : ORIGIN = 0xF0040000, LENGTH = 256K 
 	DDR_0     (w!rx)   : ORIGIN = 0x00000000, LENGTH = 2K   
-	DDR_1     (w!rx)   : ORIGIN = 0x00000800, LENGTH = 62K  
+	DDR_1     (w!rx)   : ORIGIN = 0x00000800, LENGTH = 254K 
 }
 
 PHDRS
 {
 	ddr_0_text     PT_LOAD;
 	ddr_1_text     PT_LOAD;
-	dccm_0_init    PT_LOAD;
-	ddr_0_init     PT_LOAD;
-	dccm_0_data    PT_LOAD;
+	ddr_1_init     PT_LOAD;
+	ddr_1_data     PT_LOAD;
 	
 	tls PT_TLS;
 }
@@ -53,7 +52,7 @@ SECTIONS
 {
 	__num_harts = 1;
 
-	PROVIDE(__stack = ORIGIN(DCCM_0) + LENGTH(DCCM_0));
+	PROVIDE(__stack = ORIGIN(DDR_1) + LENGTH(DDR_1));
 
 	/* Size of the stack for a single hart */
 	__stack_size = DEFINED(__stack_size) ? __stack_size : 4K;
@@ -96,21 +95,21 @@ SECTIONS
 		PROVIDE_HIDDEN ( __preinit_array_start = . );
 		KEEP (*(.preinit_array))
 		PROVIDE_HIDDEN ( __preinit_array_end = . );
-	} > DCCM_0 :dccm_0_init
+	} > DDR_1 :ddr_1_init
 
 	.init_array : {
 		PROVIDE_HIDDEN ( __init_array_start = . );
 		KEEP (*(SORT_BY_INIT_PRIORITY(.init_array.*) SORT_BY_INIT_PRIORITY(.ctors.*)))
 		KEEP (*(.init_array EXCLUDE_FILE (*crtbegin.o *crtbegin?.o *crtend.o *crtend?.o ) .ctors))
 		PROVIDE_HIDDEN ( __init_array_end = . );
-	} > DCCM_0 :dccm_0_init
+	} > DDR_1 :ddr_1_init
 
 	.fini_array : {
 		PROVIDE_HIDDEN ( __fini_array_start = . );
 		KEEP (*(SORT_BY_INIT_PRIORITY(.fini_array.*) SORT_BY_INIT_PRIORITY(.dtors.*)))
 		KEEP (*(.fini_array EXCLUDE_FILE (*crtbegin.o *crtbegin?.o *crtend.o *crtend?.o ) .dtors))
 		PROVIDE_HIDDEN ( __fini_array_end = . );
-	} > DCCM_0 :dccm_0_init
+	} > DDR_1 :ddr_1_init
 
 	.data : ALIGN_WITH_INPUT {
 		*(.data .data.*)
@@ -131,7 +130,7 @@ SECTIONS
 		PROVIDE( __global_pointer$ = . + 0x7b0 );
 		*(.sdata .sdata.* .sdata2.*)
 		*(.gnu.linkonce.s.*)
-	} > DCCM_0 :dccm_0_init
+	} > DDR_1 :ddr_1_init
         PROVIDE(__data_start = ADDR(.data));
 	PROVIDE(__data_source = LOADADDR(.data));
 
@@ -143,14 +142,14 @@ SECTIONS
 	.tdata : ALIGN_WITH_INPUT {
 		PROVIDE( __tls_base = .);
 		*(.tdata .tdata.* .gnu.linkonce.td.*)
-	} > DCCM_0 :tls :dccm_0_init
+	} > DDR_1 :tls :ddr_1_init
 	PROVIDE( __tdata_size = SIZEOF(.tdata) );
 
 	.tdata.template : ALIGN_WITH_INPUT {
 		PROVIDE( __tls_template_base = .);
                 . += __tdata_size;
 		PROVIDE(__data_end = .);
-	} > DCCM_0 :tls :dccm_0_init
+	} > DDR_1 :tls :ddr_1_init
 	PROVIDE( __tdata_source = LOADADDR(.tdata.template) );
 
 	PROVIDE( __edata = __data_end );
@@ -172,7 +171,7 @@ SECTIONS
 		*(.srodata .srodata.*)
 		*(.data.rel.ro .data.rel.ro.*)
 		*(.got .got.*)
-	} > DDR_0 :ddr_0_init
+	} > DDR_1 :ddr_1_init
 
 	/*
 	 * Data values which are preserved across reset
@@ -182,7 +181,7 @@ SECTIONS
 		KEEP(*(SORT_BY_NAME(.preserve.*)))
 		KEEP(*(.preserve))
 		PROVIDE(__preserve_end__ = .);
-	} > DDR_0 :ddr_0_init
+	} > DDR_1 :ddr_1_init
 
         
 
@@ -191,7 +190,7 @@ SECTIONS
 		*(.tbss .tbss.* .gnu.linkonce.tb.*)
 		*(.tcommon)
 		PROVIDE( __tls_end = . );
-	} > DCCM_0 :tls :dccm_0_data
+	} > DDR_1 :tls :ddr_1_data
 	PROVIDE( __tbss_size = SIZEOF(.tbss) );
 	PROVIDE( __tls_size = __tls_end - __tls_base );
 
@@ -206,7 +205,7 @@ SECTIONS
 	 */
 	.tbss_space (NOLOAD) : {
 		. = . + __tbss_size;
-	} > DCCM_0 :dccm_0_data
+	} > DDR_1 :ddr_1_data
 
 	.bss (NOLOAD) : {
 		*(.sbss*)
@@ -216,7 +215,7 @@ SECTIONS
 		*(COMMON)
 		. = ALIGN(8);
 		__bss_end = .;
-	} > DCCM_0 :dccm_0_data
+	} > DDR_1 :ddr_1_data
 	PROVIDE( __end = __bss_end );
 	PROVIDE( _end = __bss_end );
 	PROVIDE( end = __bss_end );
@@ -226,13 +225,13 @@ SECTIONS
 
 	/* Make the rest of memory available for heap storage */
 	PROVIDE( __heap_start = __end );
-	PROVIDE( __heap_end = ORIGIN(DCCM_0) + LENGTH(DCCM_0) - __num_harts * __stack_size);
+	PROVIDE( __heap_end = ORIGIN(DDR_1) + LENGTH(DDR_1) - __num_harts * __stack_size);
 	PROVIDE( __heap_size = __heap_end - __bss_end );
 
 	/* Define stack regions for up to __num_harts to make sure they fit in memory */
 	.stack (NOLOAD) : {
 		. += __num_harts * __stack_size;
-	} > DCCM_0 :dccm_0_data
+	} > DDR_1 :ddr_1_data
 	
 	/* Throw away C++ exception handling information */
 	/DISCARD/ : {

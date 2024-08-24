@@ -94,16 +94,15 @@ elseif(PLATFORM MATCHES "RVFPGANEXYS_EL2_NODDR")
 elseif(PLATFORM MATCHES "RVFPGABASYS3")
     add_definitions(-DPLATFORM_H="swerv_csr.h")
     add_definitions(-DPERIPH_H="RVfpgaBasys3_periph.h")
-    set(ARCH_FLAGS -march=rv32im_zicsr_zifencei -mabi=ilp32)
+    set(ARCH_FLAGS -march=rv32im_zicsr_zifencei -mabi=ilp32 -O2)
     set(CPU_LINK_FLAG --cpu=swerv)
     set(CLANG_CPU swerv)
     set(PLATFORM_ARG -DRVFPGABASYS3)
-    
+
+    #set(DEFAULT_YAML_FILE "${PLATFORM_DIR}/RVfpga/RVfpgaBasys3.YAML")
+
     set(DEFAULT_YAML_FILE "/home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/common/RVfpgaBasys3.YAML")
-    #set(PLACEMENTS_FILE "/home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/common/placements_regions.py")
-    #set(PLACEMENTS_FILE "/home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/common/placements.py")
-    set(PLACEMENTS_FILE "/opt/imgtec/catapult-sdk_1.10.0/examples/apps/hello/placements_rvfpga.py")
-    
+    set(PLACEMENTS_FILE "/home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/common/placements.py")
 
     
     set(DEFAULT_CPU_FREQ 13000000)
@@ -242,7 +241,7 @@ function(add_ldgen_command LINKER_SCRIPT)
     if(CMAKE_HOST_WIN32)
         set(LDGEN_BIN "ldgen.bat")
     else()
-        set(LDGEN_BIN  "ldgen.sh")
+        set(LDGEN_BIN  "/opt/imgtec/catapult-sdk_1.10.0/bin/ldgen.sh")
     endif()
 
     if(PLACEMENTS_FILE)
