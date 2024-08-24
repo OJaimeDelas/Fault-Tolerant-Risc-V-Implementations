@@ -23,7 +23,6 @@ import el2_pkg::*;
 
 `ifdef Pipeline
    output logic [31:0]                i0_rs1_d,  i0_rs2_d,
-   output logic [31:0]                muldiv_rs1_d,
 `endif
 
 `ifdef Pipeline
@@ -128,11 +127,8 @@ import el2_pkg::*;
 
    output logic         exu_pmu_i0_br_misp,                            // to PMU - I0 E4 branch mispredict
    output logic         exu_pmu_i0_br_ataken,                          // to PMU - I0 E4 taken
-   output logic         exu_pmu_i0_pc4,                                // to PMU - I0 E4 PC
+   output logic         exu_pmu_i0_pc4                                // to PMU - I0 E4 PC
 
-
-   output logic [31:0]  exu_div_result,                                // Divide result
-   output logic         exu_div_wren                                   // Divide write enable to GPR
   );
 
 
@@ -149,7 +145,6 @@ import el2_pkg::*;
 
 `ifndef Pipeline
    logic [31:0]                i0_rs1_d,  i0_rs2_d;
-   logic [31:0]                muldiv_rs1_d;
 `endif
 
 
@@ -172,12 +167,6 @@ import el2_pkg::*;
 
    logic                       flush_in_d;
    logic [31:0]                alu_result_x;
-
-`ifndef Pipeline
-   logic                       mul_valid_x;
-`endif
-
-   logic [31:0]                mul_result_x;
 
    el2_predict_pkt_t          i0_pp_r;
 
@@ -262,10 +251,6 @@ import el2_pkg::*;
                                      ({32{ i0_rs2_bypass_en_d & ~dec_extint_stall                   & dec_qual_lsu_d}} & i0_rs2_bypass_data_d[31:0]);
 
 
-   assign muldiv_rs1_d[31:0]       = ({32{~i0_rs1_bypass_en_d & dec_i0_rs1_en_d}}                                      & gpr_i0_rs1_d[31:0]        ) |
-                                     ({32{ i0_rs1_bypass_en_d                  }}                                      & i0_rs1_bypass_data_d[31:0]);
-
-
    assign x_data_en                =  dec_data_en[1];
    assign x_data_en_q1             =  dec_data_en[1] & dec_csr_ren_d;
    assign x_data_en_q2             =  dec_data_en[1] & dec_i0_branch_d;
@@ -297,29 +282,6 @@ import el2_pkg::*;
                           .predict_p_out     ( i0_predict_p_d              ),   // O
                           .pred_correct_out  ( i0_pred_correct_upper_d     ),   // O
                           .pc_ff             ( exu_i0_pc_x[31:1]           ));  // O
-
-
-
-   // el2_exu_mul_ctl #(.pt(pt)) i_mul   (.*,
-   //                        .mul_p             ( mul_p              & {$bits(el2_mul_pkt_t){mul_p.valid}} ),   // I
-   //                        .rs1_in            ( muldiv_rs1_d[31:0] & {32{mul_p.valid}}                    ),   // I
-   //                        .rs2_in            ( i0_rs2_d[31:0]     & {32{mul_p.valid}}                    ),   // I
-   //                        .result_x          ( mul_result_x[31:0]                                        ));  // O
-
-
-
-   // el2_exu_div_ctl #(.pt(pt)) i_div   (.*,
-   //                        .cancel            ( dec_div_cancel              ),   // I
-   //                        .dp                ( div_p                       ),   // I
-   //                        .dividend          ( muldiv_rs1_d[31:0]          ),   // I
-   //                        .divisor           ( i0_rs2_d[31:0]              ),   // I
-   //                        .finish_dly        ( exu_div_wren                ),   // O
-   //                        .out               ( exu_div_result[31:0]        ));  // O
-
-   assign exu_div_result = 31'b0;
-   assign mul_result_x = 31'b0;
-   assign exu_div_wren = '0;
-
 
 
    assign exu_i0_result_x[31:0]    =  alu_result_x[31:0];

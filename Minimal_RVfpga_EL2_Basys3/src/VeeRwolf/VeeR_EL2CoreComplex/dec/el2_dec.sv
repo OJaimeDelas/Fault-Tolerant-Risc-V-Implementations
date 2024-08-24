@@ -186,9 +186,6 @@ import el2_pkg::*;
    input logic         lsu_imprecise_error_store_any,  // LSU imprecise store bus error
    input logic [31:0]  lsu_imprecise_error_addr_any,   // LSU imprecise bus error address
 
-   input logic [31:0]  exu_div_result,      // final div result
-   input logic         exu_div_wren,        // Divide write enable to GPR
-
    input logic [31:0] exu_csr_rs1_x,        // rs1 for csr instruction
 
    input logic [31:0] lsu_result_m,         // load result

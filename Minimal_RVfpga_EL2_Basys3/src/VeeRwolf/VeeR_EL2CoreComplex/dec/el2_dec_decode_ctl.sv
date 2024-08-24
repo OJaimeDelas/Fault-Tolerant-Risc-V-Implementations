@@ -98,8 +98,6 @@ import el2_pkg::*;
    input logic lsu_store_stall_any,                   // stall any store at decode
    input logic dma_dccm_stall_any,                    // stall any load/store at decode
 
-   input logic exu_div_wren,                          // nonblocking divide write enable to GPR.
-
    input logic dec_tlu_i0_kill_writeb_wb,             // I0 is flushed, don't writeback any results to arch state
    input logic dec_tlu_flush_lower_wb,                // trap lower flush
    input logic dec_tlu_i0_kill_writeb_r,              // I0 is flushed, don't writeback any results to arch state
@@ -1388,7 +1386,7 @@ end : cam_array
    assign div_e1_to_r         = (x_d.i0div & x_d.i0valid) |
                                 (r_d.i0div & r_d.i0valid);
 
-   assign div_active_in = i0_div_decode_d | (div_active & ~exu_div_wren & ~nonblock_div_cancel);
+   assign div_active_in = i0_div_decode_d | (div_active & ~nonblock_div_cancel);
 
 
    assign dec_div_active = div_active;

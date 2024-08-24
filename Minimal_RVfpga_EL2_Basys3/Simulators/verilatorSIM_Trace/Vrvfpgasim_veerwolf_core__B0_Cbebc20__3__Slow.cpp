@@ -6552,7 +6552,6 @@ void Vrvfpgasim_veerwolf_core__B0_Cbebc20::_ctor_var_reset() {
     __PVT__rvtop__DOT__veer__DOT__exu__DOT__i0_predict_newp_d = VL_RAND_RESET_Q(56);
     __PVT__rvtop__DOT__veer__DOT__exu__DOT__flush_in_d = VL_RAND_RESET_I(1);
     __PVT__rvtop__DOT__veer__DOT__exu__DOT__alu_result_x = VL_RAND_RESET_I(32);
-    __PVT__rvtop__DOT__veer__DOT__exu__DOT__mul_valid_x = VL_RAND_RESET_I(1);
     __PVT__rvtop__DOT__veer__DOT__exu__DOT__i0_flush_upper_d = VL_RAND_RESET_I(1);
     __PVT__rvtop__DOT__veer__DOT__exu__DOT__i0_flush_path_d = VL_RAND_RESET_I(31);
     __PVT__rvtop__DOT__veer__DOT__exu__DOT__i0_predict_p_d = VL_RAND_RESET_Q(56);

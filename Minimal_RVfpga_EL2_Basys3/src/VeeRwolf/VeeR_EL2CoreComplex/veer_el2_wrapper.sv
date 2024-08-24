@@ -47,9 +47,7 @@ import el2_pkg::*;
 
 `ifdef Pipeline
    output logic [31:0]                i0_rs1_d,  i0_rs2_d,
-   output logic [31:0]                muldiv_rs1_d,
 `endif
-
 `ifdef Pipeline
    output logic [31:0] exu_i0_result_x,
    output logic               [31:0]    result,

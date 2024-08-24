@@ -46,7 +46,6 @@ import el2_pkg::*;
 
 `ifdef Pipeline
    output logic [31:0]                i0_rs1_d,  i0_rs2_d,
-   output logic [31:0]                muldiv_rs1_d,
 `endif
 
 `ifdef Pipeline
@@ -85,8 +84,6 @@ import el2_pkg::*;
 `endif
 
 `ifdef Pipeline
-   output   logic [31:0] exu_div_result,
-   output   logic        exu_div_wren,
    output   logic [4:0]  div_waddr_wb,
 `endif
 
@@ -725,11 +722,6 @@ import el2_pkg::*;
 
    el2_div_pkt_t  div_p;
    logic           dec_div_cancel;
-
-`ifndef Pipeline
-   logic [31:0] exu_div_result;
-   logic exu_div_wren;
-`endif
 
    logic dec_i0_decode_d;
 

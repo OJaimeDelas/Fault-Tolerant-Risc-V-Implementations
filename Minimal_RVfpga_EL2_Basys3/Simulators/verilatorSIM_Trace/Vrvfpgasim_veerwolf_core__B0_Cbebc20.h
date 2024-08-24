@@ -1346,7 +1346,6 @@ VL_MODULE(Vrvfpgasim_veerwolf_core__B0_Cbebc20) {
         CData/*0:0*/ __PVT__rvtop__DOT__veer__DOT__exu__DOT__i0_rs2_bypass_en_d;
         CData/*7:0*/ __PVT__rvtop__DOT__veer__DOT__exu__DOT__after_flush_eghr;
         CData/*0:0*/ __PVT__rvtop__DOT__veer__DOT__exu__DOT__flush_in_d;
-        CData/*0:0*/ __PVT__rvtop__DOT__veer__DOT__exu__DOT__mul_valid_x;
         CData/*0:0*/ __PVT__rvtop__DOT__veer__DOT__exu__DOT__i0_flush_upper_d;
         CData/*0:0*/ __PVT__rvtop__DOT__veer__DOT__exu__DOT__i0_branch_x;
         CData/*0:0*/ __PVT__rvtop__DOT__veer__DOT__exu__DOT__i_csr_rs1_x_ff__DOT__l1clk;
@@ -1378,9 +1377,9 @@ VL_MODULE(Vrvfpgasim_veerwolf_core__B0_Cbebc20) {
         CData/*0:0*/ __PVT__rvtop__DOT__veer__DOT__lsu__DOT__lsu_double_ecc_error_r;
         CData/*0:0*/ __PVT__rvtop__DOT__veer__DOT__lsu__DOT__ld_single_ecc_error_r;
         CData/*0:0*/ __PVT__rvtop__DOT__veer__DOT__lsu__DOT__ld_single_ecc_error_r_ff;
+        CData/*0:0*/ __PVT__rvtop__DOT__veer__DOT__lsu__DOT__lsu_i0_valid_d;
     };
     struct {
-        CData/*0:0*/ __PVT__rvtop__DOT__veer__DOT__lsu__DOT__lsu_i0_valid_d;
         CData/*0:0*/ __PVT__rvtop__DOT__veer__DOT__lsu__DOT__lsu_i0_valid_m;
         CData/*0:0*/ __PVT__rvtop__DOT__veer__DOT__lsu__DOT__lsu_i0_valid_r;
         CData/*0:0*/ __PVT__rvtop__DOT__veer__DOT__lsu__DOT__store_stbuf_reqvld_r;
@@ -1444,9 +1443,9 @@ VL_MODULE(Vrvfpgasim_veerwolf_core__B0_Cbebc20) {
         CData/*7:0*/ __PVT__rvtop__DOT__veer__DOT__lsu__DOT__dccm_ctl__DOT__store_byteen_ext_m;
         CData/*7:0*/ __PVT__rvtop__DOT__veer__DOT__lsu__DOT__dccm_ctl__DOT__store_byteen_ext_r;
         CData/*7:0*/ __PVT__rvtop__DOT__veer__DOT__lsu__DOT__dccm_ctl__DOT__L2U_Plus1_0__DOT__stbuf_fwdbyteen_m;
+        CData/*0:0*/ __PVT__rvtop__DOT__veer__DOT__lsu__DOT__dccm_ctl__DOT__L2U_Plus1_0__DOT__lsu_ld_data_corr_rff__DOT__l1clk;
     };
     struct {
-        CData/*0:0*/ __PVT__rvtop__DOT__veer__DOT__lsu__DOT__dccm_ctl__DOT__L2U_Plus1_0__DOT__lsu_ld_data_corr_rff__DOT__l1clk;
         CData/*0:0*/ __PVT__rvtop__DOT__veer__DOT__lsu__DOT__dccm_ctl__DOT__L2U1_Plus1_0__DOT__store_data_hi_rff__DOT__l1clk;
         CData/*0:0*/ __PVT__rvtop__DOT__veer__DOT__lsu__DOT__dccm_ctl__DOT__Gen_dccm_enable__DOT__ld_sec_addr_hi_rff__DOT__l1clk;
         CData/*0:0*/ __PVT__rvtop__DOT__veer__DOT__lsu__DOT__dccm_ctl__DOT__Gen_dccm_enable__DOT__ld_sec_addr_lo_rff__DOT__l1clk;
@@ -1510,9 +1509,9 @@ VL_MODULE(Vrvfpgasim_veerwolf_core__B0_Cbebc20) {
         CData/*0:0*/ __PVT__rvtop__DOT__veer__DOT__lsu__DOT__stbuf__DOT__Gen_dccm_enable__DOT__GenStBuf__BRA__3__KET____DOT__stbuf_addrff__DOT__l1clk;
         CData/*3:0*/ __PVT__rvtop__DOT__veer__DOT__lsu__DOT__stbuf__DOT__Gen_dccm_enable__DOT__GenStBuf__BRA__3__KET____DOT__stbuf_byteenff__DOT__din_new;
         CData/*0:0*/ __PVT__rvtop__DOT__veer__DOT__lsu__DOT__stbuf__DOT__Gen_dccm_enable__DOT__GenStBuf__BRA__3__KET____DOT__stbuf_dataff__DOT__l1clk;
+        CData/*0:0*/ __PVT__rvtop__DOT__veer__DOT__lsu__DOT__ecc__DOT__is_ldst_r;
     };
     struct {
-        CData/*0:0*/ __PVT__rvtop__DOT__veer__DOT__lsu__DOT__ecc__DOT__is_ldst_r;
         CData/*6:0*/ __PVT__rvtop__DOT__veer__DOT__lsu__DOT__ecc__DOT__dccm_wdata_ecc_hi_any;
         CData/*6:0*/ __PVT__rvtop__DOT__veer__DOT__lsu__DOT__ecc__DOT__dccm_wdata_ecc_lo_any;
         CData/*0:0*/ __PVT__rvtop__DOT__veer__DOT__lsu__DOT__ecc__DOT__single_ecc_error_hi_any;
@@ -1576,9 +1575,9 @@ VL_MODULE(Vrvfpgasim_veerwolf_core__B0_Cbebc20) {
         CData/*0:0*/ __PVT__rvtop__DOT__veer__DOT__lsu__DOT__bus_intf__DOT__bus_buffer__DOT__ld_addr_ibuf_hit_lo;
         CData/*0:0*/ __PVT__rvtop__DOT__veer__DOT__lsu__DOT__bus_intf__DOT__bus_buffer__DOT__ld_addr_ibuf_hit_hi;
         CData/*3:0*/ __PVT__rvtop__DOT__veer__DOT__lsu__DOT__bus_intf__DOT__bus_buffer__DOT__ld_byte_ibuf_hit_lo;
+        CData/*3:0*/ __PVT__rvtop__DOT__veer__DOT__lsu__DOT__bus_intf__DOT__bus_buffer__DOT__ld_byte_ibuf_hit_hi;
     };
     struct {
-        CData/*3:0*/ __PVT__rvtop__DOT__veer__DOT__lsu__DOT__bus_intf__DOT__bus_buffer__DOT__ld_byte_ibuf_hit_hi;
         CData/*3:0*/ __PVT__rvtop__DOT__veer__DOT__lsu__DOT__bus_intf__DOT__bus_buffer__DOT__ldst_byteen_r;
         CData/*3:0*/ __PVT__rvtop__DOT__veer__DOT__lsu__DOT__bus_intf__DOT__bus_buffer__DOT__ldst_byteen_hi_r;
         CData/*3:0*/ __PVT__rvtop__DOT__veer__DOT__lsu__DOT__bus_intf__DOT__bus_buffer__DOT__ldst_byteen_lo_r;
@@ -1642,9 +1641,9 @@ VL_MODULE(Vrvfpgasim_veerwolf_core__B0_Cbebc20) {
         CData/*3:0*/ __PVT__rvtop__DOT__veer__DOT__lsu__DOT__bus_intf__DOT__bus_buffer__DOT__buf_unsign_in;
         CData/*7:0*/ __PVT__rvtop__DOT__veer__DOT__lsu__DOT__bus_intf__DOT__bus_buffer__DOT__buf_sz_in;
         CData/*3:0*/ __PVT__rvtop__DOT__veer__DOT__lsu__DOT__bus_intf__DOT__bus_buffer__DOT__buf_write_in;
+        CData/*3:0*/ __PVT__rvtop__DOT__veer__DOT__lsu__DOT__bus_intf__DOT__bus_buffer__DOT__buf_wr_en;
     };
     struct {
-        CData/*3:0*/ __PVT__rvtop__DOT__veer__DOT__lsu__DOT__bus_intf__DOT__bus_buffer__DOT__buf_wr_en;
         CData/*3:0*/ __PVT__rvtop__DOT__veer__DOT__lsu__DOT__bus_intf__DOT__bus_buffer__DOT__buf_dualhi_in;
         CData/*7:0*/ __PVT__rvtop__DOT__veer__DOT__lsu__DOT__bus_intf__DOT__bus_buffer__DOT__buf_dualtag_in;
         CData/*3:0*/ __PVT__rvtop__DOT__veer__DOT__lsu__DOT__bus_intf__DOT__bus_buffer__DOT__buf_ldfwd_en;
@@ -1708,9 +1707,9 @@ VL_MODULE(Vrvfpgasim_veerwolf_core__B0_Cbebc20) {
         CData/*0:0*/ __PVT__rvtop__DOT__veer__DOT__lsu__DOT__bus_intf__DOT__bus_buffer__DOT__lsu_axi_awvalid_q;
         CData/*0:0*/ __PVT__rvtop__DOT__veer__DOT__lsu__DOT__bus_intf__DOT__bus_buffer__DOT__lsu_axi_awready_q;
         CData/*0:0*/ __PVT__rvtop__DOT__veer__DOT__lsu__DOT__bus_intf__DOT__bus_buffer__DOT__lsu_axi_wvalid_q;
+        CData/*0:0*/ __PVT__rvtop__DOT__veer__DOT__lsu__DOT__bus_intf__DOT__bus_buffer__DOT__lsu_axi_wready_q;
     };
     struct {
-        CData/*0:0*/ __PVT__rvtop__DOT__veer__DOT__lsu__DOT__bus_intf__DOT__bus_buffer__DOT__lsu_axi_wready_q;
         CData/*0:0*/ __PVT__rvtop__DOT__veer__DOT__lsu__DOT__bus_intf__DOT__bus_buffer__DOT__lsu_axi_arvalid_q;
         CData/*0:0*/ __PVT__rvtop__DOT__veer__DOT__lsu__DOT__bus_intf__DOT__bus_buffer__DOT__lsu_axi_arready_q;
         CData/*0:0*/ __PVT__rvtop__DOT__veer__DOT__lsu__DOT__bus_intf__DOT__bus_buffer__DOT__lsu_axi_bvalid_q;
@@ -1774,9 +1773,9 @@ VL_MODULE(Vrvfpgasim_veerwolf_core__B0_Cbebc20) {
         CData/*0:0*/ __PVT__rvtop__DOT__veer__DOT__pic_ctrl_inst__DOT__IO_CLK_GRP__BRA__5__KET____DOT__grp_clk;
         CData/*0:0*/ __PVT__rvtop__DOT__veer__DOT__pic_ctrl_inst__DOT__IO_CLK_GRP__BRA__5__KET____DOT__grp_clken;
         CData/*0:0*/ __PVT__rvtop__DOT__veer__DOT__pic_ctrl_inst__DOT__IO_CLK_GRP__BRA__6__KET____DOT__grp_clk;
+        CData/*0:0*/ __PVT__rvtop__DOT__veer__DOT__pic_ctrl_inst__DOT__IO_CLK_GRP__BRA__6__KET____DOT__grp_clken;
     };
     struct {
-        CData/*0:0*/ __PVT__rvtop__DOT__veer__DOT__pic_ctrl_inst__DOT__IO_CLK_GRP__BRA__6__KET____DOT__grp_clken;
         CData/*0:0*/ __PVT__rvtop__DOT__veer__DOT__pic_ctrl_inst__DOT__IO_CLK_GRP__BRA__7__KET____DOT__grp_clk;
         CData/*0:0*/ __PVT__rvtop__DOT__veer__DOT__pic_ctrl_inst__DOT__IO_CLK_GRP__BRA__7__KET____DOT__grp_clken;
         WData/*815:0*/ __PVT__rvtop__DOT__veer__DOT__pic_ctrl_inst__DOT__genblock__DOT__level_intpend_w_prior_en[26];
@@ -1840,9 +1839,9 @@ VL_MODULE(Vrvfpgasim_veerwolf_core__B0_Cbebc20) {
         CData/*1:0*/ __PVT__rvtop__DOT__veer__DOT__dma_ctrl__DOT__fifo_error_bus_en;
         CData/*1:0*/ __PVT__rvtop__DOT__veer__DOT__dma_ctrl__DOT__fifo_reset;
         CData/*3:0*/ __PVT__rvtop__DOT__veer__DOT__dma_ctrl__DOT__fifo_error_in;
+        CData/*0:0*/ __PVT__rvtop__DOT__veer__DOT__dma_ctrl__DOT__fifo_write_in;
     };
     struct {
-        CData/*0:0*/ __PVT__rvtop__DOT__veer__DOT__dma_ctrl__DOT__fifo_write_in;
         CData/*2:0*/ __PVT__rvtop__DOT__veer__DOT__dma_ctrl__DOT__fifo_sz_in;
         CData/*7:0*/ __PVT__rvtop__DOT__veer__DOT__dma_ctrl__DOT__fifo_byteen_in;
         CData/*0:0*/ __PVT__rvtop__DOT__veer__DOT__dma_ctrl__DOT__RspPtr;
@@ -1906,9 +1905,9 @@ VL_MODULE(Vrvfpgasim_veerwolf_core__B0_Cbebc20) {
         CData/*3:0*/ __PVT__rvtop__DOT__mem__DOT__Gen_dccm_enable__DOT__dccm__DOT__dccm_clken;
         CData/*0:0*/ __PVT__rvtop__DOT__mem__DOT__Gen_dccm_enable__DOT__dccm__DOT__mem_bank__BRA__0__KET____DOT__ram__DOT__ROP;
         CData/*0:0*/ __PVT__rvtop__DOT__mem__DOT__Gen_dccm_enable__DOT__dccm__DOT__mem_bank__BRA__1__KET____DOT__ram__DOT__ROP;
+        CData/*0:0*/ __PVT__rvtop__DOT__mem__DOT__Gen_dccm_enable__DOT__dccm__DOT__mem_bank__BRA__2__KET____DOT__ram__DOT__ROP;
     };
     struct {
-        CData/*0:0*/ __PVT__rvtop__DOT__mem__DOT__Gen_dccm_enable__DOT__dccm__DOT__mem_bank__BRA__2__KET____DOT__ram__DOT__ROP;
         CData/*0:0*/ __PVT__rvtop__DOT__mem__DOT__Gen_dccm_enable__DOT__dccm__DOT__mem_bank__BRA__3__KET____DOT__ram__DOT__ROP;
         CData/*3:0*/ __PVT__rvtop__DOT__mem__DOT__iccm__DOT__iccm__DOT__wren_bank;
         CData/*3:0*/ __PVT__rvtop__DOT__mem__DOT__iccm__DOT__iccm__DOT__rden_bank;
@@ -1972,9 +1971,9 @@ VL_MODULE(Vrvfpgasim_veerwolf_core__B0_Cbebc20) {
         QData/*39:0*/ __PVT__rvtop__DOT__veer__DOT__dec__DOT__decode__DOT__cam_in;
         QData/*39:0*/ __PVT__rvtop__DOT__veer__DOT__dec__DOT__decode__DOT__cam_raw;
         SData/*14:0*/ __PVT__rvtop__DOT__veer__DOT__dec__DOT__decode__DOT__i0r;
+        SData/*9:0*/ __PVT__rvtop__DOT__veer__DOT__dec__DOT__tlu__DOT__mtdata1_t0;
     };
     struct {
-        SData/*9:0*/ __PVT__rvtop__DOT__veer__DOT__dec__DOT__tlu__DOT__mtdata1_t0;
         SData/*9:0*/ __PVT__rvtop__DOT__veer__DOT__dec__DOT__tlu__DOT__mtdata1_t1;
         SData/*9:0*/ __PVT__rvtop__DOT__veer__DOT__dec__DOT__tlu__DOT__mtdata1_t2;
         SData/*9:0*/ __PVT__rvtop__DOT__veer__DOT__dec__DOT__tlu__DOT__mtdata1_t3;
@@ -2038,9 +2037,9 @@ VL_MODULE(Vrvfpgasim_veerwolf_core__B0_Cbebc20) {
         IData/*31:0*/ __PVT__timer_ptc__DOT__rptc_cntr;
         IData/*31:0*/ __PVT__timer_ptc__DOT__rptc_hrc;
         IData/*31:0*/ __PVT__timer_ptc__DOT__rptc_lrc;
+        IData/*31:0*/ __PVT__uart16550_0__DOT__wb_dat32_o;
     };
     struct {
-        IData/*31:0*/ __PVT__uart16550_0__DOT__wb_dat32_o;
         IData/*17:0*/ __PVT__rvtop__DOT__dccm_wr_addr_lo;
         IData/*17:0*/ __PVT__rvtop__DOT__dccm_wr_addr_hi;
         WData/*70:0*/ __PVT__rvtop__DOT__ic_debug_rd_data[3];
@@ -2104,9 +2103,9 @@ VL_MODULE(Vrvfpgasim_veerwolf_core__B0_Cbebc20) {
         WData/*79:0*/ __PVT__rvtop__DOT__veer__DOT__ifu__DOT__mem_ctl__DOT__ic_byp_data_only_pre_new[3];
         WData/*511:0*/ __PVT__rvtop__DOT__veer__DOT__ifu__DOT__mem_ctl__DOT__ic_miss_buff_data[16];
         WData/*135:0*/ __PVT__rvtop__DOT__veer__DOT__ifu__DOT__mem_ctl__DOT__icache_parity_1__DOT__ic_wr_16bytes_data[5];
+        QData/*63:0*/ __PVT__rvtop__DOT__veer__DOT__ifu__DOT__mem_ctl__DOT__iccm_enabled__DOT__iccm_corrected_data;
     };
     struct {
-        QData/*63:0*/ __PVT__rvtop__DOT__veer__DOT__ifu__DOT__mem_ctl__DOT__iccm_enabled__DOT__iccm_corrected_data;
         IData/*31:0*/ __PVT__rvtop__DOT__veer__DOT__dec__DOT__dec_csr_wrdata_r;
         IData/*16:0*/ __PVT__rvtop__DOT__veer__DOT__dec__DOT__dec_tlu_packet_r;
         IData/*31:0*/ __PVT__rvtop__DOT__veer__DOT__dec__DOT__dec_illegal_inst;
@@ -2170,9 +2169,9 @@ VL_MODULE(Vrvfpgasim_veerwolf_core__B0_Cbebc20) {
         IData/*31:0*/ __PVT__rvtop__DOT__veer__DOT__dec__DOT__tlu__DOT__mrac_in;
         IData/*31:0*/ __PVT__rvtop__DOT__veer__DOT__dec__DOT__tlu__DOT__int_timers__DOT__mitcnt0_ns;
         IData/*31:0*/ __PVT__rvtop__DOT__veer__DOT__dec__DOT__tlu__DOT__int_timers__DOT__mitcnt0;
+        IData/*31:0*/ __PVT__rvtop__DOT__veer__DOT__dec__DOT__tlu__DOT__int_timers__DOT__mitcnt1_ns;
     };
     struct {
-        IData/*31:0*/ __PVT__rvtop__DOT__veer__DOT__dec__DOT__tlu__DOT__int_timers__DOT__mitcnt1_ns;
         IData/*31:0*/ __PVT__rvtop__DOT__veer__DOT__dec__DOT__tlu__DOT__int_timers__DOT__mitcnt1;
         IData/*31:0*/ __PVT__rvtop__DOT__veer__DOT__dec__DOT__tlu__DOT__int_timers__DOT__mitb0_b;
         IData/*31:0*/ __PVT__rvtop__DOT__veer__DOT__dec__DOT__tlu__DOT__int_timers__DOT__mitb1_b;
@@ -2236,9 +2235,9 @@ VL_MODULE(Vrvfpgasim_veerwolf_core__B0_Cbebc20) {
         IData/*31:0*/ __PVT__rvtop__DOT__veer__DOT__lsu__DOT__lsu_lsc_ctl__DOT__bus_read_data_r;
         IData/*31:0*/ __PVT__rvtop__DOT__veer__DOT__lsu__DOT__lsu_lsc_ctl__DOT__L2U1_Plus1_0__DOT__lsu_ld_datafn_m;
         IData/*31:0*/ __PVT__rvtop__DOT__veer__DOT__lsu__DOT__lsu_lsc_ctl__DOT__L2U1_Plus1_0__DOT__lsu_ld_datafn_corr_r;
+        IData/*17:0*/ __PVT__rvtop__DOT__veer__DOT__lsu__DOT__dccm_ctl__DOT__ld_sec_addr_lo_r_ff;
     };
     struct {
-        IData/*17:0*/ __PVT__rvtop__DOT__veer__DOT__lsu__DOT__dccm_ctl__DOT__ld_sec_addr_lo_r_ff;
         IData/*17:0*/ __PVT__rvtop__DOT__veer__DOT__lsu__DOT__dccm_ctl__DOT__ld_sec_addr_hi_r_ff;
         IData/*31:0*/ __PVT__rvtop__DOT__veer__DOT__lsu__DOT__dccm_ctl__DOT__store_data_lo_r_in;
         IData/*31:0*/ __PVT__rvtop__DOT__veer__DOT__lsu__DOT__dccm_ctl__DOT__store_data_hi_r_in;
@@ -2302,9 +2301,9 @@ VL_MODULE(Vrvfpgasim_veerwolf_core__B0_Cbebc20) {
         IData/*31:0*/ __PVT__rvtop__DOT__veer__DOT__dma_ctrl__DOT__fifo_addr_in;
         IData/*31:0*/ __PVT__rvtop__DOT__veer__DOT__dma_ctrl__DOT__dma_dbg_mem_rddata;
         IData/*31:0*/ __PVT__rvtop__DOT__veer__DOT__dma_ctrl__DOT__dma_dbg_mem_wrdata;
+        IData/*31:0*/ __PVT__rvtop__DOT__veer__DOT__dma_ctrl__DOT__dma_mem_addr_int;
     };
     struct {
-        IData/*31:0*/ __PVT__rvtop__DOT__veer__DOT__dma_ctrl__DOT__dma_mem_addr_int;
         IData/*31:0*/ __PVT__rvtop__DOT__veer__DOT__dma_ctrl__DOT__wrbuf_addr;
         IData/*31:0*/ __PVT__rvtop__DOT__veer__DOT__dma_ctrl__DOT__rdbuf_addr;
         IData/*16:0*/ __PVT__rvtop__DOT__mem__DOT__iccm__DOT__iccm__DOT__addr_bank_inc;
@@ -2368,9 +2367,9 @@ VL_MODULE(Vrvfpgasim_veerwolf_core__B0_Cbebc20) {
         QData/*63:0*/ __PVT__rvtop__DOT__veer__DOT__lsu__DOT__dccm_ctl__DOT__L2U_Plus1_0__DOT__dccm_rdata_m;
         QData/*63:0*/ __PVT__rvtop__DOT__veer__DOT__lsu__DOT__dccm_ctl__DOT__L2U_Plus1_0__DOT__dccm_rdata_corr_m;
         QData/*63:0*/ __PVT__rvtop__DOT__veer__DOT__lsu__DOT__dccm_ctl__DOT__L2U_Plus1_0__DOT__stbuf_fwddata_m;
+        QData/*63:0*/ __PVT__rvtop__DOT__veer__DOT__lsu__DOT__dccm_ctl__DOT__L2U1_Plus1_0__DOT__store_data_mask;
     };
     struct {
-        QData/*63:0*/ __PVT__rvtop__DOT__veer__DOT__lsu__DOT__dccm_ctl__DOT__L2U1_Plus1_0__DOT__store_data_mask;
         QData/*38:0*/ __PVT__rvtop__DOT__veer__DOT__lsu__DOT__ecc__DOT__Gen_dccm_enable__DOT__lsu_ecc_decode_hi__DOT__error_mask;
         QData/*38:0*/ __PVT__rvtop__DOT__veer__DOT__lsu__DOT__ecc__DOT__Gen_dccm_enable__DOT__lsu_ecc_decode_hi__DOT__din_plus_parity;
         QData/*38:0*/ __PVT__rvtop__DOT__veer__DOT__lsu__DOT__ecc__DOT__Gen_dccm_enable__DOT__lsu_ecc_decode_hi__DOT__dout_plus_parity;
