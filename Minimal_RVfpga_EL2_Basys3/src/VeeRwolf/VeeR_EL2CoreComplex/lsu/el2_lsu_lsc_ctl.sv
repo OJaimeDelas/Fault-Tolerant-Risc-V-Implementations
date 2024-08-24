@@ -127,11 +127,10 @@ import el2_pkg::*;
    logic [31:0]        lsu_rs1_d;
    logic [11:0]        lsu_offset_d;
 
-`ifndef Pipeline
    logic [31:0]        rs1_d;
    logic [11:0]        offset_d;
    logic [31:0]        full_addr_d;
-`endif
+
 
    logic [12:0]        end_addr_offset_d;
    logic [2:0]         addr_offset_d;

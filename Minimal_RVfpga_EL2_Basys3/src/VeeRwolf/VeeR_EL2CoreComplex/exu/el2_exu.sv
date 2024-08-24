@@ -21,34 +21,6 @@ import el2_pkg::*;
 )
   (
 
-`ifdef Pipeline
-   output logic [31:0]                i0_rs1_d,  i0_rs2_d,
-`endif
-
-`ifdef Pipeline
-   output logic [31:0]                i0_rs1_bypass_data_d,
-   output logic [31:0]                i0_rs2_bypass_data_d,
-`endif
-
-`ifdef Pipeline
-   output logic                       i0_rs1_bypass_en_d,
-   output logic                       i0_rs2_bypass_en_d,
-`endif
-
-`ifdef Pipeline
-   output logic               [31:0]    result,
-   output logic                       mul_valid_x,
-   output logic                         actual_taken,
-   output logic                         any_branch,
-`endif
-
-`ifdef Pipeline
-   output logic Bypass0_exu_i0_result_x,
-   output logic Bypass0_lsu_nonblock_load_data,
-   output logic Bypass1_exu_i0_result_x,
-   output logic Bypass1_lsu_nonblock_load_data,
-`endif
-
    input logic          clk,                                           // Top level clock
    input logic          rst_l,                                         // Reset
    input logic          scan_mode,                                     // Scan control
@@ -84,7 +56,6 @@ import el2_pkg::*;
    input logic  [31:0]  dec_csr_rddata_d,                              // CSR read data
 
    input logic          dec_qual_lsu_d,                                // LSU instruction at D.  Use to quiet LSU operands
-   input logic          dec_div_cancel,                                // Cancel the divide operation
 
    input logic  [31:1]  pred_correct_npc_x,                            // DEC NPC for correctly predicted branch
 
@@ -131,20 +102,14 @@ import el2_pkg::*;
   );
 
 
-
-`ifndef Pipeline
    logic [31:0]                i0_rs1_bypass_data_d;
    logic [31:0]                i0_rs2_bypass_data_d;
-`endif
 
-`ifndef Pipeline
    logic                       i0_rs1_bypass_en_d;
    logic                       i0_rs2_bypass_en_d;
-`endif
 
-`ifndef Pipeline
    logic [31:0]                i0_rs1_d,  i0_rs2_d;
-`endif
+
 
 
    logic [31:1]                pred_correct_npc_r;

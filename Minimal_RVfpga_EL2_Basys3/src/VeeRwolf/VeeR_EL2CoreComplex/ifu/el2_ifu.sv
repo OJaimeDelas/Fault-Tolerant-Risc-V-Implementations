@@ -274,9 +274,8 @@ import el2_pkg::*;
    logic [1:0]   ic_fetch_val_f;
    logic [31:0] ic_data_f;
 
-`ifndef Pipeline
+
    logic [31:0] ifu_fetch_data_f;
-`endif
 
    logic ifc_fetch_req_f;
    logic ifc_fetch_req_f_raw;

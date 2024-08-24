@@ -525,21 +525,16 @@ import el2_pkg::*;
 
 
 
-`ifndef Pipeline
    logic         dec_i0_rs1_en_d;
    logic         dec_i0_rs2_en_d;
-`endif
 
-`ifndef Pipeline
    logic  [31:0] gpr_i0_rs1_d;
    logic  [31:0] gpr_i0_rs2_d;
-`endif
+
 
    logic [31:0] dec_i0_result_r;
 
-`ifndef Pipeline
    logic [31:0] exu_i0_result_x;
-`endif
 
 
    logic [31:1] exu_i0_pc_x;
@@ -585,9 +580,8 @@ import el2_pkg::*;
    logic        dec_lsu_valid_raw_d;
    logic [11:0] dec_lsu_offset_d;
 
-`ifndef Pipeline
    logic [31:0]  lsu_result_m;
-`endif
+
 
    logic [31:0]  lsu_result_corr_r;     // This is the ECC corrected data going to RF
    logic         lsu_single_ecc_error_incr;     // Increment the ecc counter
@@ -612,11 +606,10 @@ import el2_pkg::*;
    logic                                 lsu_nonblock_load_data_valid;
    logic [pt.LSU_NUM_NBLOAD_WIDTH-1:0]   lsu_nonblock_load_data_tag;
 
-`ifndef Pipeline
    logic [4:0]                dec_nonblock_load_waddr;
    logic                      dec_nonblock_load_wen;
    logic [31:0]               lsu_nonblock_load_data;
-`endif
+
 
    logic        dec_csr_ren_d;
    logic [31:0] dec_csr_rddata_d;
@@ -633,8 +626,6 @@ import el2_pkg::*;
    logic [31:0] dec_tlu_mrac_ff;        // CSR for memory region control
 
    logic        ifu_i0_pc4;
-
-   logic           dec_div_cancel;
 
    logic dec_i0_decode_d;
 

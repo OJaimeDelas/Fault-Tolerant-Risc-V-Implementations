@@ -247,8 +247,6 @@ import el2_pkg::*;
 
    output el2_lsu_pkt_t    lsu_p,                  // lsu packet
    output logic             dec_qual_lsu_d,         // LSU instruction at D.  Use to quiet LSU operands
-   output logic             dec_div_cancel,         // cancel divide operation
-
    output logic [11:0] dec_lsu_offset_d,            // 12b offset for load/store addresses
 
    output logic        dec_csr_ren_d,               // CSR read enable
@@ -323,22 +321,18 @@ import el2_pkg::*;
 
    logic dec_tlu_wr_pause_r;             // CSR write to pause reg is at R.
 
-`ifndef Pipeline
    logic [4:0]  dec_i0_rs1_d;
    logic [4:0]  dec_i0_rs2_d;
-`endif
+
 
    logic [31:0] dec_i0_instr_d;
 
    logic  dec_tlu_trace_disable;
    logic  dec_tlu_pipelining_disable;
 
-
-`ifndef Pipeline
    logic [4:0]  dec_i0_waddr_r;
    logic        dec_i0_wen_r;
    logic [31:0] dec_i0_wdata_r;
-`endif
 
    logic        dec_csr_wen_r;           // csr write enable at wb
    logic [11:0] dec_csr_wraddr_r;        // write address for csryes
@@ -367,10 +361,9 @@ import el2_pkg::*;
    logic [3:0]                dec_i0_trigger_match_d;
    logic                      dec_debug_fence_d;
 
-`ifndef Pipeline
    logic [4:0]                dec_nonblock_load_waddr;
    logic                      dec_nonblock_load_wen;
-`endif
+
 
    logic                      dec_tlu_flush_pause_r;
    el2_br_pkt_t                   dec_i0_brp;

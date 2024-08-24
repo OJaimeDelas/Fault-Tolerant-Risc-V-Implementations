@@ -170,9 +170,7 @@ import el2_pkg::*;
    logic [1:0]                                    rdptr, rdptr_in;
    logic [2:0]                                    qwen;
 
-`ifndef Pipeline
    logic [31:0]                                   q2,q1,q0;
-`endif
 
    logic                                          q2off_in, q2off;
    logic                                          q1off_in, q1off;
