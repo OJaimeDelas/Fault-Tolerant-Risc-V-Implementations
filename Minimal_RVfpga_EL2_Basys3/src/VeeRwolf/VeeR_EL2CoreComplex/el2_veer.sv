@@ -27,92 +27,6 @@ import el2_pkg::*;
  )
   (
 
-`ifdef Pipeline
-   output logic [31:0] ifu_fetch_data_f,
-   output logic [31:0]                            q2,q1,q0,
-   output logic [31:0]        i0_inst_d,
-   output logic [31:0]        i0_inst_x,
-   output logic [31:0]        i0_inst_r,
-   output logic [31:0]        i0_inst_wb_in,
-   output logic [31:0]        i0_inst_wb,
-`endif
-
-`ifdef Pipeline
-   output logic [4:0]  dec_i0_rs1_d,
-   output logic [4:0]  dec_i0_rs2_d,
-   output logic  [31:0] gpr_i0_rs1_d,
-   output logic  [31:0] gpr_i0_rs2_d,
-`endif
-
-`ifdef Pipeline
-   output logic [31:0]                i0_rs1_d,  i0_rs2_d,
-`endif
-
-`ifdef Pipeline
-   output logic [31:0] exu_i0_result_x,
-   output logic               [31:0]    result,
-   output logic                       mul_valid_x,
-   output logic                         actual_taken,
-   output logic                         any_branch,
-`endif
-
-`ifdef Pipeline
-   output logic [4:0]  dec_i0_waddr_r,
-   output logic        dec_i0_wen_r,
-   output logic [31:0] dec_i0_wdata_r,
-`endif
-
-`ifdef Pipeline
-   output logic [31:0]        rs1_d,
-   output logic [11:0]        offset_d,
-   output logic [31:0]        full_addr_d,
-`endif
-
-`ifdef Pipeline
-   output logic [31:0]                i0_rs1_bypass_data_d,
-   output logic [31:0]                i0_rs2_bypass_data_d,
-`endif
-
-`ifdef Pipeline
-   output logic [31:0]               lsu_result_m,
-`endif
-
-`ifdef Pipeline
-   output logic [4:0]                dec_nonblock_load_waddr,
-   output logic                      dec_nonblock_load_wen,
-   output logic [31:0]               lsu_nonblock_load_data,
-`endif
-
-`ifdef Pipeline
-   output   logic [4:0]  div_waddr_wb,
-`endif
-
-`ifdef Pipeline
-   output logic                       i0_rs1_bypass_en_d,
-   output logic                       i0_rs2_bypass_en_d,
-   output logic                       dec_i0_rs1_en_d,
-   output logic                       dec_i0_rs2_en_d,
-`endif
-
-`ifdef Pipeline
-   output logic alu_instd,
-   output logic lsu_instd,
-   output logic mul_instd,
-   output logic i0_x_data_en,
-   output logic alu_instx,
-   output logic mul_instx,
-`endif
-
-`ifdef Pipeline
-   output logic Bypass0_exu_i0_result_x,
-   output logic Bypass0_lsu_nonblock_load_data,
-   output logic Bypass1_exu_i0_result_x,
-   output logic Bypass1_lsu_nonblock_load_data,
-`endif
-
-`ifdef Pipeline
-   output logic [2:0] instr_control,
-`endif
 
    input logic                  clk,
    input logic                  rst_l,
@@ -720,7 +634,6 @@ import el2_pkg::*;
 
    logic        ifu_i0_pc4;
 
-   el2_div_pkt_t  div_p;
    logic           dec_div_cancel;
 
    logic dec_i0_decode_d;

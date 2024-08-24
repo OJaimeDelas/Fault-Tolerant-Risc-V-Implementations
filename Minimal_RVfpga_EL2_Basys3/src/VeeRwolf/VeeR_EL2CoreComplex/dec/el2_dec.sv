@@ -34,46 +34,6 @@ import el2_pkg::*;
  )
   (
 
-`ifdef Pipeline
-   output logic [31:0]        i0_inst_d,
-   output logic [31:0]        i0_inst_x,
-   output logic [31:0]        i0_inst_r,
-   output logic [31:0]        i0_inst_wb_in,
-   output logic [31:0]        i0_inst_wb,
-`endif
-
-`ifdef Pipeline
-   output logic [4:0]  dec_i0_rs1_d,
-   output logic [4:0]  dec_i0_rs2_d,
-`endif
-
-`ifdef Pipeline
-   output logic [31:0]                i0_rs1_d,  i0_rs2_d,
-`endif
-
-`ifdef Pipeline
-   output logic [4:0]  dec_i0_waddr_r,
-   output logic        dec_i0_wen_r,
-   output logic [31:0] dec_i0_wdata_r,
-`endif
-
-`ifdef Pipeline
-   output logic [4:0]                dec_nonblock_load_waddr,
-   output logic                      dec_nonblock_load_wen,
-`endif
-
-`ifdef Pipeline
-   output logic [4:0]     div_waddr_wb,
-`endif
-
-`ifdef Pipeline
-   output logic alu_instd,
-   output logic lsu_instd,
-   output logic mul_instd,
-   output logic i0_x_data_en,
-   output logic alu_instx,
-   output logic mul_instx,
-`endif
 
 `ifdef Pipeline
    output logic [2:0] instr_control,
@@ -287,7 +247,6 @@ import el2_pkg::*;
 
    output el2_lsu_pkt_t    lsu_p,                  // lsu packet
    output logic             dec_qual_lsu_d,         // LSU instruction at D.  Use to quiet LSU operands
-   output el2_div_pkt_t    div_p,                  // div packet
    output logic             dec_div_cancel,         // cancel divide operation
 
    output logic [11:0] dec_lsu_offset_d,            // 12b offset for load/store addresses

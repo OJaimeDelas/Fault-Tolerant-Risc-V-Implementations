@@ -84,7 +84,6 @@ import el2_pkg::*;
    input logic  [31:0]  dec_csr_rddata_d,                              // CSR read data
 
    input logic          dec_qual_lsu_d,                                // LSU instruction at D.  Use to quiet LSU operands
-   input el2_div_pkt_t div_p,                                         // DEC {valid, unsigned, rem}
    input logic          dec_div_cancel,                                // Cancel the divide operation
 
    input logic  [31:1]  pred_correct_npc_x,                            // DEC NPC for correctly predicted branch

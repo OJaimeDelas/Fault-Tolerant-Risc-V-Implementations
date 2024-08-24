@@ -299,11 +299,6 @@ typedef struct packed {
                        logic legal;
                        } el2_dec_pkt_t;
 
-typedef struct packed {
-                       logic valid;
-                       logic unsign;
-                       logic rem;
-                       } el2_div_pkt_t;
 
 typedef struct packed {
                        logic        TEST1;

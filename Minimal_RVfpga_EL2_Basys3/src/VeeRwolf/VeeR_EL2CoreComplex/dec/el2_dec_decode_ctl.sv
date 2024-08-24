@@ -227,7 +227,6 @@ import el2_pkg::*;
 
    logic [31:0]        csr_rddata_x;
 
-   logic               div_flush;
    logic               div_active_in;
    logic               div_active;
    logic               i0_nonblock_div_stall;
@@ -1332,12 +1331,6 @@ end : cam_array
    // nonblocking div scheme
 
    assign i0_nonblock_div_stall  = '0;
-
-
-   assign div_flush              = (x_d.i0div & x_d.i0valid & (x_d.i0rd[4:0]==5'b0)                           ) |
-                                   (x_d.i0div & x_d.i0valid & dec_tlu_flush_lower_r                           ) |
-                                   (r_d.i0div & r_d.i0valid & dec_tlu_flush_lower_r & dec_tlu_i0_kill_writeb_r);
-
 
    // cancel if any younger inst committing this cycle to same dest as nonblock divide
    assign nonblock_div_cancel    = '0;
