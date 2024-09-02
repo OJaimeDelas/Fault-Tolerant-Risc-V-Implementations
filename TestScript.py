@@ -41,8 +41,14 @@ tests = {
 
 # Predefined Simulators
 simulators = {
-    "MinimalRVfpga": "Minimal_RVfpga_EL2_Basys3/Simulators/verilatorSIM_Trace",
-    "RVfpga_Basys3": "RVfpga_Basys3/Simulators/verilatorSIM_Trace"
+    "MinimalRVfpga": {
+        "sim_path": "Minimal_RVfpga_EL2_Basys3/Simulators/verilatorSIM_Trace",
+        "vivado_path": "Minimal_RVfpga_EL2_Basys3/MinimalRVfpga"
+    },
+    "RVfpga_Basys3": {
+        "sim_path": "RVfpga_Basys3/Simulators/verilatorSIM_Trace",
+        "vivado_path": "RVfpga_Basys3/RVfpga"
+    }
     # Add more simulators here if needed
 }
 
@@ -55,8 +61,7 @@ parser = argparse.ArgumentParser(description='Automate the test of the RISC-V Ar
 # Add command-line options for choosing test and simulator
 parser.add_argument('-t', '--test', choices=tests.keys(), help='Select a predefined test to run.', default='Test1')
 parser.add_argument('-s', '--simulator', choices=simulators.keys(), help='Select a predefined simulator to use.', default='MinimalRVfpga')
-parser.add_argument('--custom_test_path', type=str, help='Provide a custom path to the test folder.')
-parser.add_argument('--custom_simulator_path', type=str, help='Provide a custom path to the simulator folder.')
+parser.add_argument('-vivado', type=str, help='Run Vivado and generate utilization report. Provide the Vivado project name.')
 
 args = parser.parse_args()
 
@@ -65,20 +70,47 @@ args = parser.parse_args()
 ###########################################################
 
 # Determine which test and simulator to use
-if args.custom_test_path:
-    test_path = args.custom_test_path
-    test_name = os.path.basename(test_path.rstrip('/'))
-    expected_values = None  # Custom tests need manual verification
-else:
-    test_config = tests[args.test]
-    test_path = test_config["path"]
-    test_name = args.test
-    expected_values = test_config["expected_values"]
+test_config = tests[args.test]
+test_path = test_config["path"]
+test_name = args.test
+expected_values = test_config["expected_values"]
 
-if args.custom_simulator_path:
-    simulator_path = args.custom_simulator_path
-else:
-    simulator_path = simulators[args.simulator]
+simulator_config = simulators[args.simulator]
+simulator_path = simulator_config["sim_path"]
+vivado_path = simulator_config["vivado_path"]
+
+###########################################################
+#       Define Vivado Functionality
+###########################################################
+
+def run_vivado_report(vivado_path, vivado_name):
+    vivado_project_path = os.path.join(vivado_path, f"{os.path.basename(vivado_path)}.xpr")
+    report_dir = os.path.join(vivado_path, "Utilization Reports (DCCM - ICCM)")
+
+    if not os.path.exists(report_dir):
+        os.makedirs(report_dir)
+
+    report_path = os.path.join(report_dir, f"{vivado_name}.xlsx")
+    
+    vivado_commands = f"""
+    start_gui
+    open_project {vivado_project_path}
+    reset_run synth_1
+    launch_runs synth_1 -jobs 2
+    wait_on_run synth_1
+    update_compile_order -fileset sources_1
+    open_run synth_1 -name synth_1
+    report_utilization -name {vivado_name} -spreadsheet_file {report_path}
+    """
+
+    tcl_file_path = os.path.join(vivado_path, "run_vivado.tcl")
+
+    with open(tcl_file_path, 'w') as tcl_file:
+        tcl_file.write(vivado_commands)
+
+    subprocess.run(["vivado", "-mode", "batch", "-source", tcl_file_path])
+
+    print(f"\nVivado utilization report generated at: {report_path}\n")
 
 ###########################################################
 #       Run Simulation and Verify Results
@@ -114,7 +146,6 @@ build_command = [
     "--config", "Debug",
     "--target", "all", "--"
 ]
-
 
 subprocess.run(build_command)
 
@@ -193,6 +224,11 @@ else:
 #                     check_index += 1
 #                     if check_index >= len(expected_values):
 #                         break
+
+# Step 8: Run Vivado utilization report (if requested)
+if args.vivado:
+    run_vivado_report(vivado_path, args.vivado)
+
 
 #     # Final Check: Ensure all tests were conducted
 #     if check_index < len(expected_values):

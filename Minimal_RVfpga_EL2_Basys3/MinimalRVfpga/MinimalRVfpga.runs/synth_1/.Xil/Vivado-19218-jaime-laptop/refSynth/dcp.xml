@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<Checkpoint Version="19" Minor="0">
+	<BUILD_NUMBER Name="3671981"/>
+	<FULL_BUILD Name="SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022"/>
+	<PRODUCT Name="Vivado v2022.2 (64-bit)"/>
+	<Part Name="xc7a35tcpg236-1"/>
+	<BoardPart Name="digilentinc.com:basys3:part0:1.2"/>
+	<Top Name="rvfpgabasys3"/>
+	<DisableAutoIOBuffers Name="0"/>
+	<OutOfContext Name="0"/>
+	<RunGenerated Name="1"/>
+	<HDPlatform Name="0"/>
+	<File Type="VERILOG_STUB" Name="rvfpgabasys3_stub.v" ModTime="1724767489"/>
+	<File Type="VHDL_STUB" Name="rvfpgabasys3_stub.vhdl" ModTime="1724767489"/>
+	<File Type="SHAPE" Name="rvfpgabasys3.shape" ModTime="1724767489"/>
+	<File Type="EDIF" Name="rvfpgabasys3.edf" ModTime="1724767489"/>
+	<File Type="XN" Name="rvfpgabasys3.xn" ModTime="1724767489"/>
+	<File Type="INCR" Name="rvfpgabasys3.incr" ModTime="1724767489"/>
+	<File Type="RDA" Name="rvfpgabasys3.rda" ModTime="1724767489"/>
+	<File Type="JSON_RDA" Name="rvfpgabasys3_rda.json" ModTime="1724767489"/>
+	<File Type="WDF" Name="rvfpgabasys3.wdf" ModTime="1724767489"/>
+	<File Type="SYNTH" Name="rvfpgabasys3.synth" ModTime="1724767489"/>
+</Checkpoint>
+

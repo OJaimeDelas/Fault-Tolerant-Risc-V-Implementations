@@ -1,0 +1,6 @@
+el2_veer__GB0
+el2_veer__GB1
+el2_veer__GB2
+el2_mem
+veerwolf_core__GC0
+rvfpgabasys3__GC0
