@@ -129,7 +129,7 @@ cmake_command = [
     "-DPLATFORM:STRING=RVFPGABASYS3",
     "-DCMAKE_EXPORT_COMPILE_COMMANDS:BOOL=TRUE",
     "-DCMAKE_BUILD_TYPE=Debug",
-    "-DCMAKE_TOOLCHAIN_FILE=/opt/imgtec/catapult-sdk_1.10.0/build/riscv-toolchain-gcc-elf.cmake",
+    "-DCMAKE_TOOLCHAIN_FILE:FILEPATH=/opt/imgtec/catapult-sdk_1.10.0/build/riscv-toolchain-gcc-elf.cmake",
     "-S", test_path,
     "-B", build_dir,
     "-G", "Ninja"
@@ -225,9 +225,9 @@ else:
 #                     if check_index >= len(expected_values):
 #                         break
 
-# Step 8: Run Vivado utilization report (if requested)
-if args.vivado:
-    run_vivado_report(vivado_path, args.vivado)
+# # Step 8: Run Vivado utilization report (if requested)
+# if args.vivado:
+#     run_vivado_report(vivado_path, args.vivado)
 
 
 #     # Final Check: Ensure all tests were conducted

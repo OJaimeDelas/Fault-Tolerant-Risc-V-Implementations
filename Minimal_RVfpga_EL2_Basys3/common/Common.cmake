@@ -101,8 +101,8 @@ elseif(PLATFORM MATCHES "RVFPGABASYS3")
 
     #set(DEFAULT_YAML_FILE "${PLATFORM_DIR}/RVfpga/RVfpgaBasys3.YAML")
 
-    set(DEFAULT_YAML_FILE "/home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/common/RVfpgaBasys3.YAML")
-    set(PLACEMENTS_FILE "/home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/common/placements.py")
+    set(DEFAULT_YAML_FILE "/home/jaime/Desktop/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/common/RVfpgaBasys3.YAML")
+    set(PLACEMENTS_FILE "/home/jaime/Desktop/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/common/placements.py")
 
     
     set(DEFAULT_CPU_FREQ 13000000)

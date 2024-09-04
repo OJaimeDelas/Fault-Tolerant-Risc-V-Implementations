@@ -1,13 +1,24 @@
 #-----------------------------------------------------------
-# Vivado v2022.2 (64-bit)
-# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
-# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Thu Aug  8 16:30:21 2024
-# Process ID: 9414
-# Current directory: /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/RVfpga_Basys3/Original_RVfpga/Original_RVfpga.runs/synth_1
-# Command line: vivado -log rvfpgabasys3.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source rvfpgabasys3.tcl
-# Log file: /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/RVfpga_Basys3/Original_RVfpga/Original_RVfpga.runs/synth_1/rvfpgabasys3.vds
-# Journal file: /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/RVfpga_Basys3/Original_RVfpga/Original_RVfpga.runs/synth_1/vivado.jou
-# Running On: jaime-laptop, OS: Linux, CPU Frequency: 2694.822 MHz, CPU Physical cores: 2, Host memory: 12408 MB
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Tue Sep  3 22:37:39 2024
+# Process ID: 5072
+# Current directory: C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/RVfpga_Basys3/Original_RVfpga/Original_RVfpga.runs/synth_1
+# Command line: vivado.exe -log rvfpgabasys3.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source rvfpgabasys3.tcl
+# Log file: C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/RVfpga_Basys3/Original_RVfpga/Original_RVfpga.runs/synth_1/rvfpgabasys3.vds
+# Journal file: C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/RVfpga_Basys3/Original_RVfpga/Original_RVfpga.runs/synth_1\vivado.jou
+# Running On        :Jaime
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :22631
+# Processor Detail  :13th Gen Intel(R) Core(TM) i9-13900H
+# CPU Frequency     :2995 MHz
+# CPU Physical cores:14
+# CPU Logical cores :20
+# Host memory       :33954 MB
+# Swap memory       :5368 MB
+# Total Virtual     :39322 MB
+# Available Virtual :27920 MB
 #-----------------------------------------------------------
 source rvfpgabasys3.tcl -notrace

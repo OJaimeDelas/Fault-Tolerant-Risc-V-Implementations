@@ -42,7 +42,7 @@ rule CUSTOM_COMMAND
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = /opt/imgtec/catapult-sdk_1.10.0/build/bin/cmake --regenerate-during-build -S/home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/Tests/Test1 -B/home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/Tests/Test1/build
+  command = /opt/imgtec/catapult-sdk_1.10.0/build/bin/cmake --regenerate-during-build -S/home/jaime/Desktop/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/Tests/Test1 -B/home/jaime/Desktop/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/Tests/Test1/build
   description = Re-running CMake...
   generator = 1
 

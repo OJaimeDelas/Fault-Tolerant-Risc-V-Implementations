@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "/home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.runs/synth_1/rvfpgabasys3.tcl"
+  variable script "C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.runs/synth_1/rvfpgabasys3.tcl"
   variable category "vivado_synth"
 }
 
@@ -55,20 +55,6 @@ if {$::dispatch::connected} {
   }
 }
 
-proc create_report { reportName command } {
-  set status "."
-  append status $reportName ".fail"
-  if { [file exists $status] } {
-    eval file delete [glob $status]
-  }
-  send_msg_id runtcl-4 info "Executing : $command"
-  set retval [eval catch { $command } msg]
-  if { $retval != 0 } {
-    set fp [open $status w]
-    close $fp
-    send_msg_id runtcl-5 warning "$msg"
-  }
-}
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35tcpg236-1
@@ -76,122 +62,125 @@ create_project -in_memory -part xc7a35tcpg236-1
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.cache/wt [current_project]
-set_property parent.project_path /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.xpr [current_project]
+set_property webtalk.parent_dir {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.cache/wt} [current_project]
+set_property parent.project_path {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.xpr} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property board_part_repo_paths {/home/jaime/.Xilinx/Vivado/2022.2/xhub/board_store/xilinx_board_store} [current_project]
+set_property board_part_repo_paths {C:/Users/minde/AppData/Roaming/Xilinx/Vivado/2024.1/xhub/board_store/xilinx_board_store} [current_project]
 set_property board_part digilentinc.com:basys3:part0:1.2 [current_project]
-set_property ip_output_repo /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.cache/ip [current_project]
+set_property ip_output_repo {c:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.cache/ip} [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 set_property include_dirs {
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/src/VeeRwolf/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/include
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/src/OtherSources/pulp-platform.org__common_cells_1.20.0/include
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/src/VeeRwolf/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/include}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/src/OtherSources/pulp-platform.org__common_cells_1.20.0/include}
 } [current_fileset]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog {
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/include/common_defines.vh
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/Peripherals/gpio/gpio_defines.v
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/Peripherals/ptc/ptc_defines.v
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/Peripherals/uart/uart_defines.v
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/Interconnect/WishboneInterconnect/wb_intercon.vh
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/Interconnect/AxiInterconnect/axi_intercon.vh
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/include/el2_param.vh
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/include/pic_map_auto.h
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/include/common_defines.vh}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/Peripherals/gpio/gpio_defines.v}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/Peripherals/ptc/ptc_defines.v}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/Peripherals/uart/uart_defines.v}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/Interconnect/WishboneInterconnect/wb_intercon.vh}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/Interconnect/AxiInterconnect/axi_intercon.vh}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/include/el2_param.vh}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/include/pic_map_auto.h}
 }
-set_property is_global_include true [get_files /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/include/common_defines.vh]
-set_property file_type "Verilog Header" [get_files /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/Peripherals/gpio/gpio_defines.v]
-set_property file_type "Verilog Header" [get_files /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/Peripherals/ptc/ptc_defines.v]
-set_property file_type "Verilog Header" [get_files /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/Peripherals/uart/uart_defines.v]
-set_property file_type "Verilog Header" [get_files /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/include/pic_map_auto.h]
-read_mem /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/BootROM/sw/boot_main.mem
+set_property file_type "Verilog Header" [get_files {{C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/include/common_defines.vh}}]
+set_property is_global_include true [get_files {{C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/include/common_defines.vh}}]
+set_property file_type "Verilog Header" [get_files {{C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/Peripherals/gpio/gpio_defines.v}}]
+set_property file_type "Verilog Header" [get_files {{C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/Peripherals/ptc/ptc_defines.v}}]
+set_property file_type "Verilog Header" [get_files {{C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/Peripherals/uart/uart_defines.v}}]
+set_property file_type "Verilog Header" [get_files {{C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/Interconnect/WishboneInterconnect/wb_intercon.vh}}]
+set_property file_type "Verilog Header" [get_files {{C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/Interconnect/AxiInterconnect/axi_intercon.vh}}]
+set_property file_type "Verilog Header" [get_files {{C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/include/el2_param.vh}}]
+set_property file_type "Verilog Header" [get_files {{C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/include/pic_map_auto.h}}]
+read_mem {{C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/sw/boot_main.mem}}
 read_verilog -library xil_defaultlib -sv {
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/include/el2_pdef.vh
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/cf_math_pkg.sv
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/addr_decode.sv
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/src/axi_pkg.sv
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/src/axi_atop_filter.sv
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/src/axi_demux.sv
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/src/axi_err_slv.sv
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/src/axi_id_prepend.sv
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/Interconnect/AxiInterconnect/axi_intercon.sv
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/src/axi_intf.sv
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/src/axi_mux.sv
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/src/axi_xbar.sv
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/lib/beh_lib.sv
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/OtherSources/bscan_tap.sv
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/counter.sv
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/delta_counter.sv
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/include/el2_def.sv
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/dbg/el2_dbg.sv
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/dec/el2_dec.sv
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/dec/el2_dec_decode_ctl.sv
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/dec/el2_dec_gpr_ctl.sv
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/dec/el2_dec_ib_ctl.sv
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/dec/el2_dec_tlu_ctl.sv
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/dec/el2_dec_trigger.sv
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/el2_dma_ctrl.sv
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/exu/el2_exu.sv
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/exu/el2_exu_alu_ctl.sv
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/ifu/el2_ifu.sv
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/ifu/el2_ifu_aln_ctl.sv
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/ifu/el2_ifu_bp_ctl.sv
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/ifu/el2_ifu_compress_ctl.sv
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/ifu/el2_ifu_ic_mem.sv
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/ifu/el2_ifu_iccm_mem.sv
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/ifu/el2_ifu_ifc_ctl.sv
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/ifu/el2_ifu_mem_ctl.sv
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/lib/el2_lib.sv
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/lsu/el2_lsu.sv
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/lsu/el2_lsu_addrcheck.sv
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/lsu/el2_lsu_bus_buffer.sv
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/lsu/el2_lsu_bus_intf.sv
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/lsu/el2_lsu_clkdomain.sv
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/lsu/el2_lsu_dccm_ctl.sv
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/lsu/el2_lsu_dccm_mem.sv
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/lsu/el2_lsu_ecc.sv
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/lsu/el2_lsu_lsc_ctl.sv
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/lsu/el2_lsu_stbuf.sv
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/lsu/el2_lsu_trigger.sv
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/el2_mem.sv
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/el2_pic_ctrl.sv
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/el2_veer.sv
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/deprecated/fifo_v2.sv
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/fifo_v3.sv
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/lzc.sv
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/lib/mem_lib.sv
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/rr_arb_tree.sv
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/spill_register.sv
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/stream_register.sv
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/veer_el2_wrapper.sv
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/Peripherals/SystemController/veerwolf_syscon.sv
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/rvfpgabasys3.sv
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/include/el2_pdef.vh}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/cf_math_pkg.sv}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/addr_decode.sv}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/src/axi_pkg.sv}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/src/axi_atop_filter.sv}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/src/axi_demux.sv}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/src/axi_err_slv.sv}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/src/axi_id_prepend.sv}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/Interconnect/AxiInterconnect/axi_intercon.sv}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/src/axi_intf.sv}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/src/axi_mux.sv}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/Interconnect/AxiInterconnect/pulp-platform.org__axi_0.25.0/src/axi_xbar.sv}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/lib/beh_lib.sv}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/OtherSources/bscan_tap.sv}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/counter.sv}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/delta_counter.sv}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/include/el2_def.sv}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/dbg/el2_dbg.sv}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/dec/el2_dec.sv}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/dec/el2_dec_decode_ctl.sv}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/dec/el2_dec_gpr_ctl.sv}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/dec/el2_dec_ib_ctl.sv}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/dec/el2_dec_tlu_ctl.sv}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/dec/el2_dec_trigger.sv}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/el2_dma_ctrl.sv}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/exu/el2_exu.sv}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/exu/el2_exu_alu_ctl.sv}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/ifu/el2_ifu.sv}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/ifu/el2_ifu_aln_ctl.sv}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/ifu/el2_ifu_bp_ctl.sv}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/ifu/el2_ifu_compress_ctl.sv}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/ifu/el2_ifu_ic_mem.sv}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/ifu/el2_ifu_iccm_mem.sv}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/ifu/el2_ifu_ifc_ctl.sv}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/ifu/el2_ifu_mem_ctl.sv}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/lib/el2_lib.sv}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/lsu/el2_lsu.sv}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/lsu/el2_lsu_addrcheck.sv}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/lsu/el2_lsu_bus_buffer.sv}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/lsu/el2_lsu_bus_intf.sv}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/lsu/el2_lsu_clkdomain.sv}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/lsu/el2_lsu_dccm_ctl.sv}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/lsu/el2_lsu_dccm_mem.sv}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/lsu/el2_lsu_ecc.sv}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/lsu/el2_lsu_lsc_ctl.sv}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/lsu/el2_lsu_stbuf.sv}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/lsu/el2_lsu_trigger.sv}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/el2_mem.sv}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/el2_pic_ctrl.sv}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/el2_veer.sv}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/deprecated/fifo_v2.sv}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/fifo_v3.sv}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/lzc.sv}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/lib/mem_lib.sv}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/rr_arb_tree.sv}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/spill_register.sv}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/stream_register.sv}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/veer_el2_wrapper.sv}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/Peripherals/SystemController/veerwolf_syscon.sv}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/rvfpgabasys3.sv}
 }
-set_property file_type SystemVerilog [get_files /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/include/el2_pdef.vh]
-set_property is_global_include true [get_files /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/include/el2_pdef.vh]
+set_property is_global_include true [get_files {{C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/VeeR_EL2CoreComplex/include/el2_pdef.vh}}]
 read_verilog -library xil_defaultlib {
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/Interconnect/AxiToWb/axi2wb.v
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/OtherSources/axi_ram.v
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/OtherSources/clk_gen_basys3.v
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/BootROM/dpram64.v
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/Peripherals/spi/fifo4.v
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/Peripherals/gpio/gpio_top.v
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/Peripherals/ptc/ptc_top.v
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/Peripherals/uart/raminfr.v
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/Peripherals/spi/simple_spi_top.v
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/Peripherals/uart/uart_receiver.v
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/Peripherals/uart/uart_regs.v
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/Peripherals/uart/uart_rfifo.v
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/Peripherals/uart/uart_sync_flops.v
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/Peripherals/uart/uart_tfifo.v
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/Peripherals/uart/uart_top.v
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/Peripherals/uart/uart_transmitter.v
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/Peripherals/uart/uart_wb.v
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/veerwolf_core.v
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/Interconnect/WishboneInterconnect/wb_intercon.v
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/BootROM/wb_mem_wrapper.v
-  /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/Interconnect/WishboneInterconnect/wb_intercon_1.2.2-r1/rtl/verilog/wb_mux.v
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/Interconnect/AxiToWb/axi2wb.v}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/OtherSources/axi_ram.v}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/OtherSources/clk_gen_basys3.v}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/BootROM/dpram64.v}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/Peripherals/spi/fifo4.v}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/Peripherals/gpio/gpio_top.v}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/Peripherals/ptc/ptc_top.v}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/Peripherals/uart/raminfr.v}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/Peripherals/spi/simple_spi_top.v}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/Peripherals/uart/uart_receiver.v}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/Peripherals/uart/uart_regs.v}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/Peripherals/uart/uart_rfifo.v}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/Peripherals/uart/uart_sync_flops.v}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/Peripherals/uart/uart_tfifo.v}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/Peripherals/uart/uart_top.v}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/Peripherals/uart/uart_transmitter.v}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/Peripherals/uart/uart_wb.v}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/veerwolf_core.v}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/Interconnect/WishboneInterconnect/wb_intercon.v}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/BootROM/wb_mem_wrapper.v}
+  {C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/sources_1/imports/src/VeeRwolf/Interconnect/WishboneInterconnect/wb_intercon_1.2.2-r1/rtl/verilog/wb_mux.v}
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -202,12 +191,10 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/constrs_1/imports/src/rvfpgabasys3.xdc
-set_property used_in_implementation false [get_files /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/constrs_1/imports/src/rvfpgabasys3.xdc]
+read_xdc {{C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/constrs_1/imports/src/rvfpgabasys3.xdc}}
+set_property used_in_implementation false [get_files {{C:/Users/minde/Ambiente de Trabalho/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/constrs_1/imports/src/rvfpgabasys3.xdc}}]
 
 set_param ips.enableIPCacheLiteLoad 1
-
-read_checkpoint -auto_incremental -incremental /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/MinimalRVfpga/MinimalRVfpga.srcs/utils_1/imports/synth_1/rvfpgabasys3.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
@@ -224,7 +211,7 @@ set_param constraints.enableBinaryConstraints false
 write_checkpoint -force -noxdef rvfpgabasys3.dcp
 OPTRACE "write_checkpoint" END { }
 OPTRACE "synth reports" START { REPORT }
-create_report "synth_1_synth_report_utilization_0" "report_utilization -file rvfpgabasys3_utilization_synth.rpt -pb rvfpgabasys3_utilization_synth.pb"
+generate_parallel_reports -reports { "report_utilization -file rvfpgabasys3_utilization_synth.rpt -pb rvfpgabasys3_utilization_synth.pb"  } 
 OPTRACE "synth reports" END { }
 file delete __synthesis_is_running__
 close [open __synthesis_is_complete__ w]

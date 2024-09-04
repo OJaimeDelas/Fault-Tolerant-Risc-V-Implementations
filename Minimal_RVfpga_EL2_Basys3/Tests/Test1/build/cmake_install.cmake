@@ -1,4 +1,4 @@
-# Install script for directory: /home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/Tests/Test1
+# Install script for directory: /home/jaime/Desktop/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/Tests/Test1
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/jaime/Desktop/Tese/Repository/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/Tests/Test1/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/jaime/Desktop/Tese/Fault-Tolerant-Risc-V-Implementations/Minimal_RVfpga_EL2_Basys3/Tests/Test1/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
